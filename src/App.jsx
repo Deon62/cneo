@@ -47,6 +47,7 @@ function App() {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section[id]')
       const navbar = document.querySelector('.navbar-container')
+      const navLinks = document.querySelectorAll('.nav-link')
       const scrollPosition = window.scrollY + window.innerHeight / 2
 
       // Dark sections that need light navbar
@@ -64,6 +65,7 @@ function App() {
         }
       })
 
+      // Update navbar dark mode
       if (currentSection && darkSectionIds.includes(currentSection)) {
         navbar?.classList.add('navbar-dark')
         setIsNavbarDark(true)
@@ -71,6 +73,16 @@ function App() {
         navbar?.classList.remove('navbar-dark')
         setIsNavbarDark(false)
       }
+
+      // Update active link indicators
+      navLinks.forEach((link) => {
+        const linkSection = link.getAttribute('data-section')
+        if (linkSection === currentSection) {
+          link.classList.add('active')
+        } else {
+          link.classList.remove('active')
+        }
+      })
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -88,12 +100,20 @@ function App() {
             <span className="logo-text">Chain Neo</span>
           </div>
           <ul className="navbar-links">
-            <li><a href="#home" className="nav-link">Home</a></li>
-            <li><a href="#about" className="nav-link">About Us</a></li>
-            <li><a href="#academy" className="nav-link">Academy</a></li>
-            <li><a href="#events" className="nav-link">Events</a></li>
-            <li><a href="#community" className="nav-link">Community</a></li>
+            <li><a href="#home" className="nav-link" data-section="home">Home</a></li>
+            <li><a href="#about" className="nav-link" data-section="about">About Us</a></li>
+            <li><a href="#academy" className="nav-link" data-section="academy">Academy</a></li>
+            <li><a href="#events" className="nav-link" data-section="events">Events</a></li>
+            <li><a href="#community" className="nav-link" data-section="community">Community</a></li>
+            <li><a href="#blogs" className="nav-link" data-section="blogs">Blogs</a></li>
+            <li><a href="#contact" className="nav-link" data-section="contact">Contact Us</a></li>
           </ul>
+          <a href="#community" className="nav-join">
+            Join the Community
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="nav-join-arrow">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
         </div>
       </nav>
 

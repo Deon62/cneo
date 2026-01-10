@@ -1,6 +1,9 @@
 import './App.css'
 import { useState, useEffect } from 'react'
 import africaImage from './assets/africa.svg'
+import learnImage from './assets/learn.png'
+import buildImage from './assets/build.png'
+import communityImage from './assets/community.png'
 
 function App() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -148,6 +151,9 @@ function App() {
           <div className="about-features">
             <div className="about-feature-item">
               <div className="feature-number">01</div>
+              <div className="feature-image-wrapper">
+                <img src={learnImage} alt="Learn Blockchain" className="feature-image" />
+              </div>
               <div className="feature-content">
                 <h3 className="feature-title">Learn Blockchain</h3>
                 <p className="feature-text">
@@ -155,7 +161,7 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className="about-feature-item">
+            <div className="about-feature-item feature-item-right">
               <div className="feature-number">02</div>
               <div className="feature-content">
                 <h3 className="feature-title">Build Real Projects</h3>
@@ -163,9 +169,15 @@ function App() {
                   Apply your knowledge by creating real-world blockchain solutions and contributing to innovative projects that make a difference.
                 </p>
               </div>
+              <div className="feature-image-wrapper">
+                <img src={buildImage} alt="Build Real Projects" className="feature-image" />
+              </div>
             </div>
             <div className="about-feature-item">
               <div className="feature-number">03</div>
+              <div className="feature-image-wrapper">
+                <img src={communityImage} alt="Grow a Community" className="feature-image" />
+              </div>
               <div className="feature-content">
                 <h3 className="feature-title">Grow a Community</h3>
                 <p className="feature-text">

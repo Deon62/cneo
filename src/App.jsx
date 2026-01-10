@@ -1,9 +1,10 @@
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import africaImage from './assets/africa.svg'
 
 function App() {
   const [openFaq, setOpenFaq] = useState(null)
+  const [isNavbarDark, setIsNavbarDark] = useState(false)
 
   const faqs = [
     {
@@ -41,6 +42,42 @@ function App() {
   const toggleFaq = (id) => {
     setOpenFaq(openFaq === id ? null : id)
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]')
+      const navbar = document.querySelector('.navbar-container')
+      const scrollPosition = window.scrollY + window.innerHeight / 2
+
+      // Dark sections that need light navbar
+      const darkSectionIds = ['academy'] // Add more dark section IDs here
+
+      let currentSection = null
+      
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop
+        const sectionHeight = section.offsetHeight
+        const sectionId = section.getAttribute('id')
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = sectionId
+        }
+      })
+
+      if (currentSection && darkSectionIds.includes(currentSection)) {
+        navbar?.classList.add('navbar-dark')
+        setIsNavbarDark(true)
+      } else {
+        navbar?.classList.remove('navbar-dark')
+        setIsNavbarDark(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll() // Check on initial load
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <div className="app">

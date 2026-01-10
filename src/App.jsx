@@ -1,5 +1,6 @@
 import './App.css'
 import { useState } from 'react'
+import africaImage from './assets/africa.svg'
 
 function App() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -61,14 +62,19 @@ function App() {
 
       {/* Hero Section */}
       <section id="home" className="hero">
-        <div className="hero-content">
-          <h1 className="hero-headline">Building Africa's Blockchain Builders</h1>
-          <p className="hero-subtext">
-            A friendly community learning, building, and growing with blockchain.
-          </p>
-          <div className="hero-ctas">
-            <button className="btn btn-primary">Join the Community</button>
-            <button className="btn btn-secondary">Explore Programs</button>
+        <div className="hero-container">
+          <div className="hero-content">
+            <h1 className="hero-headline">Building Africa's Blockchain Builders</h1>
+            <p className="hero-subtext">
+              A friendly community learning, building, and growing with blockchain.
+            </p>
+            <div className="hero-ctas">
+              <button className="btn btn-primary">Join the Community</button>
+              <button className="btn btn-secondary">Explore Programs</button>
+            </div>
+          </div>
+          <div className="hero-image-container">
+            <img src={africaImage} alt="African continent map" className="hero-image" />
           </div>
         </div>
       </section>

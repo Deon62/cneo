@@ -96,6 +96,18 @@
   overflow: hidden;
 }
 
+.hero-container {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  margin-top: -40px;
+}
+
 /* Math squared grid pattern that fades at edges */
 .hero::before {
   content: '';
@@ -129,11 +141,12 @@
 }
 
 .hero-content {
-  max-width: 800px;
-  text-align: center;
+  max-width: 600px;
+  text-align: left;
   z-index: 1;
   position: relative;
-  margin-top: -30px;
+  align-self: center;
+  margin-top: -20px;
 }
 
 .hero-headline {
@@ -151,16 +164,31 @@
   margin-bottom: 40px;
   line-height: 1.6;
   font-weight: 400;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 500px;
 }
 
 .hero-ctas {
   display: flex;
   gap: 16px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+.hero-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-top: -60px;
+  align-self: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Buttons */
@@ -782,9 +810,34 @@
     padding: 120px 20px 60px;
   }
 
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-subtext {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .hero-ctas {
     flex-direction: column;
     align-items: stretch;
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    order: -1;
+  }
+
+  .hero-image {
+    max-width: 100%;
   }
 
   .btn {
@@ -900,12 +953,30 @@
     padding: 12px 16px;
   }
 
-  .hero-headline {
-    font-size: 1.75rem;
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-content {
+    text-align: center;
   }
 
   .hero-subtext {
     font-size: 0.9375rem;
+    max-width: 100%;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  .hero-image-container {
+    order: -1;
+  }
+
+  .hero-headline {
+    font-size: 1.75rem;
   }
 
   .section-title {

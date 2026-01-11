@@ -52,13 +52,13 @@ function Contact() {
       {/* Contact Form Section */}
       <section className="contact-form-section">
         <div className="contact-form-container">
+          <div className="contact-form-header">
+            <h2 className="contact-form-title">Send us a Message</h2>
+            <p className="contact-form-description">
+              Fill out the form below and we'll get back to you as soon as possible.
+            </p>
+          </div>
           <div className="contact-form-wrapper">
-            <div className="contact-form-header">
-              <h2 className="contact-form-title">Send us a Message</h2>
-              <p className="contact-form-description">
-                Fill out the form below and we'll get back to you as soon as possible.
-              </p>
-            </div>
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
@@ -110,7 +110,7 @@ function Contact() {
                   onChange={handleChange}
                   className="form-textarea"
                   placeholder="Tell us more about your inquiry..."
-                  rows="6"
+                  rows="4"
                   required
                 ></textarea>
               </div>

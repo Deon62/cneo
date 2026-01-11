@@ -89,7 +89,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 24px;
+  padding: 140px 24px 120px;
   background-color: #FFFFFF;
   overflow: hidden;
   margin: 0;
@@ -404,12 +404,12 @@
 
 @media (max-width: 768px) {
   .contact-header {
-    padding: 80px 20px 48px;
-    min-height: auto;
+    padding: 100px 20px;
+    min-height: 80vh;
   }
 
   .contact-form-section {
-    padding: 60px 20px;
+    padding: 100px 20px 80px;
     min-height: auto;
   }
 
@@ -444,8 +444,8 @@
 
 @media (max-width: 480px) {
   .contact-header {
-    padding: 60px 16px 40px;
-    min-height: auto;
+    padding: 80px 16px;
+    min-height: 70vh;
   }
 
   .contact-header-title {

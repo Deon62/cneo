@@ -1,5 +1,6 @@
 import './App.css'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import africaImage from './assets/africa.svg'
 import learnImage from './assets/learn.png'
 import buildImage from './assets/build.png'
@@ -111,16 +112,16 @@ function App() {
             <li><a href="#about" className="nav-link" data-section="about">About Us</a></li>
             <li><a href="#academy" className="nav-link" data-section="academy">Academy</a></li>
             <li><a href="#events" className="nav-link" data-section="events">Events</a></li>
-            <li><a href="#community" className="nav-link" data-section="community">Community</a></li>
+            <li><Link to="/community" className="nav-link" data-section="community">Community</Link></li>
             <li><a href="#blogs" className="nav-link" data-section="blogs">Blogs</a></li>
             <li><a href="#contact" className="nav-link" data-section="contact">Contact Us</a></li>
           </ul>
-          <a href="#community" className="nav-join">
+          <Link to="/community" className="nav-join">
             Join the Community
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="nav-join-arrow">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-          </a>
+          </Link>
         </div>
       </nav>
 
@@ -210,12 +211,12 @@ function App() {
             <p className="how-it-works-card-description">
               Become part of Africa's leading blockchain community. Connect with builders, developers, and innovators shaping the future.
             </p>
-            <a href="#community" className="how-it-works-cta">
+            <Link to="/community" className="how-it-works-cta">
               <span>Get started</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </Link>
           </div>
 
           <div className="how-it-works-card">

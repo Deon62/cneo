@@ -6,6 +6,7 @@ import App from './App.jsx'
 import Community from './pages/Community.jsx'
 import Academy from './pages/Academy.jsx'
 import Contact from './pages/Contact.jsx'
+import Events from './pages/Events.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/community" element={<Community />} />
         <Route path="/academy" element={<Academy />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

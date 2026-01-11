@@ -81,6 +81,16 @@ function Navbar() {
           link.classList.remove('active')
         }
       })
+    } else if (location.pathname === '/events') {
+      // On events page, mark Events link as active
+      navLinks.forEach((link) => {
+        const linkSection = link.getAttribute('data-section')
+        if (linkSection === 'events') {
+          link.classList.add('active')
+        } else {
+          link.classList.remove('active')
+        }
+      })
     } else if (location.pathname === '/') {
       // On home page, use scroll-based active states
       window.addEventListener('scroll', handleScroll)
@@ -106,7 +116,7 @@ function Navbar() {
           <li><Link to="/" className="nav-link" data-section="home">Home</Link></li>
           <li><Link to="/#about" className="nav-link" data-section="about">About Us</Link></li>
           <li><Link to="/academy" className="nav-link" data-section="academy">Academy</Link></li>
-          <li><Link to="/#events" className="nav-link" data-section="events">Events</Link></li>
+          <li><Link to="/events" className="nav-link" data-section="events">Events</Link></li>
           <li><Link to="/community" className="nav-link" data-section="community">Community</Link></li>
           <li><Link to="/contact" className="nav-link" data-section="contact">Contact Us</Link></li>
         </ul>

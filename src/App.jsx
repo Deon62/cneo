@@ -111,7 +111,7 @@ function App() {
             <li><a href="#home" className="nav-link" data-section="home">Home</a></li>
             <li><a href="#about" className="nav-link" data-section="about">About Us</a></li>
             <li><Link to="/academy" className="nav-link" data-section="academy">Academy</Link></li>
-            <li><a href="#events" className="nav-link" data-section="events">Events</a></li>
+            <li><Link to="/events" className="nav-link" data-section="events">Events</Link></li>
             <li><Link to="/community" className="nav-link" data-section="community">Community</Link></li>
             <li><a href="#contact" className="nav-link" data-section="contact">Contact Us</a></li>
           </ul>

@@ -1323,12 +1323,7 @@
     font-size: 1.75rem;
   }
 
-  .snapshot-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .snapshot-stat-card {
+  .snapshot-stat-section {
     padding: 24px 18px;
   }
 

@@ -1816,7 +1816,12 @@
 .podcast-item {
   display: flex;
   flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 40px 32px;
+  border: 1px solid rgba(229, 231, 235, 0.5);
   transition: all 0.3s ease;
+  min-height: 380px;
 }
 
 .podcast-icon {

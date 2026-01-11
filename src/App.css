@@ -205,11 +205,12 @@
 
 .hamburger-line {
   width: 24px;
-  height: 2.5px;
+  height: 3px;
   background-color: #374151;
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transform-origin: center;
+  display: block;
 }
 
 .navbar-container.navbar-dark .hamburger-line {
@@ -242,8 +243,20 @@
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: flex !important;
-    position: absolute;
-    right: 20px;
+    position: absolute !important;
+    right: 20px !important;
+    z-index: 1001 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .hamburger-line {
+    background-color: #374151 !important;
+    height: 3px !important;
+  }
+
+  .navbar-container.navbar-dark .hamburger-line {
+    background-color: rgba(255, 255, 255, 0.9) !important;
   }
 
   .navbar-logo {
@@ -265,16 +278,16 @@
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 100px 32px 32px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 32px;
     gap: 0;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
     transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     z-index: 1000;
-    overflow-y: auto;
+    overflow: visible;
   }
 
   .navbar-menu.menu-open {
@@ -288,7 +301,7 @@
     flex-direction: column;
     width: 100%;
     gap: 0;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
   }
 
   .navbar-links li {
@@ -298,13 +311,14 @@
   .navbar-links .nav-link {
     display: block;
     width: 100%;
-    padding: 16px 0;
-    font-size: 1.125rem;
+    padding: 12px 0;
+    font-size: 1rem;
     font-weight: 500;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     opacity: 0;
     transform: translateX(-20px);
     transition: all 0.3s ease;
+    text-align: center;
   }
 
   .navbar-menu.menu-open .navbar-links .nav-link {
@@ -1399,13 +1413,18 @@
   }
 
   .navbar-logo {
-    display: none;
+    display: none !important;
+  }
+
+  .navbar-container .nav-join {
+    display: none !important;
   }
 
   .mobile-menu-toggle {
-    display: flex;
-    position: relative;
-    right: 0;
+    display: flex !important;
+    position: absolute;
+    right: 16px;
+    z-index: 1001;
   }
 
   .hero-container {

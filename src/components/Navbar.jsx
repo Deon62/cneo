@@ -36,9 +36,9 @@ function Navbar() {
 
       navLinks.forEach((link) => {
         const linkSection = link.getAttribute('data-section')
-        // Exclude 'community' section from activating Community link on home page
-        // The Community link should only be active when on /community route
-        if (linkSection === 'community') {
+        // Exclude 'community' and 'academy' sections from activating links on home page
+        // These links should only be active when on their respective routes
+        if (linkSection === 'community' || linkSection === 'academy') {
           link.classList.remove('active')
         } else if (linkSection === currentSection) {
           link.classList.add('active')
@@ -56,6 +56,16 @@ function Navbar() {
       navLinks.forEach((link) => {
         const linkSection = link.getAttribute('data-section')
         if (linkSection === 'community') {
+          link.classList.add('active')
+        } else {
+          link.classList.remove('active')
+        }
+      })
+    } else if (location.pathname === '/academy') {
+      // On academy page, mark Academy link as active
+      navLinks.forEach((link) => {
+        const linkSection = link.getAttribute('data-section')
+        if (linkSection === 'academy') {
           link.classList.add('active')
         } else {
           link.classList.remove('active')
@@ -85,7 +95,7 @@ function Navbar() {
         <ul className="navbar-links">
           <li><Link to="/" className="nav-link" data-section="home">Home</Link></li>
           <li><Link to="/#about" className="nav-link" data-section="about">About Us</Link></li>
-          <li><Link to="/#academy" className="nav-link" data-section="academy">Academy</Link></li>
+          <li><Link to="/academy" className="nav-link" data-section="academy">Academy</Link></li>
           <li><Link to="/#events" className="nav-link" data-section="events">Events</Link></li>
           <li><Link to="/community" className="nav-link" data-section="community">Community</Link></li>
           <li><Link to="/#blogs" className="nav-link" data-section="blogs">Blogs</Link></li>

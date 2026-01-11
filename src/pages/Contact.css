@@ -1,11 +1,11 @@
 /* Contact Page Header Section */
 .contact-header {
   position: relative;
-  min-height: auto;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 24px 60px;
+  padding: 120px 24px;
   background-color: #F9FAFB;
   overflow: hidden;
   margin: 0;

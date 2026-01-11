@@ -4,6 +4,20 @@ import { useEffect, useState } from 'react'
 function Navbar() {
   const location = useLocation()
   const [isNavbarDark, setIsNavbarDark] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
+  // Close menu when route changes
+  useEffect(() => {
+    closeMenu()
+  }, [location.pathname])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -108,24 +122,36 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/" className="logo-link">
+          <Link to="/" className="logo-link" onClick={closeMenu}>
             <span className="logo-text">Chain Neo</span>
           </Link>
         </div>
-        <ul className="navbar-links">
-          <li><Link to="/" className="nav-link" data-section="home">Home</Link></li>
-          <li><Link to="/#about" className="nav-link" data-section="about">About Us</Link></li>
-          <li><Link to="/academy" className="nav-link" data-section="academy">Academy</Link></li>
-          <li><Link to="/events" className="nav-link" data-section="events">Events</Link></li>
-          <li><Link to="/community" className="nav-link" data-section="community">Community</Link></li>
-          <li><Link to="/contact" className="nav-link" data-section="contact">Contact Us</Link></li>
-        </ul>
-        <Link to="/community" className="nav-join">
-          Join the Community
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="nav-join-arrow">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </Link>
+        <button 
+          className={`mobile-menu-toggle ${isMenuOpen ? 'menu-open' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+        >
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+          <span className="hamburger-line"></span>
+        </button>
+        <div className={`navbar-menu ${isMenuOpen ? 'menu-open' : ''}`}>
+          <ul className="navbar-links">
+            <li><Link to="/" className="nav-link" data-section="home" onClick={closeMenu}>Home</Link></li>
+            <li><Link to="/#about" className="nav-link" data-section="about" onClick={closeMenu}>About Us</Link></li>
+            <li><Link to="/academy" className="nav-link" data-section="academy" onClick={closeMenu}>Academy</Link></li>
+            <li><Link to="/events" className="nav-link" data-section="events" onClick={closeMenu}>Events</Link></li>
+            <li><Link to="/community" className="nav-link" data-section="community" onClick={closeMenu}>Community</Link></li>
+            <li><Link to="/contact" className="nav-link" data-section="contact" onClick={closeMenu}>Contact Us</Link></li>
+          </ul>
+          <Link to="/community" className="nav-join" onClick={closeMenu}>
+            Join the Community
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="nav-join-arrow">
+              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </Link>
+        </div>
       </div>
     </nav>
   )

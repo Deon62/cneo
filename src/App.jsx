@@ -110,7 +110,7 @@ function App() {
           <ul className="navbar-links">
             <li><a href="#home" className="nav-link" data-section="home">Home</a></li>
             <li><a href="#about" className="nav-link" data-section="about">About Us</a></li>
-            <li><a href="#academy" className="nav-link" data-section="academy">Academy</a></li>
+            <li><Link to="/academy" className="nav-link" data-section="academy">Academy</Link></li>
             <li><a href="#events" className="nav-link" data-section="events">Events</a></li>
             <li><Link to="/community" className="nav-link" data-section="community">Community</Link></li>
             <li><a href="#contact" className="nav-link" data-section="contact">Contact Us</a></li>
@@ -194,7 +194,7 @@ function App() {
       </section>
 
       {/* How it Works Section */}
-      <section id="academy" className="how-it-works-section">
+      <section id="how-it-works" className="how-it-works-section">
         <h2 className="how-it-works-title">How it works</h2>
         <div className="how-it-works-grid">
           <div className="how-it-works-card">
@@ -230,12 +230,12 @@ function App() {
             <p className="how-it-works-card-description">
               Access comprehensive courses, workshops, and events designed to help you master blockchain technology and stay ahead of the curve.
             </p>
-            <a href="#academy" className="how-it-works-cta">
+            <Link to="/academy" className="how-it-works-cta">
               <span>Explore courses</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </Link>
           </div>
 
           <div className="how-it-works-card">
@@ -262,7 +262,7 @@ function App() {
       </section>
 
       {/* Community Snapshot Section */}
-      <section id="community" className="community-snapshot-section">
+      <section id="community-snapshot" className="community-snapshot-section">
         <div className="community-snapshot-header">
           <p className="community-snapshot-label">Community Snapshot</p>
           <h2 className="community-snapshot-title">Trust & legitimacy</h2>
@@ -357,12 +357,12 @@ function App() {
             </div>
           </div>
           <div className="courses-view-more">
-            <a href="#academy" className="view-more-courses-btn">
+            <Link to="/academy" className="view-more-courses-btn">
               View more courses
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

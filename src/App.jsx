@@ -271,20 +271,20 @@ function App() {
             Building Africa's blockchain future with a growing community of builders, learners, and innovators committed to excellence.
           </p>
         </div>
-        <div className="snapshot-stats-grid">
-          <div className="snapshot-stat-card">
+        <div className="snapshot-stats-card">
+          <div className="snapshot-stat-section snapshot-stat-section-white">
             <div className="stat-number">Growing community</div>
             <div className="stat-description">Active members building together</div>
           </div>
-          <div className="snapshot-stat-card">
+          <div className="snapshot-stat-section snapshot-stat-section-white">
             <div className="stat-number">25+</div>
             <div className="stat-description">Events run</div>
           </div>
-          <div className="snapshot-stat-card snapshot-stat-dark">
+          <div className="snapshot-stat-section snapshot-stat-section-dark">
             <div className="stat-number">15+</div>
             <div className="stat-description">Universities & partners involved</div>
           </div>
-          <div className="snapshot-stat-card">
+          <div className="snapshot-stat-section snapshot-stat-section-light">
             <div className="stat-number">50+</div>
             <div className="stat-description">Projects built</div>
           </div>

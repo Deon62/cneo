@@ -149,7 +149,7 @@
   transition: all 0.2s ease;
   padding: 10px 20px;
   background-color: #1e40af;
-  border-radius: 20px;
+  border-radius: 9999px;
   border: none;
   display: flex;
   align-items: center;
@@ -647,59 +647,77 @@
   line-height: 1.6;
 }
 
-.snapshot-stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+.snapshot-stats-card {
+  display: flex;
   max-width: 1200px;
   margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1;
 }
 
-.snapshot-stat-card {
-  background: white;
-  border-radius: 16px;
+.snapshot-stat-section {
+  flex: 1;
   padding: 32px 24px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: all 0.3s ease;
+  align-items: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.snapshot-stat-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+.snapshot-stat-section:last-child {
+  border-right: none;
 }
 
-.snapshot-stat-dark {
-  background: #111827;
+.snapshot-stat-section-white {
+  background: #FFFFFF;
+}
+
+.snapshot-stat-section-dark {
+  background: #0A0A0A;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.snapshot-stat-section-light {
+  background: #FAF9F6;
 }
 
 .stat-number {
   font-family: 'Sora', sans-serif;
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 400;
-  color: #111827;
   line-height: 1.2;
   letter-spacing: -0.01em;
   margin-bottom: 8px;
 }
 
-.snapshot-stat-dark .stat-number {
-  color: white;
+.snapshot-stat-section-white .stat-number,
+.snapshot-stat-section-light .stat-number {
+  color: #111827;
+}
+
+.snapshot-stat-section-dark .stat-number {
+  color: #FFFFFF;
 }
 
 .stat-description {
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  color: #6B7280;
   line-height: 1.5;
 }
 
-.snapshot-stat-dark .stat-description {
-  color: rgba(255, 255, 255, 0.8);
+.snapshot-stat-section-white .stat-description,
+.snapshot-stat-section-light .stat-description {
+  color: #6B7280;
+}
+
+.snapshot-stat-section-dark .stat-description {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 /* Courses Section */
@@ -1132,13 +1150,22 @@
     text-align: center;
   }
 
-  .snapshot-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .snapshot-stats-card {
+    flex-direction: column;
   }
 
-  .snapshot-stat-card {
+  .snapshot-stat-section {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 28px 20px;
+  }
+
+  .snapshot-stat-section:last-child {
+    border-bottom: none;
+  }
+
+  .snapshot-stat-section-dark {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .courses-section {
@@ -2524,7 +2551,7 @@
   background-color: #2563EB;
   text-decoration: none;
   padding: 16px 32px;
-  border-radius: 12px;
+  border-radius: 9999px;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -2716,7 +2743,7 @@
   transition: all 0.2s ease;
   white-space: nowrap;
   padding: 10px 20px;
-  border-radius: 50px;
+  border-radius: 9999px;
   background: rgba(255, 255, 255, 0.05);
 }
 
@@ -2927,9 +2954,10 @@
   font-weight: 400;
   color: #FFFFFF;
   background-color: #111827;
+  border-radius: 9999px;
   text-decoration: none;
   padding: 16px 32px;
-  border-radius: 12px;
+  border-radius: 9999px;
   transition: all 0.2s ease;
   width: fit-content;
   margin-top: 8px;

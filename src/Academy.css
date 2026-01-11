@@ -200,10 +200,6 @@
     z-index: auto;
     overflow: visible;
   }
-
-  .mobile-menu-toggle {
-    display: none !important;
-  }
 }
 
 @keyframes fadeInUp {

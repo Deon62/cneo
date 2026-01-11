@@ -113,7 +113,6 @@ function App() {
             <li><a href="#academy" className="nav-link" data-section="academy">Academy</a></li>
             <li><a href="#events" className="nav-link" data-section="events">Events</a></li>
             <li><Link to="/community" className="nav-link" data-section="community">Community</Link></li>
-            <li><a href="#blogs" className="nav-link" data-section="blogs">Blogs</a></li>
             <li><a href="#contact" className="nav-link" data-section="contact">Contact Us</a></li>
           </ul>
           <Link to="/community" className="nav-join">

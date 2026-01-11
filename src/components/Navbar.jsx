@@ -108,7 +108,6 @@ function Navbar() {
           <li><Link to="/academy" className="nav-link" data-section="academy">Academy</Link></li>
           <li><Link to="/#events" className="nav-link" data-section="events">Events</Link></li>
           <li><Link to="/community" className="nav-link" data-section="community">Community</Link></li>
-          <li><Link to="/#blogs" className="nav-link" data-section="blogs">Blogs</Link></li>
           <li><Link to="/contact" className="nav-link" data-section="contact">Contact Us</Link></li>
         </ul>
         <Link to="/community" className="nav-join">

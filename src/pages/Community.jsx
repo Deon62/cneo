@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import learnSvg from '../assets/learn.svg'
 import impactSvg from '../assets/impact.svg'
 import communitySvg from '../assets/community.svg'
+import universitySvg from '../assets/university.svg'
 
 function Community() {
   return (
@@ -61,6 +62,49 @@ function Community() {
               </p>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Community Chapters Section */}
+      <section className="chapters-section">
+        <div className="chapters-container">
+          <div className="chapters-header">
+            <p className="chapters-label">Introducing</p>
+            <h2 className="chapters-title">Community Chapters</h2>
+            <p className="chapters-description">
+              We're building a network of campus chapters across universities, TVETs, and colleges throughout Africa. 
+              Join us in bringing blockchain education and innovation to educational institutions near you.
+            </p>
+          </div>
+          <div className="chapters-content">
+            <div className="chapters-image">
+              <img src={universitySvg} alt="University Chapters" />
+            </div>
+          </div>
+          <div className="chapters-stats-card">
+            <div className="stat-section stat-section-white">
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Ambassadors</div>
+            </div>
+            <div className="stat-section stat-section-dark">
+              <div className="stat-number">120+</div>
+              <div className="stat-label">Events Run</div>
+            </div>
+            <div className="stat-section stat-section-light">
+              <div className="stat-number">30+</div>
+              <div className="stat-label">Projects Supported</div>
+            </div>
+          </div>
+          <div className="chapters-cta-wrapper">
+            <div className="chapters-info-card">
+              <a href="#" className="chapters-cta-button">
+                Start a Chapter
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </section>

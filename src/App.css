@@ -2605,6 +2605,247 @@
 }
 
 /* Telegram Section */
+/* Community Chapters Section */
+.chapters-section {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 24px;
+  background-color: #F9FAFB;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.chapters-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.chapters-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.chapters-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #6B7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.chapters-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: #111827;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.chapters-description {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9375rem, 1.5vw, 1rem);
+  font-weight: 400;
+  color: #374151;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.chapters-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chapters-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chapters-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.chapters-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.chapters-info-card {
+  background: #0A0A0A;
+  border-radius: 20px;
+  padding: 12px 20px;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chapters-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.chapters-cta-button:hover {
+  color: rgba(255, 255, 255, 0.8);
+  gap: 12px;
+}
+
+.chapters-cta-button svg {
+  transition: transform 0.2s ease;
+}
+
+.chapters-cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+.chapters-stats-card {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-section {
+  flex: 1;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.stat-section:last-child {
+  border-right: none;
+}
+
+.stat-section-white {
+  background: #FFFFFF;
+}
+
+.stat-section-dark {
+  background: #0A0A0A;
+  flex: 1.3;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-section-light {
+  background: #FAF9F6;
+}
+
+.stat-section .stat-number {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.stat-section-white .stat-number,
+.stat-section-light .stat-number {
+  color: #111827;
+}
+
+.stat-section-dark .stat-number {
+  color: #FFFFFF;
+}
+
+.stat-section .stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.stat-section-white .stat-label,
+.stat-section-light .stat-label {
+  color: #6B7280;
+}
+
+.stat-section-dark .stat-label {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Responsive for Chapters Section */
+@media (max-width: 1024px) {
+  .chapters-content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .chapters-image {
+    order: 2;
+  }
+
+  .chapters-info {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .chapters-section {
+    padding: 80px 20px;
+  }
+
+  .chapters-stats {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chapters-section {
+    padding: 60px 16px;
+  }
+
+  .chapters-info-card {
+    padding: 32px 24px;
+  }
+
+  .chapter-stat-card {
+    padding: 32px 24px;
+  }
+}
+
 .telegram-section {
   position: relative;
   width: 100%;

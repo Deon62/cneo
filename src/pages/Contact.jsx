@@ -1,4 +1,4 @@
-import '../App.css'
+import '../Home.css'
 import './Contact.css'
 import Navbar from '../components/Navbar'
 import { useState } from 'react'

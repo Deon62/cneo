@@ -1,4 +1,4 @@
-import '../App.css'
+import '../Academy.css'
 import Navbar from '../components/Navbar'
 import podcastSvg from '../assets/podcast.svg'
 import socialSvg from '../assets/social.svg'

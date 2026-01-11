@@ -1,4 +1,4 @@
-import './App.css'
+import './Home.css'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import africaImage from './assets/africa.svg'

@@ -1255,10 +1255,6 @@
     justify-content: center;
   }
 
-  .hero-image-container {
-    order: -1;
-  }
-
   .hero-image {
     max-width: 100%;
   }
@@ -1401,10 +1397,6 @@
 
   .hero-ctas {
     justify-content: center;
-  }
-
-  .hero-image-container {
-    order: -1;
   }
 
   .hero-headline {

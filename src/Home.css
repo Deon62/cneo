@@ -632,11 +632,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
   min-height: 140px;
+  position: relative;
 }
 
-.snapshot-stat-section:last-child {
+/* Borders between stat sections */
+.snapshot-stat-section-white,
+.snapshot-stat-section-light {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.snapshot-stats-card > .animated-section-wrapper:last-child .snapshot-stat-section {
   border-right: none;
 }
 

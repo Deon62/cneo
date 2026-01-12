@@ -1,7 +1,9 @@
 import './Home.css'
+import './animations.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import AnimatedSection from './components/AnimatedSection'
 
 function App() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -66,152 +68,180 @@ function App() {
       {/* What is Chain Neo Section */}
       <section id="about" className="about-section">
         <div className="about-container">
-          <div className="about-content">
-            <span className="section-label">What is Chain Neo?</span>
-            <h2 className="about-title">What is Chain Neo?</h2>
-            <p className="about-description">
-              Chain Neo is a friendly blockchain community dedicated to building East Africa's next generation of blockchain builders. We believe in making blockchain technology accessible, approachable, and empowering for everyone.
-            </p>
-          </div>
+          <AnimatedSection animation="fadeInUp" delay={0}>
+            <div className="about-content">
+              <span className="section-label">What is Chain Neo?</span>
+              <h2 className="about-title">What is Chain Neo?</h2>
+              <p className="about-description">
+                Chain Neo is a friendly blockchain community dedicated to building East Africa's next generation of blockchain builders. We believe in making blockchain technology accessible, approachable, and empowering for everyone.
+              </p>
+            </div>
+          </AnimatedSection>
           <div className="about-cards">
-            <div className="about-card">
-              <span className="about-number">01</span>
-              <h3>Learn Blockchain</h3>
-              <p>Master the fundamentals and advanced concepts of blockchain technology through guided learning paths designed for all skill levels.</p>
-            </div>
-            <div className="about-card">
-              <span className="about-number">02</span>
-              <h3>Build Real Projects</h3>
-              <p>Apply your knowledge by creating real-world blockchain solutions and contributing to innovative projects that make a difference.</p>
-            </div>
-            <div className="about-card">
-              <span className="about-number">03</span>
-              <h3>Grow a Community</h3>
-              <p>Connect with fellow builders, share knowledge, and grow together in a supportive ecosystem that celebrates learning and collaboration.</p>
-            </div>
+            <AnimatedSection animation="fadeInUp" delay={100}>
+              <div className="about-card">
+                <span className="about-number">01</span>
+                <h3>Learn Blockchain</h3>
+                <p>Master the fundamentals and advanced concepts of blockchain technology through guided learning paths designed for all skill levels.</p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={200}>
+              <div className="about-card">
+                <span className="about-number">02</span>
+                <h3>Build Real Projects</h3>
+                <p>Apply your knowledge by creating real-world blockchain solutions and contributing to innovative projects that make a difference.</p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={300}>
+              <div className="about-card">
+                <span className="about-number">03</span>
+                <h3>Grow a Community</h3>
+                <p>Connect with fellow builders, share knowledge, and grow together in a supportive ecosystem that celebrates learning and collaboration.</p>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Programs & Opportunities Section */}
       <section id="how-it-works" className="how-it-works-section">
-        <div className="how-it-works-header">
-          <h2 className="how-it-works-title">Programs & Opportunities</h2>
-          <p className="how-it-works-description">
-            Explore our comprehensive programs designed to help you learn, build, and grow in the blockchain space.
-          </p>
-        </div>
+        <AnimatedSection animation="fadeInUp" delay={0}>
+          <div className="how-it-works-header">
+            <h2 className="how-it-works-title">Programs & Opportunities</h2>
+            <p className="how-it-works-description">
+              Explore our comprehensive programs designed to help you learn, build, and grow in the blockchain space.
+            </p>
+          </div>
+        </AnimatedSection>
         <div className="how-it-works-grid">
-          <Link to="/academy" className="how-it-works-card">
-            <div className="how-it-works-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <h3 className="how-it-works-card-title">Courses & Workshops</h3>
-            <p className="how-it-works-card-description">
-              Hands-on learning paths that give you practical blockchain skills you can apply immediately.
-            </p>
-          </Link>
+          <AnimatedSection animation="fadeInLeft" delay={100}>
+            <Link to="/academy" className="how-it-works-card">
+              <div className="how-it-works-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="how-it-works-card-title">Courses & Workshops</h3>
+              <p className="how-it-works-card-description">
+                Hands-on learning paths that give you practical blockchain skills you can apply immediately.
+              </p>
+            </Link>
+          </AnimatedSection>
 
-          <Link to="/events" className="how-it-works-card">
-            <div className="how-it-works-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M3.27002 6.96L12 12.01L20.73 6.96" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 22.08V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <h3 className="how-it-works-card-title">Events</h3>
-            <p className="how-it-works-card-description">
-              Collaborate with peers to solve real problems, build projects, and showcase your talent.
-            </p>
-          </Link>
+          <AnimatedSection animation="fadeInUp" delay={200}>
+            <Link to="/events" className="how-it-works-card">
+              <div className="how-it-works-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 16V8C20.9996 7.64928 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64928 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M3.27002 6.96L12 12.01L20.73 6.96" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M12 22.08V12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="how-it-works-card-title">Events</h3>
+              <p className="how-it-works-card-description">
+                Collaborate with peers to solve real problems, build projects, and showcase your talent.
+              </p>
+            </Link>
+          </AnimatedSection>
 
-          <Link to="/community" className="how-it-works-card">
-            <div className="how-it-works-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45768C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <h3 className="how-it-works-card-title">Community & Mentorship</h3>
-            <p className="how-it-works-card-description">
-              Join study groups, connect with mentors, and participate in discussions to grow as a builder.
-            </p>
-          </Link>
+          <AnimatedSection animation="fadeInRight" delay={300}>
+            <Link to="/community" className="how-it-works-card">
+              <div className="how-it-works-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M23 21V19C22.9993 18.1137 22.7044 17.2528 22.1614 16.5523C21.6184 15.8519 20.8581 15.3516 20 15.13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89317 18.7122 8.75608 18.1676 9.45768C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="how-it-works-card-title">Community & Mentorship</h3>
+              <p className="how-it-works-card-description">
+                Join study groups, connect with mentors, and participate in discussions to grow as a builder.
+              </p>
+            </Link>
+          </AnimatedSection>
 
         </div>
       </section>
 
       {/* Community Snapshot Section */}
       <section id="community-snapshot" className="community-snapshot-section">
-        <div className="community-snapshot-header">
-          <p className="community-snapshot-label">Community Snapshot</p>
-          <h2 className="community-snapshot-title">Trust & legitimacy</h2>
-          <p className="community-snapshot-description">
-            Building East Africa's blockchain future with a growing community of builders, learners, and innovators committed to excellence.
-          </p>
-        </div>
+        <AnimatedSection animation="fadeInUp" delay={0}>
+          <div className="community-snapshot-header">
+            <p className="community-snapshot-label">Community Snapshot</p>
+            <h2 className="community-snapshot-title">Trust & legitimacy</h2>
+            <p className="community-snapshot-description">
+              Building East Africa's blockchain future with a growing community of builders, learners, and innovators committed to excellence.
+            </p>
+          </div>
+        </AnimatedSection>
         <div className="snapshot-stats-card">
-          <div className="snapshot-stat-section snapshot-stat-section-white">
-            <div className="stat-number">30+</div>
-            <div className="stat-description">Active members building together</div>
-          </div>
-          <div className="snapshot-stat-section snapshot-stat-section-white">
-            <div className="stat-number">1</div>
-            <div className="stat-description">Upcoming event</div>
-          </div>
-          <div className="snapshot-stat-section snapshot-stat-section-dark">
-            <div className="stat-number">1</div>
-            <div className="stat-description">University</div>
-          </div>
+          <AnimatedSection animation="scaleIn" delay={100}>
+            <div className="snapshot-stat-section snapshot-stat-section-white">
+              <div className="stat-number">30+</div>
+              <div className="stat-description">Active members building together</div>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="scaleIn" delay={200}>
+            <div className="snapshot-stat-section snapshot-stat-section-light">
+              <div className="stat-number">1</div>
+              <div className="stat-description">Upcoming event</div>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="scaleIn" delay={300}>
+            <div className="snapshot-stat-section snapshot-stat-section-dark">
+              <div className="stat-number">1</div>
+              <div className="stat-description">University</div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="faq-section">
-        <div className="faq-content">
-          <h2 className="faq-title">Frequently Asked Questions</h2>
-          <div className="faq-list">
-            {faqs.map((faq) => (
-              <div key={faq.id} className={`faq-item ${openFaq === faq.id ? 'faq-open' : ''}`}>
-                <button 
-                  className="faq-question"
-                  onClick={() => toggleFaq(faq.id)}
-                  aria-expanded={openFaq === faq.id}
-                >
-                  <span>{faq.question}</span>
-                  <svg 
-                    className="faq-icon"
-                    width="20" 
-                    height="20" 
-                    viewBox="0 0 24 24" 
-                    fill="none" 
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path 
-                      d="M12 5V19M5 12H19" 
-                      stroke="currentColor" 
-                      strokeWidth="2" 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div className="faq-answer-wrapper">
-                  <div className="faq-answer">
-                    <p>{faq.answer}</p>
+        <AnimatedSection animation="fadeInUp" delay={0}>
+          <div className="faq-content">
+            <h2 className="faq-title">Frequently Asked Questions</h2>
+            <div className="faq-list">
+              {faqs.map((faq, index) => (
+                <AnimatedSection key={faq.id} animation="fadeInUp" delay={index * 50}>
+                  <div className={`faq-item ${openFaq === faq.id ? 'faq-open' : ''}`}>
+                    <button 
+                      className="faq-question"
+                      onClick={() => toggleFaq(faq.id)}
+                      aria-expanded={openFaq === faq.id}
+                    >
+                      <span>{faq.question}</span>
+                      <svg 
+                        className="faq-icon"
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path 
+                          d="M12 5V19M5 12H19" 
+                          stroke="currentColor" 
+                          strokeWidth="2" 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </button>
+                    <div className="faq-answer-wrapper">
+                      <div className="faq-answer">
+                        <p>{faq.answer}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                </AnimatedSection>
+              ))}
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Footer */}

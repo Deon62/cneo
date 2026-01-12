@@ -198,6 +198,38 @@ function Community() {
         </div>
       </section>
 
+      {/* Our Growth Section */}
+      <section className="growth-section">
+        <div className="growth-container">
+          <div className="growth-header">
+            <p className="growth-label">Our Growth</p>
+            <h2 className="growth-title">Join the Movement</h2>
+            <p className="growth-description">
+              Connect with us across all platforms and be part of East Africa's fastest-growing blockchain community.
+            </p>
+          </div>
+          <div className="growth-stats-card">
+            <div className="growth-stat-section growth-stat-section-white">
+              <div className="growth-stat-number">0</div>
+              <div className="growth-stat-label">Telegram Members</div>
+            </div>
+            <div className="growth-stat-section growth-stat-section-dark">
+              <div className="growth-stat-number">0</div>
+              <div className="growth-stat-label">Twitter Followers</div>
+            </div>
+            <div className="growth-stat-section growth-stat-section-light">
+              <div className="growth-stat-number">0</div>
+              <div className="growth-stat-label">All Platforms Combined</div>
+            </div>
+            <div className="growth-stat-section growth-stat-section-accent">
+              <div className="growth-stat-number">0%</div>
+              <div className="growth-stat-label">Growing Rate</div>
+            </div>
+          </div>
+          <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
+        </div>
+      </section>
+
       {/* Partner Section */}
       <section className="partner-section">
         <div className="partner-container">

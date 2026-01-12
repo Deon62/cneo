@@ -1,6 +1,8 @@
 import '../Academy.css'
 import '../Home.css'
+import '../animations.css'
 import Navbar from '../components/Navbar'
+import AnimatedSection from '../components/AnimatedSection'
 import academySvg from '../assets/academy.svg'
 import readSvg from '../assets/read.svg'
 import { Link } from 'react-router-dom'
@@ -72,73 +74,87 @@ function Academy() {
       {/* Header Section */}
       <section className="academy-header">
         <div className="academy-header-container">
-          <div className="academy-header-image">
-            <img src={academySvg} alt="Academy Illustration" />
-          </div>
-          <div className="academy-header-content">
-            <h1 className="academy-header-title">Academy</h1>
-            <p className="academy-header-subtitle">
-              Learn blockchain technology through comprehensive courses, podcasts, videos, and resources. 
-              Build your skills and advance your career in Web3.
-            </p>
-          </div>
+          <AnimatedSection animation="fadeInLeft" delay={0}>
+            <div className="academy-header-image">
+              <img src={academySvg} alt="Academy Illustration" />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeInRight" delay={200}>
+            <div className="academy-header-content">
+              <h1 className="academy-header-title">Academy</h1>
+              <p className="academy-header-subtitle">
+                Learn blockchain technology through comprehensive courses, podcasts, videos, and resources. 
+                Build your skills and advance your career in Web3.
+              </p>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Courses Section */}
       <section className="courses-intro-section">
         <div className="courses-intro-container">
-          <div className="courses-intro-image">
-            <img src={readSvg} alt="Courses illustration" />
-          </div>
-          <div className="courses-intro-content">
-            <span className="section-label">Our Courses</span>
-            <h2 className="courses-intro-title">Comprehensive Blockchain Education</h2>
-            <p className="courses-intro-description">
-              From blockchain fundamentals to advanced smart contract development, our courses are designed to take you from beginner to builder. Learn at your own pace with hands-on projects and real-world examples.
-            </p>
-            <Link to="/learning" className="courses-cta-button">
-              Start Learning
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </div>
+          <AnimatedSection animation="fadeInRight" delay={0}>
+            <div className="courses-intro-image">
+              <img src={readSvg} alt="Courses illustration" />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeInLeft" delay={100}>
+            <div className="courses-intro-content">
+              <span className="section-label">Our Courses</span>
+              <h2 className="courses-intro-title">Comprehensive Blockchain Education</h2>
+              <p className="courses-intro-description">
+                From blockchain fundamentals to advanced smart contract development, our courses are designed to take you from beginner to builder. Learn at your own pace with hands-on projects and real-world examples.
+              </p>
+              <Link to="/learning" className="courses-cta-button">
+                Start Learning
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Developer Blogs Section */}
       <section className="developer-blogs-section">
         <div className="developer-blogs-container">
-          <div className="developer-blogs-header">
-            <p className="developer-blogs-label">Technical Insights</p>
-            <h2 className="developer-blogs-title">Academy Notes</h2>
-            <p className="developer-blogs-description">
-              In-depth technical articles, tutorials, and insights from our developer community covering blockchain development, smart contracts, and Web3 technologies.
-            </p>
-          </div>
+          <AnimatedSection animation="fadeInUp" delay={0}>
+            <div className="developer-blogs-header">
+              <p className="developer-blogs-label">Technical Insights</p>
+              <h2 className="developer-blogs-title">Academy Notes</h2>
+              <p className="developer-blogs-description">
+                In-depth technical articles, tutorials, and insights from our developer community covering blockchain development, smart contracts, and Web3 technologies.
+              </p>
+            </div>
+          </AnimatedSection>
           <div className="blogs-grid">
             {blogs.slice(0, 3).map((blog, index) => (
-              <Link to={`/blog/${blog.id}`} key={blog.id} className="blog-card" data-index={index}>
-                <div className="blog-image">
-                  <img src={blog.image} alt={blog.title} className="blog-image-img" />
-                </div>
-                <div className="blog-meta">
-                  <span className="blog-date-author">{blog.date} • {blog.author}</span>
-                </div>
-                <h3 className="blog-title">{blog.title}</h3>
-                <p className="blog-excerpt">{blog.excerpt}</p>
-              </Link>
+              <AnimatedSection key={blog.id} animation="fadeInUp" delay={100 + (index * 100)}>
+                <Link to={`/blog/${blog.id}`} className="blog-card" data-index={index}>
+                  <div className="blog-image">
+                    <img src={blog.image} alt={blog.title} className="blog-image-img" />
+                  </div>
+                  <div className="blog-meta">
+                    <span className="blog-date-author">{blog.date} • {blog.author}</span>
+                  </div>
+                  <h3 className="blog-title">{blog.title}</h3>
+                  <p className="blog-excerpt">{blog.excerpt}</p>
+                </Link>
+              </AnimatedSection>
             ))}
           </div>
-          <div className="blogs-view-all-wrapper">
-            <Link to="/blog" className="blogs-view-all-btn">
-              View All Blogs
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
-          </div>
+          <AnimatedSection animation="fadeInUp" delay={400}>
+            <div className="blogs-view-all-wrapper">
+              <Link to="/blog" className="blogs-view-all-btn">
+                View All Blogs
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

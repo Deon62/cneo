@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: 120px 24px;
-  background-color: #F9FAFB;
+  background-color: #EEE9DA;
   overflow: hidden;
   margin: 0;
   box-sizing: border-box;
@@ -40,7 +40,7 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(ellipse 100% 85% at 50% 50%, transparent 50%, rgba(249, 250, 251, 0.5) 70%, rgba(249, 250, 251, 0.85) 85%, #F9FAFB 100%);
+    radial-gradient(ellipse 100% 85% at 50% 50%, transparent 50%, rgba(238, 233, 218, 0.5) 70%, rgba(238, 233, 218, 0.85) 85%, #EEE9DA 100%);
   pointer-events: none;
 }
 

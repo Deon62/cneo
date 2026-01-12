@@ -854,28 +854,20 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.9375rem;
   font-weight: 400;
-  color: #2563EB;
+  color: #9CA3AF;
   background: transparent;
   border: none;
   border-radius: 0;
   padding: 10px 0;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  cursor: not-allowed;
+  transition: none;
   margin-top: auto;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-}
-
-.course-enroll-btn:hover {
-  color: #1e40af;
-  transform: translateY(-2px);
-}
-
-.course-enroll-btn:hover .enroll-arrow {
-  transform: translate(-2px, -2px);
+  pointer-events: none;
 }
 
 .enroll-arrow {

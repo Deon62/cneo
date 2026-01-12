@@ -249,6 +249,26 @@ function Community() {
         </div>
       </section>
 
+      {/* Our Partners Section */}
+      <section className="partners-section">
+        <div className="partners-container">
+          <div className="partners-header">
+            <h2 className="partners-title">Our Partners</h2>
+            <p className="partners-description">
+              We wouldn't have gotten this far without our Partners. Our partners are our backbone, providing much-needed support to continue to support East Africa.
+            </p>
+          </div>
+          <div className="partners-grid">
+            <div className="partner-card"></div>
+            <div className="partner-card"></div>
+            <div className="partner-card"></div>
+            <div className="partner-card"></div>
+            <div className="partner-card"></div>
+            <div className="partner-card"></div>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Section */}
       <section className="newsletter-section">
         <div className="newsletter-container">

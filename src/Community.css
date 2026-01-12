@@ -599,13 +599,14 @@
 }
 
 .partner-container {
-  max-width: 800px;
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
 
 .partner-content {
-  text-align: center;
+  text-align: left;
+  max-width: 700px;
 }
 
 .partner-label {
@@ -636,9 +637,6 @@
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.7;
   margin-bottom: 40px;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .partner-button {
@@ -669,6 +667,115 @@
 
 .partner-button:hover svg {
   transform: translateX(4px);
+}
+
+/* Our Partners Section */
+.partners-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 24px;
+  background-color: #0A0A0A;
+  overflow: hidden;
+}
+
+.partners-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.partners-header {
+  text-align: left;
+  margin-bottom: 64px;
+  max-width: 700px;
+}
+
+.partners-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.partners-description {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(0.9375rem, 1.5vw, 1rem);
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+}
+
+.partner-card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  aspect-ratio: 1;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Partners Section Responsive */
+@media (max-width: 1024px) {
+  .partners-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .partners-section {
+    padding: 80px 20px;
+  }
+
+  .partners-header {
+    margin-bottom: 48px;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+  }
+
+  .partner-card {
+    min-height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-section {
+    padding: 60px 16px;
+  }
+
+  .partners-header {
+    margin-bottom: 40px;
+  }
+
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .partner-card {
+    min-height: 120px;
+  }
 }
 
 /* Partner Section Responsive */

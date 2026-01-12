@@ -15,6 +15,16 @@ function Contact() {
     message: ''
   })
 
+  const [formErrors, setFormErrors] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  })
+
+  const [formSuccess, setFormSuccess] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   const [newsletterEmail, setNewsletterEmail] = useState('')
   const [newsletterFilters, setNewsletterFilters] = useState({
     developers: false,
@@ -25,24 +35,98 @@ function Contact() {
   const [newsletterError, setNewsletterError] = useState('')
 
   const handleChange = (e) => {
+    const { name, value } = e.target
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     })
+    // Clear error for this field when user types
+    if (formErrors[name]) {
+      setFormErrors({
+        ...formErrors,
+        [name]: ''
+      })
+    }
+  }
+
+  const validateForm = () => {
+    const errors = {}
+    let isValid = true
+
+    // Validate name
+    if (!formData.name.trim()) {
+      errors.name = 'Name is required'
+      isValid = false
+    }
+
+    // Validate email
+    if (!formData.email.trim()) {
+      errors.email = 'Email is required'
+      isValid = false
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = 'Please enter a valid email address'
+      isValid = false
+    }
+
+    // Validate subject
+    if (!formData.subject.trim()) {
+      errors.subject = 'Subject is required'
+      isValid = false
+    }
+
+    // Validate message
+    if (!formData.message.trim()) {
+      errors.message = 'Message is required'
+      isValid = false
+    } else if (formData.message.trim().length < 10) {
+      errors.message = 'Message must be at least 10 characters long'
+      isValid = false
+    }
+
+    setFormErrors(errors)
+    return isValid
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({
+    
+    // Clear previous errors and success
+    setFormErrors({
       name: '',
       email: '',
       subject: '',
       message: ''
     })
-    alert('Thank you for your message! We will get back to you soon.')
+    setFormSuccess(false)
+
+    // Validate form
+    if (!validateForm()) {
+      return
+    }
+
+    setIsSubmitting(true)
+
+    // Simulate form submission
+    setTimeout(() => {
+      console.log('Form submitted:', formData)
+      
+      // Show success message
+      setFormSuccess(true)
+      setIsSubmitting(false)
+      
+      // Reset form after showing success
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      })
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setFormSuccess(false)
+      }, 5000)
+    }, 1000)
   }
 
   const handleNewsletterSubmit = (e) => {
@@ -132,68 +216,99 @@ function Contact() {
           </AnimatedSection>
           <AnimatedSection animation="fadeInUp" delay={100}>
             <div className="contact-form-wrapper">
-              <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name" className="form-label">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="form-input"
-                    placeholder="Your name"
-                    required
-                  />
+              {!formSuccess ? (
+                <form className="contact-form" onSubmit={handleSubmit}>
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label htmlFor="name" className="form-label">Name</label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className={`form-input ${formErrors.name ? 'form-input-error' : ''}`}
+                        placeholder="Your name"
+                      />
+                      {formErrors.name && (
+                        <span className="form-error">{formErrors.name}</span>
+                      )}
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="email" className="form-label">Email</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={`form-input ${formErrors.email ? 'form-input-error' : ''}`}
+                        placeholder="your.email@example.com"
+                      />
+                      {formErrors.email && (
+                        <span className="form-error">{formErrors.email}</span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="subject" className="form-label">Subject</label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      className={`form-input ${formErrors.subject ? 'form-input-error' : ''}`}
+                      placeholder="What is this regarding?"
+                    />
+                    {formErrors.subject && (
+                      <span className="form-error">{formErrors.subject}</span>
+                    )}
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="message" className="form-label">Message</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      className={`form-textarea ${formErrors.message ? 'form-input-error' : ''}`}
+                      placeholder="Tell us more about your inquiry..."
+                      rows="4"
+                    ></textarea>
+                    {formErrors.message && (
+                      <span className="form-error">{formErrors.message}</span>
+                    )}
+                  </div>
+                  <button type="submit" className="contact-submit-btn" disabled={isSubmitting}>
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {!isSubmitting && (
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    )}
+                  </button>
+                </form>
+              ) : (
+                <div className="contact-form-success">
+                  <div className="contact-success-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 11.08V12C21.9988 14.1564 21.3005 16.2547 20.0093 17.9818C18.7182 19.7088 16.9033 20.9725 14.8354 21.5839C12.7674 22.1953 10.5573 22.1219 8.53447 21.3746C6.51168 20.6273 4.78465 19.2461 3.61096 17.4371C2.43727 15.628 1.87979 13.4881 2.02168 11.3363C2.16356 9.18455 2.99721 7.13631 4.39828 5.49706C5.79935 3.85781 7.69279 2.71537 9.79619 2.24013C11.8996 1.7649 14.1003 1.98232 16.07 2.85999" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <h3 className="contact-success-title">Message Sent!</h3>
+                  <p className="contact-success-message">
+                    Thank you for your message. We've received it and will get back to you as soon as possible.
+                  </p>
+                  <button 
+                    className="contact-submit-btn"
+                    onClick={() => setFormSuccess(false)}
+                  >
+                    Send Another Message
+                  </button>
                 </div>
-                <div className="form-group">
-                  <label htmlFor="email" className="form-label">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="form-input"
-                    placeholder="your.email@example.com"
-                    required
-                  />
-                </div>
-              </div>
-              <div className="form-group">
-                <label htmlFor="subject" className="form-label">Subject</label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="form-input"
-                  placeholder="What is this regarding?"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="message" className="form-label">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="form-textarea"
-                  placeholder="Tell us more about your inquiry..."
-                  rows="4"
-                  required
-                ></textarea>
-              </div>
-              <button type="submit" className="contact-submit-btn">
-                Send Message
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-              </form>
+              )}
             </div>
           </AnimatedSection>
         </div>

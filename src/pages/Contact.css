@@ -210,6 +210,8 @@
   padding: 10px 14px;
   outline: none;
   transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-input:focus,
@@ -217,6 +219,26 @@
   border-color: #2563EB;
   background: #FFFFFF;
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-input-error {
+  border-color: #DC2626 !important;
+  background: #FEF2F2 !important;
+}
+
+.form-input-error:focus {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.form-error {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #DC2626;
+  margin-top: 6px;
+  line-height: 1.4;
 }
 
 .form-textarea {
@@ -260,6 +282,82 @@
 
 .contact-submit-btn:hover svg {
   transform: translateX(4px);
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.contact-submit-btn:disabled:hover {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.form-input-error {
+  border-color: #DC2626 !important;
+  background: #FEF2F2 !important;
+}
+
+.form-input-error:focus {
+  border-color: #DC2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1) !important;
+}
+
+.form-error {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #DC2626;
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* Contact Form Success Message */
+.contact-form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.contact-success-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #10B981;
+  background-color: #ECFDF5;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+.contact-success-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.contact-success-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+  color: #111827;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.contact-success-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+  max-width: 500px;
 }
 
 /* Contact Info Section */

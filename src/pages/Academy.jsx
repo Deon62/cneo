@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import podcastSvg from '../assets/podcast.svg'
 import socialSvg from '../assets/social.svg'
 import videoSvg from '../assets/video.svg'
+import academySvg from '../assets/academy.svg'
 import { useRef } from 'react'
 
 function Academy() {
@@ -30,6 +31,9 @@ function Academy() {
       {/* Header Section */}
       <section className="academy-header">
         <div className="academy-header-container">
+          <div className="academy-header-image">
+            <img src={academySvg} alt="Academy Illustration" />
+          </div>
           <div className="academy-header-content">
             <h1 className="academy-header-title">Academy</h1>
             <p className="academy-header-subtitle">

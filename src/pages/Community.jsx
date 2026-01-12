@@ -4,6 +4,7 @@ import learnSvg from '../assets/learn.svg'
 import impactSvg from '../assets/impact.svg'
 import communitySvg from '../assets/community.svg'
 import universitySvg from '../assets/university.svg'
+import communityHeaderSvg from '../assets/community1.svg'
 
 function Community() {
   return (
@@ -13,6 +14,9 @@ function Community() {
       {/* Header Section */}
       <section className="community-header">
         <div className="community-header-container">
+          <div className="community-header-image">
+            <img src={communityHeaderSvg} alt="Community Illustration" />
+          </div>
           <div className="community-header-content">
             <h1 className="community-header-title">Our Community</h1>
             <p className="community-header-subtitle">

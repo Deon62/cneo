@@ -2,6 +2,7 @@ import '../Home.css'
 import './Events.css'
 import Navbar from '../components/Navbar'
 import { useState } from 'react'
+import eventsSvg from '../assets/events.svg'
 
 function Events() {
   const [email, setEmail] = useState('')
@@ -26,6 +27,9 @@ function Events() {
               Join us for workshops, hackathons, meetups, and conferences designed to help you learn, 
               build, and connect with the blockchain community across Africa.
             </p>
+          </div>
+          <div className="events-header-image">
+            <img src={eventsSvg} alt="Events Illustration" />
           </div>
         </div>
       </section>

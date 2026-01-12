@@ -1047,11 +1047,6 @@
 }
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
-    top: 12px;
-    padding: 0 12px;
-  }
-
   .hero {
     min-height: 100vh;
     padding: 120px 20px 60px;
@@ -1195,11 +1190,6 @@
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    top: 8px;
-    padding: 0 8px;
-  }
-
   .hero-container {
     grid-template-columns: 1fr;
     gap: 32px;

@@ -17,7 +17,7 @@ function App() {
     {
       id: 2,
       question: "How do I join Chain Neo?",
-      answer: "You can join Chain Neo by clicking the 'Join the Community' button on our homepage. We welcome builders, developers, learners, and anyone interested in blockchain technology. Membership is free and open to all."
+      answer: "You can explore our community by clicking the 'Explore Community' button on our homepage. We welcome builders, developers, learners, and anyone interested in blockchain technology. No account registration required - just explore and engage!"
     },
     {
       id: 3,
@@ -58,8 +58,7 @@ function App() {
               A friendly community learning, building, and growing with blockchain.
             </p>
             <div className="hero-ctas">
-              <button className="btn btn-primary">Join the Community</button>
-              <button className="btn btn-secondary">Explore Programs</button>
+              <Link to="/community" className="btn btn-primary">Explore Community</Link>
             </div>
           </div>
         </div>

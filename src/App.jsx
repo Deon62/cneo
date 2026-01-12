@@ -38,6 +38,16 @@ function App() {
       id: 6,
       question: "How can I get involved in projects?",
       answer: "Once you're part of the community, you can join ongoing projects, propose new ideas, or collaborate with other members. We regularly share project opportunities through our community channels and events."
+    },
+    {
+      id: 7,
+      question: "How can I start a Chain Neo chapter?",
+      answer: "We're building a network of campus chapters across universities, TVETs, and colleges throughout East Africa. If you're a builder, organizer, or leader ready to grow blockchain education at your institution, you can apply to become a Chain Neo Ambassador and lead a local chapter. Visit our Community page and click 'Start a Chapter' to learn more and apply."
+    },
+    {
+      id: 8,
+      question: "How can my organization partner with or sponsor Chain Neo?",
+      answer: "Chain Neo is opening collaboration slots for Web3 protocols, universities, and organizations interested in building blockchain talent across East Africa. If you're interested in partnering with us for developer onboarding, community activation, campus workshops, hackathons, or talent discovery, visit our Community page and click 'Start a Partner Conversation' to learn more about collaboration opportunities."
     }
   ]
 

@@ -106,6 +106,16 @@ function Navbar() {
           link.classList.remove('active')
         }
       })
+    } else if (location.pathname === '/about') {
+      // On about page, mark About Us link as active
+      navLinks.forEach((link) => {
+        const linkSection = link.getAttribute('data-section')
+        if (linkSection === 'about') {
+          link.classList.add('active')
+        } else {
+          link.classList.remove('active')
+        }
+      })
     } else if (location.pathname === '/') {
       // On home page, mark Home link as active by default, then use scroll-based states
       navLinks.forEach((link) => {
@@ -148,7 +158,7 @@ function Navbar() {
         <div className={`navbar-menu ${isMenuOpen ? 'menu-open' : ''}`}>
           <ul className="navbar-links">
             <li><Link to="/" className="nav-link" data-section="home" onClick={closeMenu}>Home</Link></li>
-            <li><Link to="/#about" className="nav-link" data-section="about" onClick={closeMenu}>About Us</Link></li>
+            <li><Link to="/about" className="nav-link" data-section="about" onClick={closeMenu}>About Us</Link></li>
             <li><Link to="/academy" className="nav-link" data-section="academy" onClick={closeMenu}>Academy</Link></li>
             <li><Link to="/events" className="nav-link" data-section="events" onClick={closeMenu}>Events</Link></li>
             <li><Link to="/community" className="nav-link" data-section="community" onClick={closeMenu}>Community</Link></li>

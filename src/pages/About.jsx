@@ -147,6 +147,22 @@ function About() {
         </div>
       </section>
 
+      {/* Team Section */}
+      <section className="team-section">
+        <div className="team-container">
+          <div className="team-header">
+            <span className="section-label">Our Team</span>
+            <h2 className="team-title">The People Behind the Mission</h2>
+            <p className="team-description">
+              A passionate group of builders, educators, and dreamers committed to empowering the next generation of African blockchain talent.
+            </p>
+          </div>
+          <div className="team-empty-state-simple">
+            <p className="team-coming-soon">Team profiles coming soon</p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="about-cta-section">
         <div className="about-cta-container">

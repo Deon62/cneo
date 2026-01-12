@@ -138,6 +138,25 @@ function Community() {
         </div>
       </section>
 
+      {/* Partner Section */}
+      <section className="partner-section">
+        <div className="partner-container">
+          <div className="partner-content">
+            <span className="partner-label">Collaborate With Us</span>
+            <h2 className="partner-title">Let's Build Together</h2>
+            <p className="partner-description">
+              We're looking for organizations, protocols, and companies who share our vision of empowering African youth in blockchain. Whether you're a Web3 project seeking local talent, an educator wanting to expand your reach, or a business looking to support the next generation of builders—let's connect.
+            </p>
+            <a href="/contact" className="partner-button">
+              Become a Partner
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter Section */}
       <section className="newsletter-section">
         <div className="newsletter-container">

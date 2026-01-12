@@ -519,6 +519,77 @@
   margin-left: auto;
 }
 
+/* Team Section */
+.team-section {
+  position: relative;
+  width: 100%;
+  padding: 120px 24px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+.team-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.team-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.team-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 400;
+  color: #111827;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.team-description {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  font-weight: 400;
+  color: #6B7280;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.team-empty-state-simple {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.team-coming-soon {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #9CA3AF;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Team Section Responsive */
+@media (max-width: 768px) {
+  .team-section {
+    padding: 80px 20px;
+  }
+
+  .team-header {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-section {
+    padding: 60px 16px;
+  }
+}
+
 /* CTA Section */
 .about-cta-section {
   background: #F0F7FF;
@@ -755,6 +826,7 @@
   .vision-section,
   .story-section,
   .values-section,
+  .team-section,
   .about-cta-section {
     padding: 80px 20px;
   }
@@ -830,6 +902,7 @@
   .vision-section,
   .story-section,
   .values-section,
+  .team-section,
   .about-cta-section {
     padding: 60px 16px;
   }

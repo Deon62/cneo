@@ -563,6 +563,7 @@
   padding: 120px 24px;
   background-color: #FFFFFF;
   overflow: hidden;
+  display: none; /* Hidden for now, will be added later */
 }
 
 .team-container {

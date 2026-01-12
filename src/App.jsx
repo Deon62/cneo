@@ -2,7 +2,6 @@ import './Home.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import BlockchainNetworkIllustration from './components/BlockchainNetworkIllustration'
 
 function App() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -60,9 +59,6 @@ function App() {
               <button className="btn btn-primary">Join the Community</button>
               <button className="btn btn-secondary">Explore Programs</button>
             </div>
-          </div>
-          <div className="hero-image-container">
-            <BlockchainNetworkIllustration />
           </div>
         </div>
       </section>

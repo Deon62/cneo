@@ -93,7 +93,7 @@ function Community() {
         <div className="community-values-container">
           <h2 className="section-title">Why Join Our Community</h2>
           <p className="community-values-intro">
-            We're more than just a community—we're a movement dedicated to empowering East Africa's blockchain ecosystem 
+            We're more than just a community we're a movement dedicated to empowering East Africa's blockchain ecosystem 
             through collaboration, education, and innovation.
           </p>
           <div className="community-values-grid">
@@ -113,7 +113,7 @@ function Community() {
               </div>
               <h3 className="value-title">Build Connections</h3>
               <p className="value-description">
-                Connect with like-minded builders, developers, and entrepreneurs. Network with industry leaders and find your next collaborator.
+                Connect with like minded builders, developers, and entrepreneurs. Network with industry leaders and find your next collaborator.
               </p>
             </div>
 
@@ -123,7 +123,7 @@ function Community() {
               </div>
               <h3 className="value-title">Create Impact</h3>
               <p className="value-description">
-                Work on real-world projects that solve problems and create value. Contribute to East Africa's blockchain transformation.
+                Work on real world projects that solve problems and create value. Contribute to East Africa's blockchain transformation.
               </p>
             </div>
 
@@ -134,17 +134,25 @@ function Community() {
       {/* Community Chapters Section */}
       <section className="chapters-section">
         <div className="chapters-container">
-          <div className="chapters-header">
-            <p className="chapters-label">Introducing</p>
-            <h2 className="chapters-title">Community Chapters</h2>
-            <p className="chapters-description">
-              We're building a network of campus chapters across universities, TVETs, and colleges throughout East Africa. 
-              Join us in bringing blockchain education and innovation to educational institutions near you.
-            </p>
-          </div>
           <div className="chapters-content">
             <div className="chapters-image">
               <img src={universitySvg} alt="University Chapters" />
+            </div>
+            <div className="chapters-header">
+              <p className="chapters-label">Introducing</p>
+              <h2 className="chapters-title">Community Chapters</h2>
+              <p className="chapters-description">
+                We're building a network of campus chapters across universities, TVETs, and colleges throughout East Africa. 
+                Join us in bringing blockchain education and innovation to educational institutions near you.
+              </p>
+              <div className="chapters-cta-wrapper">
+                <a href="#" className="chapters-cta-button">
+                  Start a Chapter
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
           <div className="chapters-stats-card">
@@ -162,14 +170,6 @@ function Community() {
             </div>
           </div>
           <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
-          <div className="chapters-cta-wrapper">
-            <a href="#" className="chapters-cta-button">
-              Start a Chapter
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-          </div>
         </div>
       </section>
 

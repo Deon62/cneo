@@ -3,6 +3,7 @@ import './Contact.css'
 import Navbar from '../components/Navbar'
 import { useState } from 'react'
 import contactImage from '../assets/contact.svg'
+import emailSvg from '../assets/email.svg'
 import { Link } from 'react-router-dom'
 
 function Contact() {
@@ -11,6 +12,13 @@ function Contact() {
     email: '',
     subject: '',
     message: ''
+  })
+
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterFilters, setNewsletterFilters] = useState({
+    developers: false,
+    general: false,
+    events: false
   })
 
   const handleChange = (e) => {
@@ -32,6 +40,25 @@ function Contact() {
       message: ''
     })
     alert('Thank you for your message! We will get back to you soon.')
+  }
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault()
+    console.log('Newsletter subscription:', { email: newsletterEmail, filters: newsletterFilters })
+    alert('Thank you for subscribing! We\'ll send you updates based on your preferences.')
+    setNewsletterEmail('')
+    setNewsletterFilters({
+      developers: false,
+      general: false,
+      events: false
+    })
+  }
+
+  const handleFilterChange = (filter) => {
+    setNewsletterFilters({
+      ...newsletterFilters,
+      [filter]: !newsletterFilters[filter]
+    })
   }
 
   return (
@@ -62,6 +89,9 @@ function Contact() {
             <p className="contact-form-description">
               Fill out the form below and we'll get back to you as soon as possible.
             </p>
+            <div className="contact-form-image">
+              <img src={emailSvg} alt="Email illustration" />
+            </div>
           </div>
           <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit}>
@@ -121,7 +151,7 @@ function Contact() {
               </div>
               <button type="submit" className="contact-submit-btn">
                 Send Message
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
@@ -201,29 +231,70 @@ function Contact() {
       <section className="newsletter-section">
         <div className="newsletter-container">
           <div className="newsletter-content">
-            <h2 className="newsletter-title">Stay in the Loop</h2>
-            <p className="newsletter-description">
-              Get the latest updates on blockchain education, community events, and opportunities delivered straight to your inbox.
-            </p>
-            <form className="newsletter-form">
-              <div className="newsletter-input-wrapper">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email address" 
-                  className="newsletter-input"
-                  required
-                />
+            <div className="newsletter-left">
+              <h2 className="newsletter-title">The Newsletter you want to read</h2>
+              <p className="newsletter-description">
+                Get the latest updates on blockchain education, community events, and opportunities delivered straight to your inbox.
+              </p>
+            </div>
+            <div className="newsletter-right">
+              <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+                <div className="newsletter-filters">
+                  <label className="newsletter-checkbox-label">
+                    <input 
+                      type="checkbox" 
+                      checked={newsletterFilters.developers}
+                      onChange={() => handleFilterChange('developers')}
+                      className="newsletter-checkbox"
+                    />
+                    <div className="checkbox-content">
+                      <span className="checkbox-title">Developers Newsletter</span>
+                      <span className="checkbox-note">Technical tutorials, code snippets, and dev resources</span>
+                    </div>
+                  </label>
+                  <label className="newsletter-checkbox-label">
+                    <input 
+                      type="checkbox" 
+                      checked={newsletterFilters.general}
+                      onChange={() => handleFilterChange('general')}
+                      className="newsletter-checkbox"
+                    />
+                    <div className="checkbox-content">
+                      <span className="checkbox-title">General</span>
+                      <span className="checkbox-note">Community updates, news, and announcements</span>
+                    </div>
+                  </label>
+                  <label className="newsletter-checkbox-label">
+                    <input 
+                      type="checkbox" 
+                      checked={newsletterFilters.events}
+                      onChange={() => handleFilterChange('events')}
+                      className="newsletter-checkbox"
+                    />
+                    <div className="checkbox-content">
+                      <span className="checkbox-title">Events & Opportunities</span>
+                      <span className="checkbox-note">Hackathons, workshops, jobs, and career opportunities</span>
+                    </div>
+                  </label>
+                </div>
+                <div className="newsletter-input-wrapper">
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email address" 
+                    className="newsletter-input"
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    required
+                  />
+                </div>
                 <button type="submit" className="newsletter-button">
                   Subscribe
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
-              </div>
-              <p className="newsletter-note">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </form>
+              </form>
+            </div>
           </div>
         </div>
       </section>

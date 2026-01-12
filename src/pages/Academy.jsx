@@ -167,6 +167,40 @@ function Academy() {
         </div>
       </section>
 
+      {/* Academy Stats Card */}
+      <section className="academy-stats-section">
+        <div className="academy-stats-container">
+          <div className="academy-stats-header">
+            <h2 className="academy-stats-title">Our Impact</h2>
+            <p className="academy-stats-subtitle">
+              Building Africa's next generation of blockchain talent through comprehensive education and hands-on learning.
+            </p>
+          </div>
+          <div className="academy-stats-card">
+            <div className="academy-stat-section academy-stat-section-white">
+              <div className="academy-stat-number">25+</div>
+              <div className="academy-stat-label">Courses Offered</div>
+            </div>
+            <div className="academy-stat-section academy-stat-section-dark">
+              <div className="academy-stat-number">2.8K+</div>
+              <div className="academy-stat-label">Students Trained</div>
+            </div>
+            <div className="academy-stat-section academy-stat-section-light">
+              <div className="academy-stat-number">1.5K+</div>
+              <div className="academy-stat-label">Certificates Issued</div>
+            </div>
+            <div className="academy-stat-section academy-stat-section-accent">
+              <div className="academy-stat-number">850+</div>
+              <div className="academy-stat-label">Active Learners</div>
+            </div>
+            <div className="academy-stat-section academy-stat-section-white-alt">
+              <div className="academy-stat-number">120+</div>
+              <div className="academy-stat-label">Workshops Conducted</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Developer Blogs Section */}
       <section className="developer-blogs-section">
         <div className="developer-blogs-container">
@@ -189,8 +223,8 @@ function Academy() {
             </button>
             <div className="blogs-scroll-container" ref={blogsScrollRef}>
               <div className="blogs-grid">
-                {blogs.map((blog) => (
-                  <Link to={`/blog/${blog.id}`} key={blog.id} className="blog-card">
+                {blogs.map((blog, index) => (
+                  <Link to={`/blog/${blog.id}`} key={blog.id} className="blog-card" data-index={index}>
                     <div className="blog-image">
                       <img src={blog.image} alt={blog.title} className="blog-image-img" />
                     </div>

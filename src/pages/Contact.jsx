@@ -134,57 +134,64 @@ function Contact() {
       <section className="contact-info-section">
         <div className="contact-info-container">
           <div className="contact-info-header">
-            <p className="contact-info-label">Get in Touch</p>
-            <h2 className="contact-info-title">Other Ways to Reach Us</h2>
-            <p className="contact-info-description">
-              Prefer a different method? Connect with us through these channels.
-            </p>
+            <h2 className="contact-info-title">Connect With Us Directly</h2>
           </div>
-          <div className="contact-info-grid">
-            <div className="contact-info-card">
-              <div className="contact-info-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div className="contact-channels">
+            <a href="mailto:contact@chainneo.org" className="contact-channel">
+              <div className="contact-channel-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M22 6L12 13L2 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h3 className="contact-info-card-title">Email</h3>
-              <p className="contact-info-card-description">
-                Send us an email and we'll respond within 24-48 hours.
-              </p>
-              <a href="mailto:contact@chainneo.org" className="contact-info-link">
-                contact@chainneo.org
-              </a>
-            </div>
+              <div className="contact-channel-info">
+                <span className="contact-channel-name">Email</span>
+                <span className="contact-channel-value">contact@chainneo.org</span>
+              </div>
+            </a>
 
-            <div className="contact-info-card">
-              <div className="contact-info-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM17.896 8.178L16.051 18.302C15.878 19.261 15.316 19.486 14.488 19.019L10.681 16.227L8.813 17.943C8.599 18.155 8.419 18.333 8.004 18.333L8.291 14.458L15.948 7.592C16.272 7.301 15.88 7.131 15.45 7.422L6.698 13.465L2.93 12.208C1.978 11.911 1.961 11.293 3.12 10.849L17.013 5.368C17.806 5.054 18.496 5.466 18.244 6.515L17.896 8.178Z" fill="currentColor"/>
+            <a href="#" className="contact-channel">
+              <div className="contact-channel-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                 </svg>
               </div>
-              <h3 className="contact-info-card-title">Telegram</h3>
-              <p className="contact-info-card-description">
-                Join our community group for real-time discussions and support.
-              </p>
-              <a href="#" className="contact-info-link">
-                Join Telegram Group
-              </a>
-            </div>
+              <div className="contact-channel-info">
+                <span className="contact-channel-name">Telegram</span>
+                <span className="contact-channel-value">Join our community</span>
+              </div>
+            </a>
 
-            <div className="contact-info-card">
-              <div className="contact-info-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22 4.01C21.09 4.39 20.12 4.65 19.1 4.78C21.16 3.57 22.64 1.6 23.26 0.24C21.29 1.35 19.07 2.09 16.69 2.43C14.78 0.5 12.03 0.49 10.11 2.41C8.91 3.61 8.29 5.26 8.5 6.91C5.89 6.75 3.44 5.65 1.5 3.88C0.26 6.15 1.03 9.08 3.49 10.57C2.65 10.57 1.86 10.36 1.17 10C1.17 10 1.17 10 1.17 10.01C1.17 12.61 3.06 14.83 5.55 15.32C4.75 15.53 3.89 15.56 3.07 15.39C3.67 17.54 5.69 19.1 8.07 19.15C6.2 20.59 3.85 21.43 1.35 21.43C0.9 21.43 0.45 21.4 0 21.33C2.52 22.91 5.51 23.87 8.72 23.87C18.93 23.87 24.58 15.62 24.58 8.41C24.58 8.17 24.57 7.93 24.55 7.7C25.52 7.02 26.35 6.17 27 5.19L22 4.01Z" fill="currentColor"/>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="contact-channel">
+              <div className="contact-channel-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </div>
-              <h3 className="contact-info-card-title">Social Media</h3>
-              <p className="contact-info-card-description">
-                Follow us on Twitter, LinkedIn, and other platforms for updates.
-              </p>
-              <a href="#" className="contact-info-link">
-                Follow Us
-              </a>
+              <div className="contact-channel-info">
+                <span className="contact-channel-name">X (Twitter)</span>
+                <span className="contact-channel-value">Follow for updates</span>
+              </div>
+            </a>
+          </div>
+
+          {/* Community Stats Card */}
+          <div className="contact-stats-card">
+            <div className="contact-stat-section contact-stat-section-white">
+              <div className="contact-stat-number">850+</div>
+              <div className="contact-stat-label">Telegram Members</div>
+            </div>
+            <div className="contact-stat-section contact-stat-section-dark">
+              <div className="contact-stat-number">2.5K+</div>
+              <div className="contact-stat-label">Twitter Followers</div>
+            </div>
+            <div className="contact-stat-section contact-stat-section-light">
+              <div className="contact-stat-number">3.4K+</div>
+              <div className="contact-stat-label">All Platforms Combined</div>
+            </div>
+            <div className="contact-stat-section contact-stat-section-accent">
+              <div className="contact-stat-number">+25%</div>
+              <div className="contact-stat-label">Growing Rate</div>
             </div>
           </div>
         </div>

@@ -203,22 +203,23 @@ function App() {
         </div>
         <div className="snapshot-stats-card">
           <div className="snapshot-stat-section snapshot-stat-section-white">
-            <div className="stat-number">Growing community</div>
+            <div className="stat-number">0</div>
             <div className="stat-description">Active members building together</div>
           </div>
           <div className="snapshot-stat-section snapshot-stat-section-white">
-            <div className="stat-number">25+</div>
+            <div className="stat-number">0</div>
             <div className="stat-description">Events run</div>
           </div>
           <div className="snapshot-stat-section snapshot-stat-section-dark">
-            <div className="stat-number">15+</div>
+            <div className="stat-number">0</div>
             <div className="stat-description">Universities & partners involved</div>
           </div>
           <div className="snapshot-stat-section snapshot-stat-section-light">
-            <div className="stat-number">50+</div>
+            <div className="stat-number">0</div>
             <div className="stat-description">Projects built</div>
           </div>
         </div>
+        <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
       </section>
 
       {/* Courses Section */}

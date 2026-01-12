@@ -149,18 +149,19 @@ function Community() {
           </div>
           <div className="chapters-stats-card">
             <div className="stat-section stat-section-white">
-              <div className="stat-number">50+</div>
+              <div className="stat-number">0</div>
               <div className="stat-label">Ambassadors</div>
             </div>
             <div className="stat-section stat-section-dark">
-              <div className="stat-number">120+</div>
+              <div className="stat-number">0</div>
               <div className="stat-label">Events Run</div>
             </div>
             <div className="stat-section stat-section-light">
-              <div className="stat-number">30+</div>
+              <div className="stat-number">0</div>
               <div className="stat-label">Projects Supported</div>
             </div>
           </div>
+          <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
           <div className="chapters-cta-wrapper">
             <a href="#" className="chapters-cta-button">
               Start a Chapter

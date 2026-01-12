@@ -240,22 +240,23 @@ function Contact() {
           {/* Community Stats Card */}
           <div className="contact-stats-card">
             <div className="contact-stat-section contact-stat-section-white">
-              <div className="contact-stat-number">850+</div>
+              <div className="contact-stat-number">0</div>
               <div className="contact-stat-label">Telegram Members</div>
             </div>
             <div className="contact-stat-section contact-stat-section-dark">
-              <div className="contact-stat-number">2.5K+</div>
+              <div className="contact-stat-number">0</div>
               <div className="contact-stat-label">Twitter Followers</div>
             </div>
             <div className="contact-stat-section contact-stat-section-light">
-              <div className="contact-stat-number">3.4K+</div>
+              <div className="contact-stat-number">0</div>
               <div className="contact-stat-label">All Platforms Combined</div>
             </div>
             <div className="contact-stat-section contact-stat-section-accent">
-              <div className="contact-stat-number">+25%</div>
+              <div className="contact-stat-number">0%</div>
               <div className="contact-stat-label">Growing Rate</div>
             </div>
           </div>
+          <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
         </div>
       </section>
 

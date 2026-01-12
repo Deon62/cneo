@@ -201,26 +201,27 @@ function Academy() {
           </div>
           <div className="academy-stats-card">
             <div className="academy-stat-section academy-stat-section-white">
-              <div className="academy-stat-number">25+</div>
+              <div className="academy-stat-number">0</div>
               <div className="academy-stat-label">Courses Offered</div>
             </div>
             <div className="academy-stat-section academy-stat-section-dark">
-              <div className="academy-stat-number">2.8K+</div>
+              <div className="academy-stat-number">0</div>
               <div className="academy-stat-label">Students Trained</div>
             </div>
             <div className="academy-stat-section academy-stat-section-light">
-              <div className="academy-stat-number">1.5K+</div>
+              <div className="academy-stat-number">0</div>
               <div className="academy-stat-label">Certificates Issued</div>
             </div>
             <div className="academy-stat-section academy-stat-section-accent">
-              <div className="academy-stat-number">850+</div>
+              <div className="academy-stat-number">0</div>
               <div className="academy-stat-label">Active Learners</div>
             </div>
             <div className="academy-stat-section academy-stat-section-white-alt">
-              <div className="academy-stat-number">120+</div>
+              <div className="academy-stat-number">0</div>
               <div className="academy-stat-label">Workshops Conducted</div>
             </div>
           </div>
+          <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
         </div>
       </section>
 

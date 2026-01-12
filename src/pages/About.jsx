@@ -227,29 +227,6 @@ function About() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="about-cta-section">
-        <AnimatedSection animation="fadeInUp" delay={0}>
-          <div className="about-cta-container">
-            <h2 className="about-cta-title">Ready to Start Your Journey?</h2>
-            <p className="about-cta-description">
-              Join thousands of young builders who are learning, growing, and building the future with blockchain technology.
-            </p>
-            <div className="about-cta-buttons">
-              <a href="/community" className="cta-button-primary">
-                Join the Community
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-              <a href="/academy" className="cta-button-secondary">
-                Explore Courses
-              </a>
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
-
       {/* Footer */}
       <footer className="footer">
         <div className="footer-container">

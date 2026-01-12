@@ -1147,8 +1147,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 60px 24px;
-  background-color: #EEE9DA;
+  padding: 120px 24px 160px 24px;
+  background-color: #F0F4FF;
   overflow: hidden;
   margin: 0;
   box-sizing: border-box;
@@ -1266,6 +1266,17 @@
   transform: translateX(4px);
 }
 
+.chapters-stats-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  font-weight: 400;
+  color: #111827;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
 .chapters-stats-card {
   display: flex;
   max-width: 1200px;
@@ -1346,10 +1357,10 @@
   font-size: 0.875rem;
   font-weight: 400;
   color: #6B7280;
-  text-align: center;
+  text-align: left;
   margin-top: 32px;
   max-width: 800px;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   line-height: 1.6;
   font-style: italic;
@@ -1641,7 +1652,7 @@
   align-items: center;
   justify-content: center;
   padding: 120px 24px;
-  background-color: #EEE9DA;
+  background-color: #FAF9F6;
   overflow: hidden;
   margin: 0;
   box-sizing: border-box;

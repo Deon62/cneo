@@ -589,9 +589,6 @@
 .team-profile-card {
   position: relative;
   aspect-ratio: 3 / 4;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #F3F4F6;
 }
 
 .team-profile-image {
@@ -625,7 +622,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
   padding: 24px 16px 16px;
   display: flex;
   flex-direction: column;
@@ -635,17 +631,15 @@
 .team-profile-name-placeholder {
   width: 70%;
   height: 20px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(17, 24, 39, 0.15);
   border-radius: 4px;
-  opacity: 0.8;
 }
 
 .team-profile-position-placeholder {
   width: 50%;
   height: 16px;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(17, 24, 39, 0.12);
   border-radius: 4px;
-  opacity: 0.8;
 }
 
 /* Team Section Responsive */

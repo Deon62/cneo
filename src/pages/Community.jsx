@@ -155,6 +155,7 @@ function Community() {
               </div>
             </div>
           </div>
+          <h3 className="chapters-stats-title">Community Impact</h3>
           <div className="chapters-stats-card">
             <div className="stat-section stat-section-white">
               <div className="stat-number">0</div>

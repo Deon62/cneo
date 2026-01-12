@@ -922,10 +922,10 @@
   font-size: 0.875rem;
   font-weight: 400;
   color: #6B7280;
-  text-align: center;
+  text-align: left;
   margin-top: 32px;
   max-width: 800px;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   line-height: 1.6;
   font-style: italic;

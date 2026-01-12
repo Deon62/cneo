@@ -3,7 +3,6 @@ import './Contact.css'
 import Navbar from '../components/Navbar'
 import { useState } from 'react'
 import contactImage from '../assets/contact.svg'
-import emailSvg from '../assets/email.svg'
 import { Link } from 'react-router-dom'
 
 function Contact() {
@@ -121,9 +120,6 @@ function Contact() {
             <p className="contact-form-description">
               Fill out the form below and we'll get back to you as soon as possible.
             </p>
-            <div className="contact-form-image">
-              <img src={emailSvg} alt="Email illustration" />
-            </div>
           </div>
           <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit}>

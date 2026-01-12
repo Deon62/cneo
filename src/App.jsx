@@ -3,10 +3,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import BlockchainNetworkIllustration from './components/BlockchainNetworkIllustration'
-import bitcoinIcon from './assets/bitcoin.svg'
-import contractsIcon from './assets/contracts.svg'
-import defiIcon from './assets/defi.svg'
-import securityIcon from './assets/security.svg'
 
 function App() {
   const [openFaq, setOpenFaq] = useState(null)
@@ -194,83 +190,6 @@ function App() {
           <div className="snapshot-stat-section snapshot-stat-section-light">
             <div className="stat-number">0</div>
             <div className="stat-description">Projects built</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Courses Section */}
-      <section className="courses-section">
-        <div className="courses-content">
-          <h2 className="courses-title">Courses</h2>
-          <div className="courses-grid">
-            <div className="course-card">
-              <div className="course-icon">
-                <img src={bitcoinIcon} alt="Blockchain Fundamentals" />
-              </div>
-              <h3 className="course-title">Blockchain Fundamentals</h3>
-              <p className="course-description">
-                Learn the core concepts of blockchain technology, including distributed ledgers, consensus mechanisms, and cryptographic principles.
-              </p>
-              <button className="course-enroll-btn">
-                Enroll
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="enroll-arrow">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-            <div className="course-card">
-              <div className="course-icon">
-                <img src={contractsIcon} alt="Smart Contracts Development" />
-              </div>
-              <h3 className="course-title">Smart Contracts Development</h3>
-              <p className="course-description">
-                Master smart contract programming, deployment, and testing. Build decentralized applications with hands-on projects.
-              </p>
-              <button className="course-enroll-btn">
-                Enroll
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="enroll-arrow">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-            <div className="course-card">
-              <div className="course-icon">
-                <img src={defiIcon} alt="DeFi & Web3" />
-              </div>
-              <h3 className="course-title">DeFi & Web3</h3>
-              <p className="course-description">
-                Explore decentralized finance protocols, Web3 architecture, and how to build financial applications on blockchain.
-              </p>
-              <button className="course-enroll-btn">
-                Enroll
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="enroll-arrow">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-            <div className="course-card">
-              <div className="course-icon">
-                <img src={securityIcon} alt="Blockchain Security" />
-              </div>
-              <h3 className="course-title">Blockchain Security</h3>
-              <p className="course-description">
-                Understand security best practices, vulnerability assessment, and how to build secure blockchain applications.
-              </p>
-              <button className="course-enroll-btn">
-                Enroll
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="enroll-arrow">
-                  <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div className="courses-view-more">
-            <Link to="/academy" className="view-more-courses-btn">
-              View more courses
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
           </div>
         </div>
       </section>

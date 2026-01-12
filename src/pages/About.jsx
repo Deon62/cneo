@@ -1,6 +1,8 @@
 import '../About.css'
 import '../Home.css'
+import '../animations.css'
 import Navbar from '../components/Navbar'
+import AnimatedSection from '../components/AnimatedSection'
 import aboutImage from '../assets/about.svg'
 import visionImage from '../assets/vision.svg'
 import { Link } from 'react-router-dom'
@@ -13,74 +15,96 @@ function About() {
       {/* Header Section */}
       <section className="about-header">
         <div className="about-header-container">
-          <div className="about-header-content">
-            <h1 className="about-header-title">Empowering East Africa's Next Web3 Generation</h1>
-            <p className="about-header-subtitle">
-              We connect young talent with blockchain opportunities bridging the gap between emerging tech and the students, developers, and founders ready to build the future.
-            </p>
-          </div>
-          <div className="about-header-image">
-            <img src={aboutImage} alt="Chain Neo Community" />
-          </div>
+          <AnimatedSection animation="fadeInLeft" delay={0}>
+            <div className="about-header-content">
+              <h1 className="about-header-title">Empowering East Africa's Next Web3 Generation</h1>
+              <p className="about-header-subtitle">
+                We connect young talent with blockchain opportunities bridging the gap between emerging tech and the students, developers, and founders ready to build the future.
+              </p>
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeInRight" delay={200}>
+            <div className="about-header-image">
+              <img src={aboutImage} alt="Chain Neo Community" />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Vision Section */}
       <section className="vision-section">
         <div className="vision-container">
-          <div className="vision-image">
-            <img src={visionImage} alt="Vision illustration" />
-          </div>
-          <div className="vision-content">
-            <span className="section-label">Our Vision</span>
-            <h2 className="vision-title">A Leading Youth Driven Blockchain Community in East Africa</h2>
-            <p className="vision-description">
-              To become a leading youth driven blockchain community in East Africa, producing skilled builders, informed users, and globally competitive Web3 talent.
-            </p>
-            <div className="vision-stats">
-              <div className="vision-stat">
-                <span className="stat-value">2030</span>
-                <span className="stat-label">Vision Horizon</span>
-              </div>
-              <div className="vision-stat">
-                <span className="stat-value">10K+</span>
-                <span className="stat-label">Builders Trained</span>
-              </div>
-              <div className="vision-stat">
-                <span className="stat-value">50+</span>
-                <span className="stat-label">Cities Reached</span>
+          <AnimatedSection animation="fadeInLeft" delay={0}>
+            <div className="vision-image">
+              <img src={visionImage} alt="Vision illustration" />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeInRight" delay={100}>
+            <div className="vision-content">
+              <span className="section-label">Our Vision</span>
+              <h2 className="vision-title">A Leading Youth Driven Blockchain Community in East Africa</h2>
+              <p className="vision-description">
+                To become a leading youth driven blockchain community in East Africa, producing skilled builders, informed users, and globally competitive Web3 talent.
+              </p>
+              <div className="vision-stats">
+                <AnimatedSection animation="scaleIn" delay={200}>
+                  <div className="vision-stat">
+                    <span className="stat-value">2030</span>
+                    <span className="stat-label">Vision Horizon</span>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation="scaleIn" delay={300}>
+                  <div className="vision-stat">
+                    <span className="stat-value">10K+</span>
+                    <span className="stat-label">Builders Trained</span>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation="scaleIn" delay={400}>
+                  <div className="vision-stat">
+                    <span className="stat-value">50+</span>
+                    <span className="stat-label">Cities Reached</span>
+                  </div>
+                </AnimatedSection>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Mission Section */}
       <section className="mission-section">
         <div className="mission-container">
-          <div className="mission-content">
-            <span className="section-label">Our Mission</span>
-            <h2 className="mission-title">Building the Future, One Builder at a Time</h2>
-            <p className="mission-description">
-              We are committed to creating pathways for young East Africans to thrive in the blockchain ecosystem through education, community, and real-world opportunities.
-            </p>
-          </div>
+          <AnimatedSection animation="fadeInUp" delay={0}>
+            <div className="mission-content">
+              <span className="section-label">Our Mission</span>
+              <h2 className="mission-title">Building the Future, One Builder at a Time</h2>
+              <p className="mission-description">
+                We are committed to creating pathways for young East Africans to thrive in the blockchain ecosystem through education, community, and real-world opportunities.
+              </p>
+            </div>
+          </AnimatedSection>
           <div className="mission-cards">
-            <div className="mission-card">
-              <span className="mission-number">01</span>
-              <h3>Educate & Onboard</h3>
-              <p>Educate and onboard young people into blockchain and emerging technologies through structured learning programs.</p>
-            </div>
-            <div className="mission-card">
-              <span className="mission-number">02</span>
-              <h3>Build Communities</h3>
-              <p>Build sustainable tech communities through learning, collaboration, and mentorship across East Africa.</p>
-            </div>
-            <div className="mission-card">
-              <span className="mission-number">03</span>
-              <h3>Connect Globally</h3>
-              <p>Support blockchain adoption by connecting global Web3 projects with local talent and communities.</p>
-            </div>
+            <AnimatedSection animation="fadeInUp" delay={100}>
+              <div className="mission-card">
+                <span className="mission-number">01</span>
+                <h3>Educate & Onboard</h3>
+                <p>Educate and onboard young people into blockchain and emerging technologies through structured learning programs.</p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={200}>
+              <div className="mission-card">
+                <span className="mission-number">02</span>
+                <h3>Build Communities</h3>
+                <p>Build sustainable tech communities through learning, collaboration, and mentorship across East Africa.</p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={300}>
+              <div className="mission-card">
+                <span className="mission-number">03</span>
+                <h3>Connect Globally</h3>
+                <p>Support blockchain adoption by connecting global Web3 projects with local talent and communities.</p>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -88,35 +112,45 @@ function About() {
       {/* Story Section */}
       <section className="story-section">
         <div className="story-container">
-          <div className="story-header">
-            <span className="section-label">Our Story</span>
-            <h2 className="story-title">From Idea to Movement</h2>
-          </div>
+          <AnimatedSection animation="fadeInUp" delay={0}>
+            <div className="story-header">
+              <span className="section-label">Our Story</span>
+              <h2 className="story-title">From Idea to Movement</h2>
+            </div>
+          </AnimatedSection>
           <div className="story-content">
-            <div className="story-text">
-              <p>
-                Chain NEO was born from a simple observation: young people across East Africa are eager to learn and build with blockchain, but lack access to structured pathways and real ecosystem exposure.
-              </p>
-              <p>
-                We're building a community that turns curiosity into capability connecting youth to knowledge, mentorship, and opportunities in Web3. This is just the beginning.
-              </p>
-            </div>
-            <div className="story-timeline">
-              <div className="timeline-item">
-                <div className="timeline-dot"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">January 2026</span>
-                  <p>Chain Neo founded</p>
-                </div>
+            <AnimatedSection animation="fadeInLeft" delay={100}>
+              <div className="story-text">
+                <p>
+                  Chain NEO was born from a simple observation: young people across East Africa are eager to learn and build with blockchain, but lack access to structured pathways and real ecosystem exposure.
+                </p>
+                <p>
+                  We're building a community that turns curiosity into capability connecting youth to knowledge, mentorship, and opportunities in Web3. This is just the beginning.
+                </p>
               </div>
-              <div className="timeline-item">
-                <div className="timeline-dot active"></div>
-                <div className="timeline-content">
-                  <span className="timeline-year">2026</span>
-                  <p>Growing across East Africa</p>
-                </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInRight" delay={200}>
+              <div className="story-timeline">
+                <AnimatedSection animation="fadeInUp" delay={300}>
+                  <div className="timeline-item">
+                    <div className="timeline-dot"></div>
+                    <div className="timeline-content">
+                      <span className="timeline-year">January 2026</span>
+                      <p>Chain Neo founded</p>
+                    </div>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection animation="fadeInUp" delay={400}>
+                  <div className="timeline-item">
+                    <div className="timeline-dot active"></div>
+                    <div className="timeline-content">
+                      <span className="timeline-year">2026</span>
+                      <p>Growing across East Africa</p>
+                    </div>
+                  </div>
+                </AnimatedSection>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -124,31 +158,41 @@ function About() {
       {/* Values Section */}
       <section className="values-section">
         <div className="values-container">
-          <div className="values-header">
-            <span className="section-label">Our Values</span>
-            <h2 className="values-title">What We Stand For</h2>
-          </div>
+          <AnimatedSection animation="fadeInUp" delay={0}>
+            <div className="values-header">
+              <span className="section-label">Our Values</span>
+              <h2 className="values-title">What We Stand For</h2>
+            </div>
+          </AnimatedSection>
           <div className="values-list">
-            <div className="value-row">
-              <h3 className="value-name">Accessibility</h3>
-              <p className="value-desc">Knowledge should be free and accessible to anyone willing to learn.</p>
-              <span className="value-num">01</span>
-            </div>
-            <div className="value-row">
-              <h3 className="value-name">Community</h3>
-              <p className="value-desc">We grow stronger together through collective knowledge and support.</p>
-              <span className="value-num">02</span>
-            </div>
-            <div className="value-row">
-              <h3 className="value-name">Innovation</h3>
-              <p className="value-desc">We encourage bold ideas. The best solutions come from unexpected places.</p>
-              <span className="value-num">03</span>
-            </div>
-            <div className="value-row">
-              <h3 className="value-name">Integrity</h3>
-              <p className="value-desc">We build trust through transparency and doing what's right.</p>
-              <span className="value-num">04</span>
-            </div>
+            <AnimatedSection animation="fadeInUp" delay={100}>
+              <div className="value-row">
+                <h3 className="value-name">Accessibility</h3>
+                <p className="value-desc">Knowledge should be free and accessible to anyone willing to learn.</p>
+                <span className="value-num">01</span>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={200}>
+              <div className="value-row">
+                <h3 className="value-name">Community</h3>
+                <p className="value-desc">We grow stronger together through collective knowledge and support.</p>
+                <span className="value-num">02</span>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={300}>
+              <div className="value-row">
+                <h3 className="value-name">Innovation</h3>
+                <p className="value-desc">We encourage bold ideas. The best solutions come from unexpected places.</p>
+                <span className="value-num">03</span>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInUp" delay={400}>
+              <div className="value-row">
+                <h3 className="value-name">Integrity</h3>
+                <p className="value-desc">We build trust through transparency and doing what's right.</p>
+                <span className="value-num">04</span>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -156,24 +200,28 @@ function About() {
       {/* Team Section */}
       <section className="team-section">
         <div className="team-container">
-          <div className="team-header">
-            <span className="section-label">Our Team</span>
-            <h2 className="team-title">The People Behind the Mission</h2>
-            <p className="team-description">
-              A passionate group of builders, educators, and dreamers committed to empowering the next generation of East African blockchain talent.
-            </p>
-          </div>
+          <AnimatedSection animation="fadeInUp" delay={0}>
+            <div className="team-header">
+              <span className="section-label">Our Team</span>
+              <h2 className="team-title">The People Behind the Mission</h2>
+              <p className="team-description">
+                A passionate group of builders, educators, and dreamers committed to empowering the next generation of East African blockchain talent.
+              </p>
+            </div>
+          </AnimatedSection>
           <div className="team-profiles-grid">
             {[...Array(10)].map((_, index) => (
-              <div key={index} className="team-profile-card">
-                <div className="team-profile-image">
-                  <div className="team-profile-placeholder"></div>
+              <AnimatedSection key={index} animation="scaleIn" delay={index * 50}>
+                <div className="team-profile-card">
+                  <div className="team-profile-image">
+                    <div className="team-profile-placeholder"></div>
+                  </div>
+                  <div className="team-profile-overlay">
+                    <div className="team-profile-name-placeholder"></div>
+                    <div className="team-profile-position-placeholder"></div>
+                  </div>
                 </div>
-                <div className="team-profile-overlay">
-                  <div className="team-profile-name-placeholder"></div>
-                  <div className="team-profile-position-placeholder"></div>
-                </div>
-              </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
@@ -181,23 +229,25 @@ function About() {
 
       {/* CTA Section */}
       <section className="about-cta-section">
-        <div className="about-cta-container">
-          <h2 className="about-cta-title">Ready to Start Your Journey?</h2>
-          <p className="about-cta-description">
-            Join thousands of young builders who are learning, growing, and building the future with blockchain technology.
-          </p>
-          <div className="about-cta-buttons">
-            <a href="/community" className="cta-button-primary">
-              Join the Community
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-            <a href="/academy" className="cta-button-secondary">
-              Explore Courses
-            </a>
+        <AnimatedSection animation="fadeInUp" delay={0}>
+          <div className="about-cta-container">
+            <h2 className="about-cta-title">Ready to Start Your Journey?</h2>
+            <p className="about-cta-description">
+              Join thousands of young builders who are learning, growing, and building the future with blockchain technology.
+            </p>
+            <div className="about-cta-buttons">
+              <a href="/community" className="cta-button-primary">
+                Join the Community
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+              <a href="/academy" className="cta-button-secondary">
+                Explore Courses
+              </a>
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
 
       {/* Footer */}

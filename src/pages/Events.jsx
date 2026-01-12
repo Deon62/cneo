@@ -65,32 +65,36 @@ function Events() {
       <section className="events-subscribe-section">
         <div className="events-subscribe-container">
           <div className="events-subscribe-content">
-            <h2 className="events-subscribe-title">Get Notified About Upcoming Events</h2>
-            <p className="events-subscribe-description">
-              Be the first to know when we announce new workshops, hackathons, and community events. 
-              Subscribe to receive updates directly in your inbox.
-            </p>
-            <form className="events-subscribe-form" onSubmit={handleSubmit}>
-              <div className="events-subscribe-input-wrapper">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email address" 
-                  className="events-subscribe-input"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-                <button type="submit" className="events-subscribe-button">
-                  Subscribe
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-              </div>
-              <p className="events-subscribe-note">
-                We respect your privacy. Unsubscribe at any time.
+            <div className="events-subscribe-left">
+              <h2 className="events-subscribe-title">Get Notified About Upcoming Events</h2>
+              <p className="events-subscribe-description">
+                Be the first to know when we announce new workshops, hackathons, and community events. 
+                Subscribe to receive updates directly in your inbox.
               </p>
-            </form>
+            </div>
+            <div className="events-subscribe-right">
+              <form className="events-subscribe-form" onSubmit={handleSubmit}>
+                <div className="events-subscribe-input-wrapper">
+                  <input 
+                    type="email" 
+                    placeholder="Enter your email address" 
+                    className="events-subscribe-input"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <button type="submit" className="events-subscribe-button">
+                    Subscribe
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+                <p className="events-subscribe-note">
+                  We respect your privacy. Unsubscribe at any time.
+                </p>
+              </form>
+            </div>
           </div>
         </div>
       </section>

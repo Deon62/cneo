@@ -9,6 +9,7 @@ import soonSvg from '../assets/soon.svg'
 
 function Learning() {
   const [activeFilter, setActiveFilter] = useState('all')
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   const renderContent = () => {
     if (activeFilter === 'all') {
@@ -167,13 +168,24 @@ function Learning() {
     <div className="learning-dashboard">
       {/* Top Bar with Back Button */}
       <div className="learning-topbar">
-        <Link to="/academy" className="learning-back-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-          <span>Back to Academy</span>
-        </Link>
-        <div className="learning-title">Learning Dashboard</div>
+        <div className="learning-topbar-left">
+          <button 
+            className="learning-menu-toggle"
+            onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+            aria-label="Toggle menu"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+          <Link to="/academy" className="learning-back-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span className="learning-back-text">Back</span>
+          </Link>
+        </div>
+        <div className="learning-title">Learning</div>
         <div className="learning-profile-placeholder">
           <div className="learning-profile-avatar">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,14 +196,31 @@ function Learning() {
         </div>
       </div>
 
+      {/* Mobile Overlay */}
+      {isSidebarOpen && (
+        <div 
+          className="learning-sidebar-overlay"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       <div className="learning-layout">
         {/* Sidebar Panel (IDE style) */}
-        <aside className="learning-sidebar">
+        <aside className={`learning-sidebar ${isSidebarOpen ? 'sidebar-open' : ''}`}>
           <div className="learning-sidebar-header">
             <h3 className="learning-sidebar-title">Courses</h3>
+            <button 
+              className="learning-sidebar-close"
+              onClick={() => setIsSidebarOpen(false)}
+              aria-label="Close menu"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
           </div>
           <nav className="learning-sidebar-nav">
-            <div className={`learning-nav-item ${activeFilter === 'all' ? 'active' : ''}`} onClick={() => setActiveFilter('all')}>
+            <div className={`learning-nav-item ${activeFilter === 'all' ? 'active' : ''}`} onClick={() => { setActiveFilter('all'); setIsSidebarOpen(false); }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M3 9H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -199,20 +228,20 @@ function Learning() {
               </svg>
               <span>All Courses</span>
             </div>
-            <div className={`learning-nav-item ${activeFilter === 'progress' ? 'active' : ''}`} onClick={() => setActiveFilter('progress')}>
+            <div className={`learning-nav-item ${activeFilter === 'progress' ? 'active' : ''}`} onClick={() => { setActiveFilter('progress'); setIsSidebarOpen(false); }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <span>In Progress</span>
             </div>
-            <div className={`learning-nav-item ${activeFilter === 'completed' ? 'active' : ''}`} onClick={() => setActiveFilter('completed')}>
+            <div className={`learning-nav-item ${activeFilter === 'completed' ? 'active' : ''}`} onClick={() => { setActiveFilter('completed'); setIsSidebarOpen(false); }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22 11.08V12A10 10 0 1 1 5.93 18.75" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M22 4L12 14.01L9 11.01" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
               <span>Completed</span>
             </div>
-            <div className={`learning-nav-item ${activeFilter === 'saved' ? 'active' : ''}`} onClick={() => setActiveFilter('saved')}>
+            <div className={`learning-nav-item ${activeFilter === 'saved' ? 'active' : ''}`} onClick={() => { setActiveFilter('saved'); setIsSidebarOpen(false); }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H11L19 11V19A2 2 0 0 1 19 21Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M17 21V13H9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

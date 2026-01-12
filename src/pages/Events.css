@@ -163,7 +163,7 @@
   align-items: center;
   justify-content: center;
   padding: 120px 24px;
-  background-color: #0A0A0A;
+  background-color: #F0F7FF;
   overflow: hidden;
   margin: 0;
   box-sizing: border-box;
@@ -185,7 +185,7 @@
   font-family: 'Sora', sans-serif;
   font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 400;
-  color: #FFFFFF;
+  color: #111827;
   margin-bottom: 20px;
   line-height: 1.3;
   letter-spacing: -0.01em;
@@ -195,7 +195,7 @@
   font-family: 'Inter', sans-serif;
   font-size: clamp(1rem, 1.5vw, 1.125rem);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.75);
+  color: #4B5563;
   line-height: 1.7;
   margin-bottom: 48px;
   max-width: 600px;
@@ -212,8 +212,8 @@
   display: flex;
   gap: 12px;
   margin-bottom: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: #FFFFFF;
+  border: 2px solid #E5E7EB;
   border-radius: 16px;
   padding: 8px;
   transition: all 0.3s ease;
@@ -221,8 +221,8 @@
 
 .events-subscribe-input-wrapper:focus-within {
   border-color: #2563EB;
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
 }
 
 .events-subscribe-input {
@@ -230,7 +230,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #111827;
   background: transparent;
   border: none;
   outline: none;
@@ -238,7 +238,7 @@
 }
 
 .events-subscribe-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: #9CA3AF;
 }
 
 .events-subscribe-button {
@@ -278,7 +278,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.5);
+  color: #6B7280;
   line-height: 1.5;
   margin: 0;
 }
@@ -336,15 +336,15 @@
   }
 
   .events-subscribe-input {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: #FFFFFF;
+    border: 2px solid #E5E7EB;
     border-radius: 12px;
     margin-bottom: 12px;
   }
 
   .events-subscribe-input:focus {
     border-color: #2563EB;
-    background: rgba(255, 255, 255, 0.08);
+    background: #FFFFFF;
   }
 
   .events-subscribe-button {

@@ -6,6 +6,7 @@ import impactSvg from '../assets/impact.svg'
 import communitySvg from '../assets/community.svg'
 import universitySvg from '../assets/university.svg'
 import communityHeaderSvg from '../assets/community1.svg'
+import partnersSvg from '../assets/partners.svg'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
@@ -214,41 +215,32 @@ function Community() {
         </div>
       </section>
 
-      {/* Partner Section */}
-      <section className="partner-section">
-        <div className="partner-container">
-          <div className="partner-content">
-            <span className="partner-label">Collaborate With Us</span>
-            <h2 className="partner-title">Let's Build Together</h2>
-            <p className="partner-description">
-              We're looking for organizations, protocols, and companies who share our vision of empowering East African youth in blockchain. Whether you're a Web3 project seeking local talent, an educator wanting to expand your reach, or a business looking to support the next generation of builders—let's connect.
-            </p>
-            <a href="/contact" className="partner-button">
-              Become a Partner
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Partners Section */}
-      <section className="partners-section">
-        <div className="partners-container">
-          <div className="partners-header">
-            <h2 className="partners-title">Our Partners</h2>
-            <p className="partners-description">
-              We wouldn't have gotten this far without our Partners. Our partners are our backbone, providing much-needed support to continue to support East Africa.
-            </p>
-          </div>
-          <div className="partners-grid">
-            <div className="partner-card"></div>
-            <div className="partner-card"></div>
-            <div className="partner-card"></div>
-            <div className="partner-card"></div>
-            <div className="partner-card"></div>
-            <div className="partner-card"></div>
+      {/* Collaborate With Us Section */}
+      <section className="collaborate-section">
+        <div className="collaborate-container">
+          <div className="collaborate-content">
+            <div className="collaborate-header">
+              <p className="collaborate-label">Collaborate With Us</p>
+              <h2 className="collaborate-title">Calling Early Partners</h2>
+              <p className="collaborate-description">
+                Chain Neo is opening collaboration slots for Web3 protocols, universities, and organizations interested in building blockchain talent across East Africa.
+              </p>
+              <p className="collaborate-description">
+                We're working with students, developers, and builders at the grassroots level—through campus programs, workshops, and hands-on Web3 education.
+              </p>
+              <p className="collaborate-description">
+                If you want early access to talent, community reach, and long-term ecosystem growth, this is the entry point.
+              </p>
+              <a href="/contact" className="collaborate-cta-button">
+                Start a Partner Conversation
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
+            <div className="collaborate-image">
+              <img src={partnersSvg} alt="Partners illustration" />
+            </div>
           </div>
         </div>
       </section>

@@ -159,20 +159,16 @@ function App() {
         </div>
         <div className="snapshot-stats-card">
           <div className="snapshot-stat-section snapshot-stat-section-white">
-            <div className="stat-number">0</div>
+            <div className="stat-number">30+</div>
             <div className="stat-description">Active members building together</div>
           </div>
           <div className="snapshot-stat-section snapshot-stat-section-white">
-            <div className="stat-number">0</div>
-            <div className="stat-description">Events run</div>
+            <div className="stat-number">1</div>
+            <div className="stat-description">Upcoming event</div>
           </div>
           <div className="snapshot-stat-section snapshot-stat-section-dark">
-            <div className="stat-number">0</div>
-            <div className="stat-description">Universities & partners involved</div>
-          </div>
-          <div className="snapshot-stat-section snapshot-stat-section-light">
-            <div className="stat-number">0</div>
-            <div className="stat-description">Projects built</div>
+            <div className="stat-number">1</div>
+            <div className="stat-description">University</div>
           </div>
         </div>
       </section>

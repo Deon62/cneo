@@ -3,7 +3,7 @@
 .navbar *,
 .mobile-menu-toggle,
 .nav-link,
-.nav-join {
+.nav-search-toggle {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -126,7 +126,7 @@
   }
 
   /* Hide desktop join button */
-  .navbar-container > .nav-join {
+  .navbar-container > .navbar-search-wrapper {
     display: none !important;
   }
 
@@ -272,7 +272,7 @@
   }
 
   /* Hide Join CTA in mobile modal */
-  .navbar-menu .nav-join {
+  .navbar-menu .navbar-search-wrapper {
     display: none !important;
   }
 

@@ -1,11 +1,31 @@
-import { Link, useLocation } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { useEffect, useState, useRef } from 'react'
 import './NavbarMobile.css'
 
 function Navbar() {
   const location = useLocation()
+  const navigate = useNavigate()
   const [isNavbarDark, setIsNavbarDark] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState([])
+  const searchInputRef = useRef(null)
+  const searchBarRef = useRef(null)
+
+  // Searchable sections data
+  const searchableSections = [
+    { id: 'home', title: 'Home', path: '/', type: 'page' },
+    { id: 'about', title: 'About Us', path: '/about', type: 'page' },
+    { id: 'academy', title: 'Academy', path: '/academy', type: 'page' },
+    { id: 'events', title: 'Events', path: '/events', type: 'page' },
+    { id: 'community', title: 'Community', path: '/community', type: 'page' },
+    { id: 'contact', title: 'Contact Us', path: '/contact', type: 'page' },
+    { id: 'blog', title: 'Blog', path: '/blog', type: 'page' },
+    { id: 'how-it-works', title: 'Programs & Opportunities', path: '/', type: 'section' },
+    { id: 'community-snapshot', title: 'Community Snapshot', path: '/', type: 'section' },
+    { id: 'faq', title: 'FAQ', path: '/', type: 'section' },
+  ]
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -15,10 +35,85 @@ function Navbar() {
     setIsMenuOpen(false)
   }
 
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen)
+    if (!isSearchOpen) {
+      setTimeout(() => {
+        searchInputRef.current?.focus()
+      }, 100)
+    } else {
+      setSearchQuery('')
+      setSearchResults([])
+    }
+  }
+
+  const handleSearchChange = (e) => {
+    const query = e.target.value.toLowerCase().trim()
+    setSearchQuery(query)
+    
+    if (query.length > 0) {
+      const results = searchableSections.filter(section =>
+        section.title.toLowerCase().includes(query) ||
+        section.id.toLowerCase().includes(query)
+      )
+      setSearchResults(results)
+    } else {
+      setSearchResults([])
+    }
+  }
+
+  const handleSearchResultClick = (result) => {
+    setSearchQuery('')
+    setSearchResults([])
+    setIsSearchOpen(false)
+    closeMenu()
+    
+    if (result.path) {
+      navigate(result.path)
+      // If it's a section on the home page, scroll to it after navigation
+      if (result.type === 'section' && result.path === '/') {
+        setTimeout(() => {
+          const element = document.getElementById(result.id)
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }
+        }, 100)
+      }
+    }
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Escape') {
+      setIsSearchOpen(false)
+      setSearchQuery('')
+      setSearchResults([])
+    } else if (e.key === 'Enter' && searchResults.length > 0) {
+      handleSearchResultClick(searchResults[0])
+    }
+  }
+
   // Close menu when route changes
   useEffect(() => {
     closeMenu()
   }, [location.pathname])
+
+  // Close search when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isSearchOpen && searchBarRef.current && !searchBarRef.current.contains(event.target)) {
+        setIsSearchOpen(false)
+        setSearchQuery('')
+        setSearchResults([])
+      }
+    }
+
+    if (isSearchOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside)
+      }
+    }
+  }, [isSearchOpen])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -165,12 +260,45 @@ function Navbar() {
             <li><Link to="/community" className="nav-link" data-section="community" onClick={closeMenu}>Community</Link></li>
             <li><Link to="/contact" className="nav-link" data-section="contact" onClick={closeMenu}>Contact Us</Link></li>
           </ul>
-          <Link to="/community" className="nav-join" onClick={closeMenu}>
-            Join the Community
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="nav-join-arrow">
-              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </Link>
+          <div className="navbar-search-wrapper" ref={searchBarRef}>
+            <button 
+              className="nav-search-toggle" 
+              onClick={toggleSearch}
+              aria-label="Toggle search"
+              aria-expanded={isSearchOpen}
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="m21 21-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="nav-search-text">search</span>
+            </button>
+            <div className={`navbar-search-bar ${isSearchOpen ? 'search-open' : ''}`}>
+              <input
+                ref={searchInputRef}
+                type="text"
+                className="navbar-search-input"
+                placeholder="Search sections..."
+                value={searchQuery}
+                onChange={handleSearchChange}
+                onKeyDown={handleKeyDown}
+              />
+              {searchResults.length > 0 && (
+                <div className="navbar-search-results">
+                  {searchResults.map((result, index) => (
+                    <button
+                      key={index}
+                      className="navbar-search-result"
+                      onClick={() => handleSearchResultClick(result)}
+                    >
+                      <span className="search-result-title">{result.title}</span>
+                      <span className="search-result-type">{result.type}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </nav>

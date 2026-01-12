@@ -116,28 +116,30 @@ function About() {
       {/* Values Section */}
       <section className="values-section">
         <div className="values-container">
-          <span className="section-label">Our Values</span>
-          <h2 className="values-title">What We Stand For</h2>
-          <div className="values-grid">
-            <div className="value-item">
-              <div className="value-number">01</div>
-              <h3>Accessibility</h3>
-              <p>Knowledge should be free and accessible to anyone willing to learn, regardless of their background or resources.</p>
+          <div className="values-header">
+            <span className="section-label">Our Values</span>
+            <h2 className="values-title">What We Stand For</h2>
+          </div>
+          <div className="values-list">
+            <div className="value-row">
+              <span className="value-num">01</span>
+              <h3 className="value-name">Accessibility</h3>
+              <p className="value-desc">Knowledge should be free and accessible to anyone willing to learn.</p>
             </div>
-            <div className="value-item">
-              <div className="value-number">02</div>
-              <h3>Community</h3>
-              <p>We grow stronger together. Every member contributes to and benefits from our collective knowledge and support.</p>
+            <div className="value-row">
+              <span className="value-num">02</span>
+              <h3 className="value-name">Community</h3>
+              <p className="value-desc">We grow stronger together through collective knowledge and support.</p>
             </div>
-            <div className="value-item">
-              <div className="value-number">03</div>
-              <h3>Innovation</h3>
-              <p>We encourage creative thinking and bold ideas. The best solutions often come from unexpected places.</p>
+            <div className="value-row">
+              <span className="value-num">03</span>
+              <h3 className="value-name">Innovation</h3>
+              <p className="value-desc">We encourage bold ideas. The best solutions come from unexpected places.</p>
             </div>
-            <div className="value-item">
-              <div className="value-number">04</div>
-              <h3>Integrity</h3>
-              <p>We build trust through transparency, honesty, and doing what's right—even when it's difficult.</p>
+            <div className="value-row">
+              <span className="value-num">04</span>
+              <h3 className="value-name">Integrity</h3>
+              <p className="value-desc">We build trust through transparency and doing what's right.</p>
             </div>
           </div>
         </div>

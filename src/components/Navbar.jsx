@@ -51,11 +51,12 @@ function Navbar() {
 
       navLinks.forEach((link) => {
         const linkSection = link.getAttribute('data-section')
-        // Exclude 'community' and 'academy' sections from activating links on home page
+        // Exclude sections that have their own pages from scroll-based activation on home page
         // These links should only be active when on their respective routes
-        if (linkSection === 'community' || linkSection === 'academy') {
+        if (linkSection === 'community' || linkSection === 'academy' || linkSection === 'about' || linkSection === 'events' || linkSection === 'contact') {
           link.classList.remove('active')
-        } else if (linkSection === currentSection) {
+        } else if (linkSection === 'home') {
+          // Keep Home active for all home page sections
           link.classList.add('active')
         } else {
           link.classList.remove('active')

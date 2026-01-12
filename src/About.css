@@ -580,18 +580,72 @@
   margin: 0;
 }
 
-.team-empty-state-simple {
-  text-align: center;
-  padding: 40px 0;
+.team-profiles-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
 }
 
-.team-coming-soon {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: #9CA3AF;
-  font-style: italic;
-  margin: 0;
+.team-profile-card {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F3F4F6;
+}
+
+.team-profile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.team-profile-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-profile-placeholder::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #9CA3AF;
+  opacity: 0.3;
+}
+
+.team-profile-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+  padding: 24px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team-profile-name-placeholder {
+  width: 70%;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+.team-profile-position-placeholder {
+  width: 50%;
+  height: 16px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  opacity: 0.8;
 }
 
 /* Team Section Responsive */

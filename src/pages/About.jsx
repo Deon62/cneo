@@ -163,8 +163,18 @@ function About() {
               A passionate group of builders, educators, and dreamers committed to empowering the next generation of East African blockchain talent.
             </p>
           </div>
-          <div className="team-empty-state-simple">
-            <p className="team-coming-soon">Team profiles coming soon</p>
+          <div className="team-profiles-grid">
+            {[...Array(10)].map((_, index) => (
+              <div key={index} className="team-profile-card">
+                <div className="team-profile-image">
+                  <div className="team-profile-placeholder"></div>
+                </div>
+                <div className="team-profile-overlay">
+                  <div className="team-profile-name-placeholder"></div>
+                  <div className="team-profile-position-placeholder"></div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

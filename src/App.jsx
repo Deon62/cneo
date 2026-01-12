@@ -342,35 +342,70 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-container">
-          <div className="footer-content">
+          <div className="footer-main">
+            {/* Brand Section */}
             <div className="footer-brand">
-              <span className="footer-logo">Chain Neo</span>
+              <Link to="/" className="footer-logo">
+                <span className="footer-logo-text">Chain Neo</span>
+              </Link>
               <p className="footer-tagline">Building Africa's Blockchain Builders</p>
             </div>
+
+            {/* Links Columns */}
+            <div className="footer-links-wrapper">
+              <div className="footer-column">
+                <h4 className="footer-column-title">Navigate</h4>
+                <ul className="footer-links">
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/about">About Us</Link></li>
+                  <li><Link to="/academy">Academy</Link></li>
+                  <li><Link to="/events">Events</Link></li>
+                </ul>
+              </div>
+
+              <div className="footer-column">
+                <h4 className="footer-column-title">Community</h4>
+                <ul className="footer-links">
+                  <li><Link to="/community">Join Us</Link></li>
+                  <li><Link to="/contact">Contact</Link></li>
+                </ul>
+              </div>
+
+              <div className="footer-column">
+                <h4 className="footer-column-title">Legal</h4>
+                <ul className="footer-links">
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Bottom */}
+          <div className="footer-bottom">
             <div className="footer-social">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Twitter">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22 4.01C21.09 4.39 20.12 4.65 19.1 4.78C21.16 3.57 22.64 1.6 23.26 0.24C21.29 1.35 19.07 2.09 16.69 2.43C14.78 0.5 12.03 0.49 10.11 2.41C8.91 3.61 8.29 5.26 8.5 6.91C5.89 6.75 3.44 5.65 1.5 3.88C0.26 6.15 1.03 9.08 3.49 10.57C2.65 10.57 1.86 10.36 1.17 10C1.17 10 1.17 10 1.17 10.01C1.17 12.61 3.06 14.83 5.55 15.32C4.75 15.53 3.89 15.56 3.07 15.39C3.67 17.54 5.69 19.1 8.07 19.15C6.2 20.59 3.85 21.43 1.35 21.43C0.9 21.43 0.45 21.4 0 21.33C2.52 22.91 5.51 23.87 8.72 23.87C18.93 23.87 24.58 15.62 24.58 8.41C24.58 8.17 24.57 7.93 24.55 7.7C25.52 7.02 26.35 6.17 27 5.19L22 4.01Z" fill="currentColor"/>
+              <span className="footer-social-label">Follow us</span>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19 0H5C2.24 0 0 2.24 0 5V19C0 21.76 2.24 24 5 24H19C21.76 24 24 21.76 24 19V5C24 2.24 21.76 0 19 0ZM8 19H5V8H8V19ZM6.5 6.73C5.53 6.73 4.75 5.96 4.75 5C4.75 4.04 5.53 3.27 6.5 3.27C7.47 3.27 8.25 4.04 8.25 5C8.25 5.96 7.47 6.73 6.5 6.73ZM20 19H17V13.67C17 11.37 13 11.53 13 13.67V19H10V8H13V9.76C13.8 8.63 15.92 8.39 17 10.26V8H20V19Z" fill="currentColor"/>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                 </svg>
               </a>
-              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Discord">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.317 4.37C18.352 3.435 16.302 2.706 14.188 2.202C13.85 2.597 13.535 3.007 13.258 3.427C11.06 3.066 8.855 3.066 6.701 3.427C6.424 3.007 6.109 2.597 5.769 2.202C3.654 2.706 1.603 3.435 0.637 4.37C0.484 7.134 0.628 9.859 1.055 12.524C1.055 12.524 1.623 13.569 2.863 14.656C4.809 14.201 6.695 13.552 8.479 12.724C8.831 13.42 9.239 14.085 9.699 14.714C7.611 15.123 5.546 15.311 3.493 15.277C4.999 16.425 6.727 17.334 8.607 17.95C10.423 18.549 12.304 18.855 14.191 18.855C15.996 18.855 17.776 18.577 19.493 18.024C21.327 17.431 23.078 16.547 24.691 15.39C24.746 15.2 24.816 15.008 24.877 14.814C25.269 12.154 25.467 9.435 25.318 6.678C23.568 5.738 21.743 4.992 19.859 4.457L20.317 4.37ZM9.012 11.964C8.015 11.964 7.204 11.22 7.204 10.297C7.204 9.373 8.015 8.629 9.012 8.629C10.009 8.629 10.818 9.373 10.818 10.297C10.818 11.22 10.009 11.964 9.012 11.964ZM14.987 11.964C13.99 11.964 13.18 11.22 13.18 10.297C13.18 9.373 13.99 8.629 14.987 8.629C15.984 8.629 16.793 9.373 16.793 10.297C16.793 11.22 15.984 11.964 14.987 11.964Z" fill="currentColor"/>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/>
                 </svg>
               </a>
-              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Telegram">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM17.896 8.178L16.051 18.302C15.878 19.261 15.316 19.486 14.488 19.019L10.681 16.227L8.813 17.943C8.599 18.155 8.419 18.333 8.004 18.333L8.291 14.458L15.948 7.592C16.272 7.301 15.88 7.131 15.45 7.422L6.698 13.465L2.93 12.208C1.978 11.911 1.961 11.293 3.12 10.849L17.013 5.368C17.806 5.054 18.496 5.466 18.244 6.515L17.896 8.178Z" fill="currentColor"/>
+              <a href="https://telegram.org" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="footer-bottom">
             <p className="footer-copyright">&copy; {new Date().getFullYear()} Chain Neo. All rights reserved.</p>
           </div>
         </div>

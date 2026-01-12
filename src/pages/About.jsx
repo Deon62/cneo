@@ -16,7 +16,7 @@ function About() {
           <div className="about-header-content">
             <h1 className="about-header-title">Empowering East Africa's Next Web3 Generation</h1>
             <p className="about-header-subtitle">
-              We connect young talent with blockchain opportunities—bridging the gap between emerging tech and the students, developers, and founders ready to build the future.
+              We connect young talent with blockchain opportunities bridging the gap between emerging tech and the students, developers, and founders ready to build the future.
             </p>
           </div>
           <div className="about-header-image">
@@ -33,9 +33,9 @@ function About() {
           </div>
           <div className="vision-content">
             <span className="section-label">Our Vision</span>
-            <h2 className="vision-title">A Leading Youth-Driven Blockchain Community in East Africa</h2>
+            <h2 className="vision-title">A Leading Youth Driven Blockchain Community in East Africa</h2>
             <p className="vision-description">
-              To become a leading youth-driven blockchain community in East Africa, producing skilled builders, informed users, and globally competitive Web3 talent.
+              To become a leading youth driven blockchain community in East Africa, producing skilled builders, informed users, and globally competitive Web3 talent.
             </p>
             <div className="vision-stats">
               <div className="vision-stat">
@@ -95,24 +95,24 @@ function About() {
           <div className="story-content">
             <div className="story-text">
               <p>
-                What started as small university workshops has grown into a vibrant community of builders across East Africa. We discovered untapped talent hungry to learn, build, and innovate.
+                Chain NEO was born from a simple observation: young people across East Africa are eager to learn and build with blockchain, but lack access to structured pathways and real ecosystem exposure.
               </p>
               <p>
-                Today, we're just getting started—committed to being the launchpad for young East Africans in Web3.
+                We're building a community that turns curiosity into capability connecting youth to knowledge, mentorship, and opportunities in Web3. This is just the beginning.
               </p>
             </div>
             <div className="story-timeline">
               <div className="timeline-item">
                 <div className="timeline-dot"></div>
                 <div className="timeline-content">
-                  <span className="timeline-year">2024</span>
+                  <span className="timeline-year">January 2026</span>
                   <p>Chain Neo founded</p>
                 </div>
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot active"></div>
                 <div className="timeline-content">
-                  <span className="timeline-year">2025</span>
+                  <span className="timeline-year">2026</span>
                   <p>Growing across East Africa</p>
                 </div>
               </div>

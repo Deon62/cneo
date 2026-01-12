@@ -11,6 +11,7 @@ import Events from './pages/Events.jsx'
 import NotFound from './pages/NotFound.jsx'
 import Blog from './pages/Blog.jsx'
 import BlogPost from './pages/BlogPost.jsx'
+import Learning from './pages/Learning.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 
 createRoot(document.getElementById('root')).render(
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/events" element={<Events />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogPost />} />
+        <Route path="/learning" element={<Learning />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

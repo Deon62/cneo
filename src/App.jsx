@@ -348,7 +348,7 @@ function App() {
               <Link to="/" className="footer-logo">
                 <span className="footer-logo-text">Chain Neo</span>
               </Link>
-              <p className="footer-tagline">Building Africa's Blockchain Builders</p>
+              <p className="footer-tagline">Building East Africa's Blockchain Builders</p>
             </div>
 
             {/* Links Columns */}

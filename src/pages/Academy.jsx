@@ -5,6 +5,7 @@ import podcastSvg from '../assets/podcast.svg'
 import socialSvg from '../assets/social.svg'
 import videoSvg from '../assets/video.svg'
 import academySvg from '../assets/academy.svg'
+import readSvg from '../assets/read.svg'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -101,6 +102,28 @@ function Academy() {
               Learn blockchain technology through comprehensive courses, podcasts, videos, and resources. 
               Build your skills and advance your career in Web3.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses Section */}
+      <section className="courses-intro-section">
+        <div className="courses-intro-container">
+          <div className="courses-intro-image">
+            <img src={readSvg} alt="Courses illustration" />
+          </div>
+          <div className="courses-intro-content">
+            <span className="section-label">Our Courses</span>
+            <h2 className="courses-intro-title">Comprehensive Blockchain Education</h2>
+            <p className="courses-intro-description">
+              From blockchain fundamentals to advanced smart contract development, our courses are designed to take you from beginner to builder. Learn at your own pace with hands-on projects and real-world examples.
+            </p>
+            <Link to="/learning" className="courses-cta-button">
+              Start Learning
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -266,7 +289,7 @@ function Academy() {
               <Link to="/" className="footer-logo">
                 <span className="footer-logo-text">Chain Neo</span>
               </Link>
-              <p className="footer-tagline">Building Africa's Blockchain Builders</p>
+              <p className="footer-tagline">Building East Africa's Blockchain Builders</p>
             </div>
             <div className="footer-links-wrapper">
               <div className="footer-column">

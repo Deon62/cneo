@@ -164,12 +164,12 @@ function Community() {
                   Join us in bringing blockchain education and innovation to educational institutions near you.
                 </p>
                 <div className="chapters-cta-wrapper">
-                  <a href="#" className="chapters-cta-button">
+                  <Link to="/ambassador" className="chapters-cta-button">
                     Start a Chapter
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </AnimatedSection>

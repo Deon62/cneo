@@ -7,8 +7,67 @@ import communitySvg from '../assets/community.svg'
 import universitySvg from '../assets/university.svg'
 import communityHeaderSvg from '../assets/community1.svg'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 function Community() {
+  const [newsletterEmail, setNewsletterEmail] = useState('')
+  const [newsletterFilters, setNewsletterFilters] = useState({
+    developers: false,
+    general: false,
+    events: false
+  })
+  const [newsletterSuccess, setNewsletterSuccess] = useState(false)
+  const [newsletterError, setNewsletterError] = useState('')
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault()
+    
+    // Validate at least one checkbox is selected
+    const hasSelectedFilter = newsletterFilters.developers || newsletterFilters.general || newsletterFilters.events
+    
+    if (!hasSelectedFilter) {
+      setNewsletterError('Please select at least one newsletter subscription')
+      return
+    }
+    
+    // Clear any previous errors
+    setNewsletterError('')
+    
+    console.log('Newsletter subscription:', { email: newsletterEmail, filters: newsletterFilters })
+    
+    // Show success message
+    setNewsletterSuccess(true)
+    
+    // Reset form after a delay (optional, or keep it visible)
+    setTimeout(() => {
+      setNewsletterEmail('')
+      setNewsletterFilters({
+        developers: false,
+        general: false,
+        events: false
+      })
+    }, 5000)
+  }
+
+  const handleFilterChange = (filter) => {
+    setNewsletterFilters({
+      ...newsletterFilters,
+      [filter]: !newsletterFilters[filter]
+    })
+    // Clear error when user selects a checkbox
+    if (newsletterError) {
+      setNewsletterError('')
+    }
+  }
+
+  const handleNewsletterEmailChange = (e) => {
+    setNewsletterEmail(e.target.value)
+    // Clear error when user types
+    if (newsletterError) {
+      setNewsletterError('')
+    }
+  }
+
   return (
     <div className="app">
       <Navbar />
@@ -161,29 +220,108 @@ function Community() {
       <section className="newsletter-section">
         <div className="newsletter-container">
           <div className="newsletter-content">
-            <h2 className="newsletter-title">Stay in the Loop</h2>
-            <p className="newsletter-description">
-              Get the latest updates on blockchain education, community events, and opportunities delivered straight to your inbox.
-            </p>
-            <form className="newsletter-form">
-              <div className="newsletter-input-wrapper">
-                <input 
-                  type="email" 
-                  placeholder="Enter your email address" 
-                  className="newsletter-input"
-                  required
-                />
-                <button type="submit" className="newsletter-button">
-                  Subscribe
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </button>
-              </div>
-              <p className="newsletter-note">
-                We respect your privacy. Unsubscribe at any time.
+            <div className="newsletter-left">
+              <h2 className="newsletter-title">The Newsletter you want to read</h2>
+              <p className="newsletter-description">
+                Get the latest updates on blockchain education, community events, and opportunities delivered straight to your inbox.
               </p>
-            </form>
+            </div>
+            <div className="newsletter-right">
+              {!newsletterSuccess ? (
+                <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
+                  <div className="newsletter-filters">
+                    <label className="newsletter-checkbox-label">
+                      <input 
+                        type="checkbox" 
+                        checked={newsletterFilters.developers}
+                        onChange={() => handleFilterChange('developers')}
+                        className="newsletter-checkbox"
+                      />
+                      <div className="checkbox-content">
+                        <span className="checkbox-title">Developers Newsletter</span>
+                        <span className="checkbox-note">Technical tutorials, code snippets, and dev resources</span>
+                      </div>
+                    </label>
+                    <label className="newsletter-checkbox-label">
+                      <input 
+                        type="checkbox" 
+                        checked={newsletterFilters.general}
+                        onChange={() => handleFilterChange('general')}
+                        className="newsletter-checkbox"
+                      />
+                      <div className="checkbox-content">
+                        <span className="checkbox-title">General</span>
+                        <span className="checkbox-note">Community updates, news, and announcements</span>
+                      </div>
+                    </label>
+                    <label className="newsletter-checkbox-label">
+                      <input 
+                        type="checkbox" 
+                        checked={newsletterFilters.events}
+                        onChange={() => handleFilterChange('events')}
+                        className="newsletter-checkbox"
+                      />
+                      <div className="checkbox-content">
+                        <span className="checkbox-title">Events & Opportunities</span>
+                        <span className="checkbox-note">Hackathons, workshops, jobs, and career opportunities</span>
+                      </div>
+                    </label>
+                  </div>
+                  {newsletterError && (
+                    <div className="newsletter-error">
+                      {newsletterError}
+                    </div>
+                  )}
+                  <div className="newsletter-input-wrapper">
+                    <input 
+                      type="email" 
+                      placeholder="Enter your email address" 
+                      className="newsletter-input"
+                      value={newsletterEmail}
+                      onChange={handleNewsletterEmailChange}
+                      required
+                    />
+                  </div>
+                  <button type="submit" className="newsletter-button">
+                    Subscribe
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </form>
+              ) : (
+                <div className="newsletter-success">
+                  <h3 className="newsletter-success-title">The Newsletters</h3>
+                  <h4 className="newsletter-success-subtitle">The email you actually want to read</h4>
+                  <p className="newsletter-success-description">
+                    Hear it from us first. Sign up to get the real-time scoop on blockchain ecosystem news, educational resources, and opportunities.
+                  </p>
+                  <div className="newsletter-success-thanks">
+                    <p className="newsletter-success-thanks-title">Thank You</p>
+                    <p className="newsletter-success-thanks-text">
+                      Welcome to the community. We'll keep you in the loop. If you'd like, get started with some of our <a href="/academy" className="newsletter-success-link">Learning Resources</a> or <a href="/blog" className="newsletter-success-link">Blog</a>.
+                    </p>
+                  </div>
+                  <button 
+                    className="newsletter-button"
+                    onClick={() => {
+                      setNewsletterSuccess(false)
+                      setNewsletterEmail('')
+                      setNewsletterFilters({
+                        developers: false,
+                        general: false,
+                        events: false
+                      })
+                    }}
+                  >
+                    Subscribe Another Email
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>

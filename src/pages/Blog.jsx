@@ -12,6 +12,7 @@ import tokensImg from '../assets/blogs/tokens.png'
 import dappsImg from '../assets/blogs/dapps.png'
 import bugsImg from '../assets/blogs/bugs.png'
 import blockchainUsesImg from '../assets/blogs/blockchainuses.png'
+import daosImg from '../assets/blogs/daos.png'
 
 function Blog() {
   const blogs = [
@@ -92,7 +93,7 @@ function Blog() {
       date: "Feb 20, 2025",
       readTime: "8 min read",
       author: "Deon Orina",
-      gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
+      image: daosImg,
       featured: false
     },
     {

@@ -15,4 +15,7 @@ export default defineConfig({
   css: {
     devSourcemap: true,
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.css'],
+  },
 })

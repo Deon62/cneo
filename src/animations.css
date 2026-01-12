@@ -215,6 +215,18 @@
   width: 100%;
 }
 
+/* Fix for contact channels flex layout */
+.contact-channels > .animated-section-wrapper {
+  flex: 1;
+  display: flex;
+  min-width: 280px; /* Match contact-channel min-width */
+}
+
+.contact-channels > .animated-section-wrapper > .contact-channel {
+  flex: 1;
+  width: 100%;
+}
+
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   .animate-on-scroll,

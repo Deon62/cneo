@@ -404,13 +404,18 @@
 
 @media (max-width: 768px) {
   .contact-header {
-    padding: 100px 20px;
-    min-height: 80vh;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 80px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .contact-form-section {
-    padding: 100px 20px 80px;
-    min-height: auto;
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
   }
 
   .contact-form-container {
@@ -432,7 +437,9 @@
   }
 
   .contact-info-section {
-    padding: 60px 20px;
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
     min-height: auto;
   }
 
@@ -444,8 +451,7 @@
 
 @media (max-width: 480px) {
   .contact-header {
-    padding: 80px 16px;
-    min-height: 70vh;
+    padding: 70px 16px 40px;
   }
 
   .contact-header-title {
@@ -457,8 +463,11 @@
   }
 
   .contact-form-section {
-    padding: 40px 16px;
-    min-height: auto;
+    padding: 60px 16px;
+  }
+
+  .contact-info-section {
+    padding: 60px 16px;
   }
 
   .contact-form-wrapper {
@@ -626,8 +635,9 @@
 /* Newsletter Section Responsive */
 @media (max-width: 768px) {
   .newsletter-section {
+    min-height: 100vh;
+    height: auto;
     padding: 80px 20px;
-    min-height: 80vh;
   }
 
   .newsletter-input-wrapper {
@@ -659,7 +669,6 @@
 @media (max-width: 480px) {
   .newsletter-section {
     padding: 60px 16px;
-    min-height: 70vh;
   }
 
   .newsletter-title {

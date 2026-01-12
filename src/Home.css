@@ -1049,19 +1049,25 @@
 }
 /* Responsive Design */
 @media (max-width: 768px) {
+  /* Hero Section - Full viewport */
   .hero {
     min-height: 100vh;
-    padding: 120px 20px 60px;
+    height: 100vh;
+    padding: 80px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 0;
   }
 
   .hero-content {
     max-width: 100%;
     text-align: center;
+    margin-top: 0;
   }
 
   .hero-subtext {
@@ -1076,17 +1082,23 @@
     justify-content: center;
   }
 
-  .hero-image {
-    max-width: 100%;
+  /* Hide African map on mobile */
+  .hero-image-container {
+    display: none !important;
   }
 
   .btn {
     width: 100%;
   }
 
+  /* About Section - Full viewport */
   .about-section {
-    padding: 60px 20px;
     min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .about-content {
@@ -1112,9 +1124,14 @@
     font-size: 1.25rem;
   }
 
+  /* How it Works Section - Full viewport */
   .how-it-works-section {
-    padding: 60px 20px;
     min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .how-it-works-title {
@@ -1130,9 +1147,14 @@
     padding: 40px 24px;
   }
 
+  /* Community Snapshot Section - Full viewport */
   .community-snapshot-section {
-    padding: 60px 20px;
     min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .community-snapshot-header {
@@ -1158,9 +1180,14 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
+  /* Courses Section - Full viewport */
   .courses-section {
-    padding: 60px 20px;
     min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .courses-title {
@@ -1177,9 +1204,14 @@
     min-height: 320px;
   }
 
+  /* FAQ Section - Full viewport */
   .faq-section {
-    padding: 60px 20px;
     min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .faq-title {
@@ -1192,13 +1224,23 @@
 }
 
 @media (max-width: 480px) {
+  /* Hero - ensure image hidden */
+  .hero {
+    padding: 70px 16px 40px;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 0;
   }
 
   .hero-content {
     text-align: center;
+    margin-top: 0;
+  }
+
+  .hero-image-container {
+    display: none !important;
   }
 
   .hero-subtext {
@@ -1219,8 +1261,9 @@
     margin-bottom: 40px;
   }
 
+  /* About Section */
   .about-section {
-    padding: 48px 16px;
+    padding: 60px 16px;
     min-height: 100vh;
   }
 

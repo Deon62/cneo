@@ -268,16 +268,24 @@
 /* Events Page Responsive */
 @media (max-width: 768px) {
   .events-header {
-    padding: 100px 20px;
-    min-height: 80vh;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 80px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .events-empty-section {
-    padding: 100px 20px 80px;
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
   }
 
   .events-subscribe-section {
-    padding: 100px 20px;
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
   }
 
   .events-subscribe-input-wrapper {
@@ -308,8 +316,7 @@
 
 @media (max-width: 480px) {
   .events-header {
-    padding: 80px 16px;
-    min-height: 70vh;
+    padding: 70px 16px 40px;
   }
 
   .events-header-title {
@@ -321,7 +328,11 @@
   }
 
   .events-empty-section {
-    padding: 80px 16px;
+    padding: 60px 16px;
+  }
+
+  .events-subscribe-section {
+    padding: 60px 16px;
   }
 
   .events-empty-icon {

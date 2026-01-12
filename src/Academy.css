@@ -302,19 +302,34 @@
 /* Academy Header Responsive */
 @media (max-width: 768px) {
   .academy-header {
-    padding: 100px 20px 60px;
-    min-height: 60vh;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 80px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .academy-header-content {
     max-width: 100%;
   }
+
+  .podcasts-section {
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .blogs-section {
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+  }
 }
 
 @media (max-width: 480px) {
   .academy-header {
-    padding: 80px 16px 48px;
-    min-height: 50vh;
+    padding: 70px 16px 40px;
   }
 
   .academy-header-title {
@@ -323,6 +338,14 @@
 
   .academy-header-subtitle {
     font-size: 1rem;
+  }
+
+  .podcasts-section {
+    padding: 60px 16px;
+  }
+
+  .blogs-section {
+    padding: 60px 16px;
   }
 }
 

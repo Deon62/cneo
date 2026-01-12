@@ -314,19 +314,46 @@
 /* Community Header Responsive */
 @media (max-width: 768px) {
   .community-header {
-    padding: 100px 20px 60px;
-    min-height: 60vh;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 80px 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .community-header-content {
     max-width: 100%;
   }
+
+  .community-values-section {
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .community-platforms-section {
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .community-benefits-section {
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .community-cta-section {
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px;
+  }
 }
 
 @media (max-width: 480px) {
   .community-header {
-    padding: 80px 16px 48px;
-    min-height: 50vh;
+    padding: 70px 16px 40px;
   }
 
   .community-header-title {
@@ -335,6 +362,22 @@
 
   .community-header-subtitle {
     font-size: 1rem;
+  }
+
+  .community-values-section {
+    padding: 60px 16px;
+  }
+
+  .community-platforms-section {
+    padding: 60px 16px;
+  }
+
+  .community-benefits-section {
+    padding: 60px 16px;
+  }
+
+  .community-cta-section {
+    padding: 60px 16px;
   }
 }
 

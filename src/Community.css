@@ -808,36 +808,29 @@
   margin-top: 40px;
 }
 
-.chapters-info-card {
-  background: #0A0A0A;
-  border-radius: 20px;
-  padding: 12px 20px;
-  width: fit-content;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .chapters-cta-button {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-family: 'Inter', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 400;
+  font-size: 0.9375rem;
+  font-weight: 500;
   color: #FFFFFF;
   text-decoration: none;
   transition: all 0.2s ease;
   white-space: nowrap;
-  padding: 10px 20px;
+  padding: 14px 28px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.05);
+  background: #0A0A0A;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
 .chapters-cta-button:hover {
-  color: rgba(255, 255, 255, 0.8);
+  background: #1a1a1a;
   gap: 12px;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .chapters-cta-button svg {

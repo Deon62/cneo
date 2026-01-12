@@ -107,7 +107,15 @@ function Navbar() {
         }
       })
     } else if (location.pathname === '/') {
-      // On home page, use scroll-based active states
+      // On home page, mark Home link as active by default, then use scroll-based states
+      navLinks.forEach((link) => {
+        const linkSection = link.getAttribute('data-section')
+        if (linkSection === 'home') {
+          link.classList.add('active')
+        } else {
+          link.classList.remove('active')
+        }
+      })
       window.addEventListener('scroll', handleScroll)
       handleScroll()
       return () => window.removeEventListener('scroll', handleScroll)

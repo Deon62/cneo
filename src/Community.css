@@ -938,6 +938,25 @@
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
+  .chapters-stats-card {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .stat-section {
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 20px;
+  }
+
+  .stat-section:last-child {
+    border-bottom: none;
+  }
+
+  .stat-section-dark {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 
 @media (max-width: 480px) {
@@ -945,12 +964,20 @@
     padding: 60px 16px;
   }
 
-  .chapters-info-card {
-    padding: 32px 24px;
+  .chapters-stats-card {
+    border-radius: 12px;
   }
 
-  .chapter-stat-card {
-    padding: 32px 24px;
+  .stat-section {
+    padding: 20px 16px;
+  }
+
+  .stat-section .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-section .stat-label {
+    font-size: 0.8125rem;
   }
 }
 

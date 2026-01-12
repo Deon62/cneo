@@ -645,6 +645,32 @@
   margin: 0 auto;
 }
 
+.view-more-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #2563EB;
+  text-decoration: none;
+  margin-top: 24px;
+  transition: all 0.2s ease;
+}
+
+.view-more-link:hover {
+  color: #1d4ed8;
+  gap: 12px;
+}
+
+.view-more-link svg {
+  transition: transform 0.2s ease;
+}
+
+.view-more-link:hover svg {
+  transform: translateX(4px);
+}
+
 .blogs-scroll-wrapper {
   position: relative;
   max-width: 1400px;

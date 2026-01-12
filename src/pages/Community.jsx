@@ -356,8 +356,8 @@ function Community() {
               <div className="footer-column">
                 <h4 className="footer-column-title">Legal</h4>
                 <ul className="footer-links">
-                  <li><a href="#">Terms of Service</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
+                  <li><Link to="/legal#terms">Terms of Service</Link></li>
+                  <li><Link to="/legal#privacy">Privacy Policy</Link></li>
                 </ul>
               </div>
             </div>

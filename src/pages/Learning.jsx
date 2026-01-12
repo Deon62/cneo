@@ -1,5 +1,6 @@
 import '../Home.css'
 import Navbar from '../components/Navbar'
+import { Link } from 'react-router-dom'
 import bitcoinIcon from '../assets/bitcoin.svg'
 import contractsIcon from '../assets/contracts.svg'
 import defiIcon from '../assets/defi.svg'
@@ -102,26 +103,26 @@ function Learning() {
             <div className="footer-column">
               <h3 className="footer-column-title">Explore</h3>
               <ul className="footer-links">
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/community">Community</a></li>
-                <li><a href="/academy">Academy</a></li>
-                <li><a href="/events">Events</a></li>
+                <li><Link to="/about">About Us</Link></li>
+                <li><Link to="/community">Community</Link></li>
+                <li><Link to="/academy">Academy</Link></li>
+                <li><Link to="/events">Events</Link></li>
               </ul>
             </div>
             <div className="footer-column">
               <h3 className="footer-column-title">Resources</h3>
               <ul className="footer-links">
-                <li><a href="/blog">Blog</a></li>
-                <li><a href="/learning">Courses</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><Link to="/blog">Blog</Link></li>
+                <li><Link to="/learning">Courses</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
               </ul>
             </div>
             <div className="footer-column">
               <h3 className="footer-column-title">Legal</h3>
-              <ul className="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-              </ul>
+                <ul className="footer-links">
+                  <li><Link to="/legal#privacy">Privacy Policy</Link></li>
+                  <li><Link to="/legal#terms">Terms of Service</Link></li>
+                </ul>
             </div>
           </div>
         </div>

@@ -219,7 +219,6 @@ function App() {
             <div className="stat-description">Projects built</div>
           </div>
         </div>
-        <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
       </section>
 
       {/* Courses Section */}

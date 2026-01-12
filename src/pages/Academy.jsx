@@ -1,12 +1,8 @@
 import '../Academy.css'
 import '../Home.css'
 import Navbar from '../components/Navbar'
-import podcastSvg from '../assets/podcast.svg'
-import socialSvg from '../assets/social.svg'
-import videoSvg from '../assets/video.svg'
 import academySvg from '../assets/academy.svg'
 import readSvg from '../assets/read.svg'
-import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 // Blog images
@@ -18,8 +14,6 @@ import tokensImg from '../assets/blogs/tokens.png'
 import dappsImg from '../assets/blogs/dapps.png'
 
 function Academy() {
-  const blogsScrollRef = useRef(null)
-
   const blogs = [
     {
       id: 1,
@@ -71,21 +65,6 @@ function Academy() {
     }
   ]
 
-  const scrollBlogs = (direction) => {
-    if (blogsScrollRef.current) {
-      const container = blogsScrollRef.current
-      const firstCard = container.querySelector('.blog-card')
-      if (firstCard) {
-        const cardWidth = firstCard.offsetWidth
-        const scrollAmount = cardWidth * 4 // Scroll by exactly 4 cards (gap is included in card width)
-        
-        container.scrollBy({
-          left: direction === 'right' ? scrollAmount : -scrollAmount,
-          behavior: 'smooth'
-        })
-      }
-    }
-  }
   return (
     <div className="app">
       <Navbar />
@@ -128,148 +107,29 @@ function Academy() {
         </div>
       </section>
 
-      {/* Podcasts & Media Section */}
-      <section className="podcasts-section">
-        <div className="podcasts-container">
-          <div className="podcasts-header">
-            <p className="podcasts-label">Content & Media</p>
-            <h2 className="podcasts-title">Learn Through Content</h2>
-            <p className="podcasts-description">
-              Explore our collection of podcasts, videos, and media resources designed to enhance your blockchain learning journey.
-            </p>
-          </div>
-          <div className="podcasts-grid">
-            <div className="podcast-item">
-              <div className="podcast-icon">
-                <img src={podcastSvg} alt="Podcasts" />
-              </div>
-              <h3 className="podcast-item-title">Podcasts</h3>
-              <p className="podcast-item-description">
-                Weekly discussions with blockchain experts, builders, and innovators sharing insights and stories.
-              </p>
-              <a href="#" className="podcast-link">
-                Listen Now
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-
-            <div className="podcast-item">
-              <div className="podcast-icon">
-                <img src={socialSvg} alt="YouTube Shorts" />
-              </div>
-              <h3 className="podcast-item-title">YouTube Shorts</h3>
-              <p className="podcast-item-description">
-                Quick, bite-sized videos covering blockchain concepts, tips, and tutorials in under 60 seconds.
-              </p>
-              <a href="#" className="podcast-link">
-                Watch Now
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-
-            <div className="podcast-item">
-              <div className="podcast-icon">
-                <img src={videoSvg} alt="Video Tutorials" />
-              </div>
-              <h3 className="podcast-item-title">Video Tutorials</h3>
-              <p className="podcast-item-description">
-                In-depth video tutorials and walkthroughs for learning blockchain development and concepts.
-              </p>
-              <a href="#" className="podcast-link">
-                Start Learning
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Academy Stats Card */}
-      <section className="academy-stats-section">
-        <div className="academy-stats-container">
-          <div className="academy-stats-header">
-            <h2 className="academy-stats-title">Our Impact</h2>
-            <p className="academy-stats-subtitle">
-              Building East Africa's next generation of blockchain talent through comprehensive education and hands-on learning.
-            </p>
-          </div>
-          <div className="academy-stats-card">
-            <div className="academy-stat-section academy-stat-section-white">
-              <div className="academy-stat-number">0</div>
-              <div className="academy-stat-label">Courses Offered</div>
-            </div>
-            <div className="academy-stat-section academy-stat-section-dark">
-              <div className="academy-stat-number">0</div>
-              <div className="academy-stat-label">Students Trained</div>
-            </div>
-            <div className="academy-stat-section academy-stat-section-light">
-              <div className="academy-stat-number">0</div>
-              <div className="academy-stat-label">Certificates Issued</div>
-            </div>
-            <div className="academy-stat-section academy-stat-section-accent">
-              <div className="academy-stat-number">0</div>
-              <div className="academy-stat-label">Active Learners</div>
-            </div>
-            <div className="academy-stat-section academy-stat-section-white-alt">
-              <div className="academy-stat-number">0</div>
-              <div className="academy-stat-label">Workshops Conducted</div>
-            </div>
-          </div>
-          <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
-        </div>
-      </section>
-
       {/* Developer Blogs Section */}
       <section className="developer-blogs-section">
         <div className="developer-blogs-container">
           <div className="developer-blogs-header">
             <p className="developer-blogs-label">Technical Insights</p>
-            <h2 className="developer-blogs-title">Developer Blogs</h2>
+            <h2 className="developer-blogs-title">Academy Notes</h2>
             <p className="developer-blogs-description">
               In-depth technical articles, tutorials, and insights from our developer community covering blockchain development, smart contracts, and Web3 technologies.
             </p>
           </div>
-          <div className="blogs-scroll-wrapper">
-            <button 
-              className="blogs-scroll-btn blogs-scroll-left" 
-              onClick={() => scrollBlogs('left')}
-              aria-label="Scroll left"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
-            <div className="blogs-scroll-container" ref={blogsScrollRef}>
-              <div className="blogs-grid">
-                {blogs.map((blog, index) => (
-                  <Link to={`/blog/${blog.id}`} key={blog.id} className="blog-card" data-index={index}>
-                    <div className="blog-image">
-                      <img src={blog.image} alt={blog.title} className="blog-image-img" />
-                    </div>
-                    <div className="blog-meta">
-                      <span className="blog-date-author">{blog.date} • {blog.author}</span>
-                    </div>
-                    <h3 className="blog-title">{blog.title}</h3>
-                    <p className="blog-excerpt">{blog.excerpt}</p>
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <button 
-              className="blogs-scroll-btn blogs-scroll-right" 
-              onClick={() => scrollBlogs('right')}
-              aria-label="Scroll right"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </button>
+          <div className="blogs-grid">
+            {blogs.slice(0, 3).map((blog, index) => (
+              <Link to={`/blog/${blog.id}`} key={blog.id} className="blog-card" data-index={index}>
+                <div className="blog-image">
+                  <img src={blog.image} alt={blog.title} className="blog-image-img" />
+                </div>
+                <div className="blog-meta">
+                  <span className="blog-date-author">{blog.date} • {blog.author}</span>
+                </div>
+                <h3 className="blog-title">{blog.title}</h3>
+                <p className="blog-excerpt">{blog.excerpt}</p>
+              </Link>
+            ))}
           </div>
           <div className="blogs-view-all-wrapper">
             <Link to="/blog" className="blogs-view-all-btn">

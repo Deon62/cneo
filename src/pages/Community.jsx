@@ -155,22 +155,6 @@ function Community() {
               </div>
             </div>
           </div>
-          <h3 className="chapters-stats-title">Community Impact</h3>
-          <div className="chapters-stats-card">
-            <div className="stat-section stat-section-white">
-              <div className="stat-number">0</div>
-              <div className="stat-label">Ambassadors</div>
-            </div>
-            <div className="stat-section stat-section-dark">
-              <div className="stat-number">0</div>
-              <div className="stat-label">Events Run</div>
-            </div>
-            <div className="stat-section stat-section-light">
-              <div className="stat-number">0</div>
-              <div className="stat-label">Projects Supported</div>
-            </div>
-          </div>
-          <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
         </div>
       </section>
 
@@ -199,35 +183,34 @@ function Community() {
         </div>
       </section>
 
-      {/* Our Growth Section */}
-      <section className="growth-section">
-        <div className="growth-container">
-          <div className="growth-header">
-            <p className="growth-label">Our Growth</p>
-            <h2 className="growth-title">Join the Movement</h2>
-            <p className="growth-description">
-              Connect with us across all platforms and be part of East Africa's fastest-growing blockchain community.
+      {/* Community Stats Section */}
+      <section className="community-stats-section">
+        <div className="community-stats-container">
+          <div className="community-stats-header">
+            <p className="community-stats-label">Our Impact</p>
+            <h2 className="community-stats-title">Community Growth</h2>
+            <p className="community-stats-description">
+              Building East Africa's blockchain future with a growing community of builders, learners, and innovators committed to excellence.
             </p>
           </div>
-          <div className="growth-stats-card">
-            <div className="growth-stat-section growth-stat-section-white">
-              <div className="growth-stat-number">0</div>
-              <div className="growth-stat-label">Telegram Members</div>
+          <div className="community-stats-card">
+            <div className="community-stat-section community-stat-section-white">
+              <div className="community-stat-number">4</div>
+              <div className="community-stat-label">Ambassadors</div>
             </div>
-            <div className="growth-stat-section growth-stat-section-dark">
-              <div className="growth-stat-number">0</div>
-              <div className="growth-stat-label">Twitter Followers</div>
+            <div className="community-stat-section community-stat-section-dark">
+              <div className="community-stat-number">1</div>
+              <div className="community-stat-label">Universities</div>
             </div>
-            <div className="growth-stat-section growth-stat-section-light">
-              <div className="growth-stat-number">0</div>
-              <div className="growth-stat-label">All Platforms Combined</div>
+            <div className="community-stat-section community-stat-section-light">
+              <div className="community-stat-number">30+</div>
+              <div className="community-stat-label">Members in All Platforms</div>
             </div>
-            <div className="growth-stat-section growth-stat-section-accent">
-              <div className="growth-stat-number">0%</div>
-              <div className="growth-stat-label">Growing Rate</div>
+            <div className="community-stat-section community-stat-section-accent">
+              <div className="community-stat-number">25%</div>
+              <div className="community-stat-label">Growing Rate</div>
             </div>
           </div>
-          <p className="stats-note">We're just getting started! As a new startup, we're building our community from the ground up. Join us to be part of our growth story.</p>
         </div>
       </section>
 
@@ -275,9 +258,10 @@ function Community() {
         <div className="newsletter-container">
           <div className="newsletter-content">
             <div className="newsletter-left">
-              <h2 className="newsletter-title">The Newsletter you want to read</h2>
+              <h2 className="newsletter-title">The Newsletter Worth Reading</h2>
               <p className="newsletter-description">
-                Get the latest updates on blockchain education, community events, and opportunities delivered straight to your inbox.
+                No spam. No hype.
+                Just practical insights on blockchain education, community programs, and real opportunities across East Africa.
               </p>
             </div>
             <div className="newsletter-right">

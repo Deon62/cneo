@@ -203,6 +203,18 @@
   width: 100%;
 }
 
+/* Fix for community stats card flex layout */
+.community-stats-card > .animated-section-wrapper {
+  flex: 1;
+  display: flex;
+  min-width: 0; /* Prevent flex items from overflowing */
+}
+
+.community-stats-card > .animated-section-wrapper > .community-stat-section {
+  flex: 1;
+  width: 100%;
+}
+
 /* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   .animate-on-scroll,

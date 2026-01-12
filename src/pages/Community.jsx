@@ -1,6 +1,8 @@
 import '../Community.css'
 import '../Home.css'
+import '../animations.css'
 import Navbar from '../components/Navbar'
+import AnimatedSection from '../components/AnimatedSection'
 import learnSvg from '../assets/learn.svg'
 import impactSvg from '../assets/impact.svg'
 import communitySvg from '../assets/community.svg'
@@ -76,57 +78,69 @@ function Community() {
       {/* Header Section */}
       <section className="community-header">
         <div className="community-header-container">
-          <div className="community-header-image">
-            <img src={communityHeaderSvg} alt="Community Illustration" />
-          </div>
-          <div className="community-header-content">
-            <h1 className="community-header-title">Our Community</h1>
-            <p className="community-header-subtitle">
-              Join a vibrant network of blockchain builders, learners, and innovators across East Africa. 
-              Together, we're shaping the future of decentralized technology.
-            </p>
-          </div>
+          <AnimatedSection animation="fadeInLeft" delay={0}>
+            <div className="community-header-image">
+              <img src={communityHeaderSvg} alt="Community Illustration" />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeInRight" delay={200}>
+            <div className="community-header-content">
+              <h1 className="community-header-title">Our Community</h1>
+              <p className="community-header-subtitle">
+                Join a vibrant network of blockchain builders, learners, and innovators across East Africa. 
+                Together, we're shaping the future of decentralized technology.
+              </p>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Community Values Section */}
       <section className="community-values-section">
         <div className="community-values-container">
-          <h2 className="section-title">Why Join Our Community</h2>
-          <p className="community-values-intro">
-            We're more than just a community we're a movement dedicated to empowering East Africa's blockchain ecosystem 
-            through collaboration, education, and innovation.
-          </p>
+          <AnimatedSection animation="fadeInUp" delay={0}>
+            <h2 className="section-title">Why Join Our Community</h2>
+            <p className="community-values-intro">
+              We're more than just a community we're a movement dedicated to empowering East Africa's blockchain ecosystem 
+              through collaboration, education, and innovation.
+            </p>
+          </AnimatedSection>
           <div className="community-values-grid">
-            <div className="community-value-card">
-              <div className="value-icon">
-                <img src={learnSvg} alt="Learn Together" />
+            <AnimatedSection animation="fadeInUp" delay={100}>
+              <div className="community-value-card">
+                <div className="value-icon">
+                  <img src={learnSvg} alt="Learn Together" />
+                </div>
+                <h3 className="value-title">Learn Together</h3>
+                <p className="value-description">
+                  Access comprehensive learning resources, courses, and workshops designed to help you master blockchain technology at your own pace.
+                </p>
               </div>
-              <h3 className="value-title">Learn Together</h3>
-              <p className="value-description">
-                Access comprehensive learning resources, courses, and workshops designed to help you master blockchain technology at your own pace.
-              </p>
-            </div>
+            </AnimatedSection>
 
-            <div className="community-value-card">
-              <div className="value-icon">
-                <img src={communitySvg} alt="Build Connections" />
+            <AnimatedSection animation="fadeInUp" delay={200}>
+              <div className="community-value-card">
+                <div className="value-icon">
+                  <img src={communitySvg} alt="Build Connections" />
+                </div>
+                <h3 className="value-title">Build Connections</h3>
+                <p className="value-description">
+                  Connect with like minded builders, developers, and entrepreneurs. Network with industry leaders and find your next collaborator.
+                </p>
               </div>
-              <h3 className="value-title">Build Connections</h3>
-              <p className="value-description">
-                Connect with like minded builders, developers, and entrepreneurs. Network with industry leaders and find your next collaborator.
-              </p>
-            </div>
+            </AnimatedSection>
 
-            <div className="community-value-card">
-              <div className="value-icon">
-                <img src={impactSvg} alt="Create Impact" />
+            <AnimatedSection animation="fadeInUp" delay={300}>
+              <div className="community-value-card">
+                <div className="value-icon">
+                  <img src={impactSvg} alt="Create Impact" />
+                </div>
+                <h3 className="value-title">Create Impact</h3>
+                <p className="value-description">
+                  Work on real world projects that solve problems and create value. Contribute to East Africa's blockchain transformation.
+                </p>
               </div>
-              <h3 className="value-title">Create Impact</h3>
-              <p className="value-description">
-                Work on real world projects that solve problems and create value. Contribute to East Africa's blockchain transformation.
-              </p>
-            </div>
+            </AnimatedSection>
 
           </div>
         </div>
@@ -136,25 +150,29 @@ function Community() {
       <section className="chapters-section">
         <div className="chapters-container">
           <div className="chapters-content">
-            <div className="chapters-image">
-              <img src={universitySvg} alt="University Chapters" />
-            </div>
-            <div className="chapters-header">
-              <p className="chapters-label">Introducing</p>
-              <h2 className="chapters-title">Community Chapters</h2>
-              <p className="chapters-description">
-                We're building a network of campus chapters across universities, TVETs, and colleges throughout East Africa. 
-                Join us in bringing blockchain education and innovation to educational institutions near you.
-              </p>
-              <div className="chapters-cta-wrapper">
-                <a href="#" className="chapters-cta-button">
-                  Start a Chapter
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
+            <AnimatedSection animation="fadeInLeft" delay={0}>
+              <div className="chapters-image">
+                <img src={universitySvg} alt="University Chapters" />
               </div>
-            </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInRight" delay={100}>
+              <div className="chapters-header">
+                <p className="chapters-label">Introducing</p>
+                <h2 className="chapters-title">Community Chapters</h2>
+                <p className="chapters-description">
+                  We're building a network of campus chapters across universities, TVETs, and colleges throughout East Africa. 
+                  Join us in bringing blockchain education and innovation to educational institutions near you.
+                </p>
+                <div className="chapters-cta-wrapper">
+                  <a href="#" className="chapters-cta-button">
+                    Start a Chapter
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -162,55 +180,69 @@ function Community() {
       {/* Telegram Section */}
       <section className="telegram-section">
         <div className="telegram-container">
-          <div className="telegram-logo-wrapper">
-            <div className="telegram-logo">
-              <svg width="200" height="200" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM17.896 8.178L16.051 18.302C15.878 19.261 15.316 19.486 14.488 19.019L10.681 16.227L8.813 17.943C8.599 18.155 8.419 18.333 8.004 18.333L8.291 14.458L15.948 7.592C16.272 7.301 15.88 7.131 15.45 7.422L6.698 13.465L2.93 12.208C1.978 11.911 1.961 11.293 3.12 10.849L17.013 5.368C17.806 5.054 18.496 5.466 18.244 6.515L17.896 8.178Z" fill="currentColor"/>
-              </svg>
+          <AnimatedSection animation="scaleIn" delay={0}>
+            <div className="telegram-logo-wrapper">
+              <div className="telegram-logo">
+                <svg width="200" height="200" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0C5.373 0 0 5.373 0 12C0 18.627 5.373 24 12 24C18.627 24 24 18.627 24 12C24 5.373 18.627 0 12 0ZM17.896 8.178L16.051 18.302C15.878 19.261 15.316 19.486 14.488 19.019L10.681 16.227L8.813 17.943C8.599 18.155 8.419 18.333 8.004 18.333L8.291 14.458L15.948 7.592C16.272 7.301 15.88 7.131 15.45 7.422L6.698 13.465L2.93 12.208C1.978 11.911 1.961 11.293 3.12 10.849L17.013 5.368C17.806 5.054 18.496 5.466 18.244 6.515L17.896 8.178Z" fill="currentColor"/>
+                </svg>
+              </div>
             </div>
-          </div>
-          <div className="telegram-content">
-            <h2 className="telegram-title">Join our Telegram</h2>
-            <p className="telegram-description">
-              The Chain Neo Telegram is a community group for events, feedback, questions, mentoring, expert guidance, and networking.
-            </p>
-            <a href="#" className="telegram-button">
-              Join Now
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </a>
-          </div>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeInUp" delay={200}>
+            <div className="telegram-content">
+              <h2 className="telegram-title">Join our Telegram</h2>
+              <p className="telegram-description">
+                The Chain Neo Telegram is a community group for events, feedback, questions, mentoring, expert guidance, and networking.
+              </p>
+              <a href="#" className="telegram-button">
+                Join Now
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* Community Stats Section */}
       <section className="community-stats-section">
         <div className="community-stats-container">
-          <div className="community-stats-header">
-            <p className="community-stats-label">Our Impact</p>
-            <h2 className="community-stats-title">Community Growth</h2>
-            <p className="community-stats-description">
-              Building East Africa's blockchain future with a growing community of builders, learners, and innovators committed to excellence.
-            </p>
-          </div>
+          <AnimatedSection animation="fadeInUp" delay={0}>
+            <div className="community-stats-header">
+              <p className="community-stats-label">Our Impact</p>
+              <h2 className="community-stats-title">Community Growth</h2>
+              <p className="community-stats-description">
+                Building East Africa's blockchain future with a growing community of builders, learners, and innovators committed to excellence.
+              </p>
+            </div>
+          </AnimatedSection>
           <div className="community-stats-card">
-            <div className="community-stat-section community-stat-section-white">
-              <div className="community-stat-number">4</div>
-              <div className="community-stat-label">Ambassadors</div>
-            </div>
-            <div className="community-stat-section community-stat-section-dark">
-              <div className="community-stat-number">1</div>
-              <div className="community-stat-label">Universities</div>
-            </div>
-            <div className="community-stat-section community-stat-section-light">
-              <div className="community-stat-number">30+</div>
-              <div className="community-stat-label">Members in All Platforms</div>
-            </div>
-            <div className="community-stat-section community-stat-section-accent">
-              <div className="community-stat-number">25%</div>
-              <div className="community-stat-label">Growing Rate</div>
-            </div>
+            <AnimatedSection animation="scaleIn" delay={100}>
+              <div className="community-stat-section community-stat-section-white">
+                <div className="community-stat-number">4</div>
+                <div className="community-stat-label">Ambassadors</div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="scaleIn" delay={200}>
+              <div className="community-stat-section community-stat-section-dark">
+                <div className="community-stat-number">1</div>
+                <div className="community-stat-label">Universities</div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="scaleIn" delay={300}>
+              <div className="community-stat-section community-stat-section-light">
+                <div className="community-stat-number">30+</div>
+                <div className="community-stat-label">Members in All Platforms</div>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="scaleIn" delay={400}>
+              <div className="community-stat-section community-stat-section-accent">
+                <div className="community-stat-number">25%</div>
+                <div className="community-stat-label">Growing Rate</div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -219,28 +251,32 @@ function Community() {
       <section className="collaborate-section">
         <div className="collaborate-container">
           <div className="collaborate-content">
-            <div className="collaborate-header">
-              <p className="collaborate-label">Collaborate With Us</p>
-              <h2 className="collaborate-title">Calling Early Partners</h2>
-              <p className="collaborate-description">
-                Chain Neo is opening collaboration slots for Web3 protocols, universities, and organizations interested in building blockchain talent across East Africa.
-              </p>
-              <p className="collaborate-description">
-                We're working with students, developers, and builders at the grassroots level—through campus programs, workshops, and hands-on Web3 education.
-              </p>
-              <p className="collaborate-description">
-                If you want early access to talent, community reach, and long-term ecosystem growth, this is the entry point.
-              </p>
-              <a href="/contact" className="collaborate-cta-button">
-                Start a Partner Conversation
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </a>
-            </div>
-            <div className="collaborate-image">
-              <img src={partnersSvg} alt="Partners illustration" />
-            </div>
+            <AnimatedSection animation="fadeInLeft" delay={0}>
+              <div className="collaborate-header">
+                <p className="collaborate-label">Collaborate With Us</p>
+                <h2 className="collaborate-title">Calling Early Partners</h2>
+                <p className="collaborate-description">
+                  Chain Neo is opening collaboration slots for Web3 protocols, universities, and organizations interested in building blockchain talent across East Africa.
+                </p>
+                <p className="collaborate-description">
+                  We're working with students, developers, and builders at the grassroots level—through campus programs, workshops, and hands-on Web3 education.
+                </p>
+                <p className="collaborate-description">
+                  If you want early access to talent, community reach, and long-term ecosystem growth, this is the entry point.
+                </p>
+                <a href="/contact" className="collaborate-cta-button">
+                  Start a Partner Conversation
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInRight" delay={200}>
+              <div className="collaborate-image">
+                <img src={partnersSvg} alt="Partners illustration" />
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -249,15 +285,18 @@ function Community() {
       <section className="newsletter-section">
         <div className="newsletter-container">
           <div className="newsletter-content">
-            <div className="newsletter-left">
-              <h2 className="newsletter-title">The Newsletter Worth Reading</h2>
-              <p className="newsletter-description">
-                No spam. No hype.
-                Just practical insights on blockchain education, community programs, and real opportunities across East Africa.
-              </p>
-            </div>
-            <div className="newsletter-right">
-              {!newsletterSuccess ? (
+            <AnimatedSection animation="fadeInLeft" delay={0}>
+              <div className="newsletter-left">
+                <h2 className="newsletter-title">The Newsletter Worth Reading</h2>
+                <p className="newsletter-description">
+                  No spam. No hype.
+                  Just practical insights on blockchain education, community programs, and real opportunities across East Africa.
+                </p>
+              </div>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeInRight" delay={100}>
+              <div className="newsletter-right">
+                {!newsletterSuccess ? (
                 <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
                   <div className="newsletter-filters">
                     <label className="newsletter-checkbox-label">
@@ -351,7 +390,8 @@ function Community() {
                   </button>
                 </div>
               )}
-            </div>
+              </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

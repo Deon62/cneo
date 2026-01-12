@@ -3,9 +3,6 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import BlockchainNetworkIllustration from './components/BlockchainNetworkIllustration'
-import learnImage from './assets/learn.png'
-import buildImage from './assets/build.png'
-import communityImage from './assets/community.png'
 import bitcoinIcon from './assets/bitcoin.svg'
 import contractsIcon from './assets/contracts.svg'
 import defiIcon from './assets/defi.svg'
@@ -76,49 +73,29 @@ function App() {
 
       {/* What is Chain Neo Section */}
       <section id="about" className="about-section">
-        <h2 className="section-title">What is Chain Neo?</h2>
-        <div className="about-content">
-          <div className="about-intro">
-            <p className="about-text">
+        <div className="about-container">
+          <div className="about-content">
+            <span className="section-label">What is Chain Neo?</span>
+            <h2 className="about-title">What is Chain Neo?</h2>
+            <p className="about-description">
               Chain Neo is a friendly blockchain community dedicated to building East Africa's next generation of blockchain builders. We believe in making blockchain technology accessible, approachable, and empowering for everyone.
             </p>
           </div>
-          <div className="about-features">
-            <div className="about-feature-item">
-              <div className="feature-number">01</div>
-              <div className="feature-image-wrapper">
-                <img src={learnImage} alt="Learn Blockchain" className="feature-image" />
-              </div>
-              <div className="feature-content">
-                <h3 className="feature-title">Learn Blockchain</h3>
-                <p className="feature-text">
-                  Master the fundamentals and advanced concepts of blockchain technology through guided learning paths designed for all skill levels.
-                </p>
-              </div>
+          <div className="about-cards">
+            <div className="about-card">
+              <span className="about-number">01</span>
+              <h3>Learn Blockchain</h3>
+              <p>Master the fundamentals and advanced concepts of blockchain technology through guided learning paths designed for all skill levels.</p>
             </div>
-            <div className="about-feature-item feature-item-right">
-              <div className="feature-number">02</div>
-              <div className="feature-content">
-                <h3 className="feature-title">Build Real Projects</h3>
-                <p className="feature-text">
-                  Apply your knowledge by creating real-world blockchain solutions and contributing to innovative projects that make a difference.
-                </p>
-              </div>
-              <div className="feature-image-wrapper">
-                <img src={buildImage} alt="Build Real Projects" className="feature-image" />
-              </div>
+            <div className="about-card">
+              <span className="about-number">02</span>
+              <h3>Build Real Projects</h3>
+              <p>Apply your knowledge by creating real-world blockchain solutions and contributing to innovative projects that make a difference.</p>
             </div>
-            <div className="about-feature-item">
-              <div className="feature-number">03</div>
-              <div className="feature-image-wrapper">
-                <img src={communityImage} alt="Grow a Community" className="feature-image" />
-              </div>
-              <div className="feature-content">
-                <h3 className="feature-title">Grow a Community</h3>
-                <p className="feature-text">
-                  Connect with fellow builders, share knowledge, and grow together in a supportive ecosystem that celebrates learning and collaboration.
-                </p>
-              </div>
+            <div className="about-card">
+              <span className="about-number">03</span>
+              <h3>Grow a Community</h3>
+              <p>Connect with fellow builders, share knowledge, and grow together in a supportive ecosystem that celebrates learning and collaboration.</p>
             </div>
           </div>
         </div>

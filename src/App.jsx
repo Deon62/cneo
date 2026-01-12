@@ -18,7 +18,7 @@ function App() {
     {
       id: 1,
       question: "What is Chain Neo?",
-      answer: "Chain Neo is a blockchain community-based organization focused on building Africa's blockchain builders. We provide learning resources, courses, events, and a supportive community for anyone interested in blockchain technology."
+      answer: "Chain Neo is a blockchain community-based organization focused on building East Africa's blockchain builders. We provide learning resources, courses, events, and a supportive community for anyone interested in blockchain technology."
     },
     {
       id: 2,
@@ -59,7 +59,7 @@ function App() {
       <section id="home" className="hero">
         <div className="hero-container">
           <div className="hero-content">
-            <h1 className="hero-headline">Building Africa's Blockchain Builders</h1>
+            <h1 className="hero-headline">Building East Africa's Blockchain Builders</h1>
             <p className="hero-subtext">
               A friendly community learning, building, and growing with blockchain.
             </p>
@@ -80,7 +80,7 @@ function App() {
         <div className="about-content">
           <div className="about-intro">
             <p className="about-text">
-              Chain Neo is a friendly blockchain community dedicated to building Africa's next generation of blockchain builders. We believe in making blockchain technology accessible, approachable, and empowering for everyone.
+              Chain Neo is a friendly blockchain community dedicated to building East Africa's next generation of blockchain builders. We believe in making blockchain technology accessible, approachable, and empowering for everyone.
             </p>
           </div>
           <div className="about-features">
@@ -139,7 +139,7 @@ function App() {
             </div>
             <h3 className="how-it-works-card-title">Join Chain Neo</h3>
             <p className="how-it-works-card-description">
-              Become part of Africa's leading blockchain community. Connect with builders, developers, and innovators shaping the future.
+              Become part of East Africa's leading blockchain community. Connect with builders, developers, and innovators shaping the future.
             </p>
             <Link to="/community" className="how-it-works-cta">
               <span>Get started</span>
@@ -198,7 +198,7 @@ function App() {
           <p className="community-snapshot-label">Community Snapshot</p>
           <h2 className="community-snapshot-title">Trust & legitimacy</h2>
           <p className="community-snapshot-description">
-            Building Africa's blockchain future with a growing community of builders, learners, and innovators committed to excellence.
+            Building East Africa's blockchain future with a growing community of builders, learners, and innovators committed to excellence.
           </p>
         </div>
         <div className="snapshot-stats-card">

@@ -173,7 +173,7 @@ function Academy() {
           <div className="academy-stats-header">
             <h2 className="academy-stats-title">Our Impact</h2>
             <p className="academy-stats-subtitle">
-              Building Africa's next generation of blockchain talent through comprehensive education and hands-on learning.
+              Building East Africa's next generation of blockchain talent through comprehensive education and hands-on learning.
             </p>
           </div>
           <div className="academy-stats-card">

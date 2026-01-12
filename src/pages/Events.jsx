@@ -26,7 +26,7 @@ function Events() {
             <h1 className="events-header-title">Events</h1>
             <p className="events-header-subtitle">
               Join us for workshops, hackathons, meetups, and conferences designed to help you learn, 
-              build, and connect with the blockchain community across Africa.
+              build, and connect with the blockchain community across East Africa.
             </p>
           </div>
           <div className="events-header-image">

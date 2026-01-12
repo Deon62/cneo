@@ -233,12 +233,33 @@
 .vision-section {
   background-color: #0A0A0A;
   padding: 120px 24px;
-  text-align: center;
 }
 
 .vision-container {
-  max-width: 900px;
+  max-width: 1400px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.vision-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vision-image img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+}
+
+.vision-content {
+  max-width: 700px;
+  text-align: left;
 }
 
 .vision-section .section-label {
@@ -269,12 +290,12 @@
 
 .vision-stats {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 80px;
 }
 
 .vision-stat {
-  text-align: center;
+  text-align: left;
 }
 
 .vision-stat .stat-value {
@@ -845,9 +866,29 @@
     font-size: 2rem;
   }
 
+  .vision-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .vision-image {
+    order: 1;
+  }
+
+  .vision-content {
+    order: 2;
+    max-width: 100%;
+    text-align: center;
+  }
+
   .vision-stats {
     flex-direction: column;
     gap: 32px;
+    justify-content: center;
+  }
+
+  .vision-stat {
+    text-align: center;
   }
 
   .value-row {

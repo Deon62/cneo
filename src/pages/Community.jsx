@@ -81,7 +81,7 @@ function Community() {
           <div className="community-header-content">
             <h1 className="community-header-title">Our Community</h1>
             <p className="community-header-subtitle">
-              Join a vibrant network of blockchain builders, learners, and innovators across Africa. 
+              Join a vibrant network of blockchain builders, learners, and innovators across East Africa. 
               Together, we're shaping the future of decentralized technology.
             </p>
           </div>
@@ -93,7 +93,7 @@ function Community() {
         <div className="community-values-container">
           <h2 className="section-title">Why Join Our Community</h2>
           <p className="community-values-intro">
-            We're more than just a community—we're a movement dedicated to empowering Africa's blockchain ecosystem 
+            We're more than just a community—we're a movement dedicated to empowering East Africa's blockchain ecosystem 
             through collaboration, education, and innovation.
           </p>
           <div className="community-values-grid">
@@ -123,7 +123,7 @@ function Community() {
               </div>
               <h3 className="value-title">Create Impact</h3>
               <p className="value-description">
-                Work on real-world projects that solve problems and create value. Contribute to Africa's blockchain transformation.
+                Work on real-world projects that solve problems and create value. Contribute to East Africa's blockchain transformation.
               </p>
             </div>
 
@@ -138,7 +138,7 @@ function Community() {
             <p className="chapters-label">Introducing</p>
             <h2 className="chapters-title">Community Chapters</h2>
             <p className="chapters-description">
-              We're building a network of campus chapters across universities, TVETs, and colleges throughout Africa. 
+              We're building a network of campus chapters across universities, TVETs, and colleges throughout East Africa. 
               Join us in bringing blockchain education and innovation to educational institutions near you.
             </p>
           </div>
@@ -204,7 +204,7 @@ function Community() {
             <span className="partner-label">Collaborate With Us</span>
             <h2 className="partner-title">Let's Build Together</h2>
             <p className="partner-description">
-              We're looking for organizations, protocols, and companies who share our vision of empowering African youth in blockchain. Whether you're a Web3 project seeking local talent, an educator wanting to expand your reach, or a business looking to support the next generation of builders—let's connect.
+              We're looking for organizations, protocols, and companies who share our vision of empowering East African youth in blockchain. Whether you're a Web3 project seeking local talent, an educator wanting to expand your reach, or a business looking to support the next generation of builders—let's connect.
             </p>
             <a href="/contact" className="partner-button">
               Become a Partner
@@ -334,7 +334,7 @@ function Community() {
               <Link to="/" className="footer-logo">
                 <span className="footer-logo-text">Chain Neo</span>
               </Link>
-              <p className="footer-tagline">Building Africa's Blockchain Builders</p>
+              <p className="footer-tagline">Building East Africa's Blockchain Builders</p>
             </div>
             <div className="footer-links-wrapper">
               <div className="footer-column">

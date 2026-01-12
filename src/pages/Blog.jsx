@@ -123,7 +123,7 @@ function Blog() {
             <h1 className="blog-header-title">Chain Neo | Blog</h1>
             <p className="blog-header-subtitle">
               Technical insights, tutorials, and stories from our developer community. 
-              Learn about blockchain development, Web3 technologies, and the African tech ecosystem.
+              Learn about blockchain development, Web3 technologies, and the East African tech ecosystem.
             </p>
           </div>
         </div>

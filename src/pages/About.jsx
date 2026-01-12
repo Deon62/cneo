@@ -2,6 +2,7 @@ import '../About.css'
 import '../Home.css'
 import Navbar from '../components/Navbar'
 import aboutImage from '../assets/about.svg'
+import visionImage from '../assets/vision.svg'
 import { Link } from 'react-router-dom'
 
 function About() {
@@ -27,23 +28,28 @@ function About() {
       {/* Vision Section */}
       <section className="vision-section">
         <div className="vision-container">
-          <span className="section-label">Our Vision</span>
-          <h2 className="vision-title">A Leading Youth-Driven Blockchain Community in East Africa</h2>
-          <p className="vision-description">
-            To become a leading youth-driven blockchain community in East Africa, producing skilled builders, informed users, and globally competitive Web3 talent.
-          </p>
-          <div className="vision-stats">
-            <div className="vision-stat">
-              <span className="stat-value">2030</span>
-              <span className="stat-label">Vision Horizon</span>
-            </div>
-            <div className="vision-stat">
-              <span className="stat-value">10K+</span>
-              <span className="stat-label">Builders Trained</span>
-            </div>
-            <div className="vision-stat">
-              <span className="stat-value">50+</span>
-              <span className="stat-label">Cities Reached</span>
+          <div className="vision-image">
+            <img src={visionImage} alt="Vision illustration" />
+          </div>
+          <div className="vision-content">
+            <span className="section-label">Our Vision</span>
+            <h2 className="vision-title">A Leading Youth-Driven Blockchain Community in East Africa</h2>
+            <p className="vision-description">
+              To become a leading youth-driven blockchain community in East Africa, producing skilled builders, informed users, and globally competitive Web3 talent.
+            </p>
+            <div className="vision-stats">
+              <div className="vision-stat">
+                <span className="stat-value">2030</span>
+                <span className="stat-label">Vision Horizon</span>
+              </div>
+              <div className="vision-stat">
+                <span className="stat-value">10K+</span>
+                <span className="stat-label">Builders Trained</span>
+              </div>
+              <div className="vision-stat">
+                <span className="stat-value">50+</span>
+                <span className="stat-label">Cities Reached</span>
+              </div>
             </div>
           </div>
         </div>
@@ -56,7 +62,7 @@ function About() {
             <span className="section-label">Our Mission</span>
             <h2 className="mission-title">Building the Future, One Builder at a Time</h2>
             <p className="mission-description">
-              We are committed to creating pathways for young Africans to thrive in the blockchain ecosystem through education, community, and real-world opportunities.
+              We are committed to creating pathways for young East Africans to thrive in the blockchain ecosystem through education, community, and real-world opportunities.
             </p>
           </div>
           <div className="mission-cards">
@@ -92,7 +98,7 @@ function About() {
                 What started as small university workshops has grown into a vibrant community of builders across East Africa. We discovered untapped talent hungry to learn, build, and innovate.
               </p>
               <p>
-                Today, we're just getting started—committed to being the launchpad for young Africans in Web3.
+                Today, we're just getting started—committed to being the launchpad for young East Africans in Web3.
               </p>
             </div>
             <div className="story-timeline">
@@ -154,7 +160,7 @@ function About() {
             <span className="section-label">Our Team</span>
             <h2 className="team-title">The People Behind the Mission</h2>
             <p className="team-description">
-              A passionate group of builders, educators, and dreamers committed to empowering the next generation of African blockchain talent.
+              A passionate group of builders, educators, and dreamers committed to empowering the next generation of East African blockchain talent.
             </p>
           </div>
           <div className="team-empty-state-simple">
@@ -192,7 +198,7 @@ function About() {
               <Link to="/" className="footer-logo">
                 <span className="footer-logo-text">Chain Neo</span>
               </Link>
-              <p className="footer-tagline">Building Africa's Blockchain Builders</p>
+              <p className="footer-tagline">Building East Africa's Blockchain Builders</p>
             </div>
             <div className="footer-links-wrapper">
               <div className="footer-column">

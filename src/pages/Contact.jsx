@@ -104,7 +104,7 @@ function Contact() {
             <h1 className="contact-header-title">Contact Us</h1>
             <p className="contact-header-subtitle">
               Have questions, ideas, or want to collaborate? We'd love to hear from you. 
-              Get in touch with the Chain Neo team and let's build Africa's blockchain future together.
+              Get in touch with the Chain Neo team and let's build East Africa's blockchain future together.
             </p>
           </div>
           <div className="contact-header-image">
@@ -377,7 +377,7 @@ function Contact() {
               <Link to="/" className="footer-logo">
                 <span className="footer-logo-text">Chain Neo</span>
               </Link>
-              <p className="footer-tagline">Building Africa's Blockchain Builders</p>
+              <p className="footer-tagline">Building East Africa's Blockchain Builders</p>
             </div>
             <div className="footer-links-wrapper">
               <div className="footer-column">

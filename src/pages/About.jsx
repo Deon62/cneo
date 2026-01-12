@@ -130,24 +130,24 @@ function About() {
           </div>
           <div className="values-list">
             <div className="value-row">
-              <span className="value-num">01</span>
               <h3 className="value-name">Accessibility</h3>
               <p className="value-desc">Knowledge should be free and accessible to anyone willing to learn.</p>
+              <span className="value-num">01</span>
             </div>
             <div className="value-row">
-              <span className="value-num">02</span>
               <h3 className="value-name">Community</h3>
               <p className="value-desc">We grow stronger together through collective knowledge and support.</p>
+              <span className="value-num">02</span>
             </div>
             <div className="value-row">
-              <span className="value-num">03</span>
               <h3 className="value-name">Innovation</h3>
               <p className="value-desc">We encourage bold ideas. The best solutions come from unexpected places.</p>
+              <span className="value-num">03</span>
             </div>
             <div className="value-row">
-              <span className="value-num">04</span>
               <h3 className="value-name">Integrity</h3>
               <p className="value-desc">We build trust through transparency and doing what's right.</p>
+              <span className="value-num">04</span>
             </div>
           </div>
         </div>

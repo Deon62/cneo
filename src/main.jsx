@@ -9,10 +9,12 @@ import Academy from './pages/Academy.jsx'
 import Contact from './pages/Contact.jsx'
 import Events from './pages/Events.jsx'
 import NotFound from './pages/NotFound.jsx'
+import ScrollToTop from './components/ScrollToTop.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />

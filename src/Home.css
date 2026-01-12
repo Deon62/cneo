@@ -228,7 +228,7 @@
   position: relative;
 }
 
-/* Math squared grid pattern - visible across the section */
+/* Math squared grid pattern - visible across the section, fading at edges */
 .hero::before {
   content: '';
   position: absolute;
@@ -237,12 +237,31 @@
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(rgba(229, 231, 235, 0.8) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(229, 231, 235, 0.8) 1px, transparent 1px);
+    linear-gradient(rgba(107, 114, 128, 0.6) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107, 114, 128, 0.6) 1px, transparent 1px);
   background-size: 32px 32px;
   background-position: center center;
   pointer-events: none;
   opacity: 1;
+  z-index: 0;
+  mask-image: 
+    radial-gradient(ellipse 50% 40% at 50% 50%, black 20%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.1) 80%, transparent 100%);
+  -webkit-mask-image: 
+    radial-gradient(ellipse 50% 40% at 50% 50%, black 20%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.1) 80%, transparent 100%);
+}
+
+/* Additional overlay to enhance fade at edges */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 50% 40% at 50% 50%, transparent 20%, rgba(238, 233, 218, 0.3) 40%, rgba(238, 233, 218, 0.6) 60%, rgba(238, 233, 218, 0.9) 80%, #EEE9DA 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-content {

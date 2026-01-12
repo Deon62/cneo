@@ -2,6 +2,7 @@ import '../Home.css'
 import './Contact.css'
 import Navbar from '../components/Navbar'
 import { useState } from 'react'
+import contactImage from '../assets/contact.svg'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -45,6 +46,9 @@ function Contact() {
               Have questions, ideas, or want to collaborate? We'd love to hear from you. 
               Get in touch with the Chain Neo team and let's build Africa's blockchain future together.
             </p>
+          </div>
+          <div className="contact-header-image">
+            <img src={contactImage} alt="Contact illustration" />
           </div>
         </div>
       </section>

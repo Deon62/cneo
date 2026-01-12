@@ -267,7 +267,7 @@
   z-index: 1;
   position: relative;
   align-self: center;
-  margin-top: -100px;
+  margin-top: -40px;
 }
 
 .hero-headline {
@@ -315,8 +315,11 @@
   justify-content: center;
   position: relative;
   z-index: 1;
-  margin-top: 20px;
+  margin-top: 0;
   align-self: center;
+  width: 100%;
+  max-width: 420px;
+  margin-left: auto;
 }
 
 .hero-image {

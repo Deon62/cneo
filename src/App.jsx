@@ -2,7 +2,7 @@ import './Home.css'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import africaImage from './assets/africa.svg'
+import BlockchainNetworkIllustration from './components/BlockchainNetworkIllustration'
 import learnImage from './assets/learn.png'
 import buildImage from './assets/build.png'
 import communityImage from './assets/community.png'
@@ -69,7 +69,7 @@ function App() {
             </div>
           </div>
           <div className="hero-image-container">
-            <img src={africaImage} alt="African continent map" className="hero-image" />
+            <BlockchainNetworkIllustration />
           </div>
         </div>
       </section>

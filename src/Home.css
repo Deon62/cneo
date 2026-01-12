@@ -245,9 +245,9 @@
   opacity: 1;
   z-index: 0;
   mask-image: 
-    radial-gradient(ellipse 50% 40% at 50% 50%, black 20%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.1) 80%, transparent 100%);
+    radial-gradient(ellipse 65% 55% at 50% 50%, black 40%, rgba(0, 0, 0, 0.9) 55%, rgba(0, 0, 0, 0.7) 65%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.1) 90%, transparent 100%);
   -webkit-mask-image: 
-    radial-gradient(ellipse 50% 40% at 50% 50%, black 20%, rgba(0, 0, 0, 0.8) 40%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.1) 80%, transparent 100%);
+    radial-gradient(ellipse 65% 55% at 50% 50%, black 40%, rgba(0, 0, 0, 0.9) 55%, rgba(0, 0, 0, 0.7) 65%, rgba(0, 0, 0, 0.4) 80%, rgba(0, 0, 0, 0.1) 90%, transparent 100%);
 }
 
 /* Additional overlay to enhance fade at edges */
@@ -259,7 +259,7 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(ellipse 50% 40% at 50% 50%, transparent 20%, rgba(238, 233, 218, 0.3) 40%, rgba(238, 233, 218, 0.6) 60%, rgba(238, 233, 218, 0.9) 80%, #EEE9DA 100%);
+    radial-gradient(ellipse 65% 55% at 50% 50%, transparent 40%, rgba(238, 233, 218, 0.2) 55%, rgba(238, 233, 218, 0.4) 65%, rgba(238, 233, 218, 0.7) 80%, rgba(238, 233, 218, 0.95) 90%, #EEE9DA 100%);
   pointer-events: none;
   z-index: 0;
 }

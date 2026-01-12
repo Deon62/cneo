@@ -8,8 +8,67 @@ import academySvg from '../assets/academy.svg'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
+// Blog images
+import smartContractsImg from '../assets/blogs/smartcontracts.png'
+import africanDevsImg from '../assets/blogs/africandevs.png'
+import gasFeesImg from '../assets/blogs/gasfees.png'
+import studentsOnChainImg from '../assets/blogs/studentsonchain.png'
+import tokensImg from '../assets/blogs/tokens.png'
+import dappsImg from '../assets/blogs/dapps.png'
+
 function Academy() {
   const blogsScrollRef = useRef(null)
+
+  const blogs = [
+    {
+      id: 1,
+      title: "Your First Smart Contract in 30 Minutes",
+      excerpt: "A hands-on walkthrough for absolute beginners. We'll write, deploy, and interact with a simple contract on a test network.",
+      date: "Mar 15, 2025",
+      author: "Deon Orina",
+      image: smartContractsImg
+    },
+    {
+      id: 2,
+      title: "Why African Developers Are Leading Blockchain Innovation",
+      excerpt: "From mobile money to decentralized identity, African builders are solving real problems with blockchain.",
+      date: "Mar 12, 2025",
+      author: "Deon Orina",
+      image: africanDevsImg
+    },
+    {
+      id: 3,
+      title: "Gas Fees Explained: What You're Actually Paying For",
+      excerpt: "Break down the mystery of transaction costs on Ethereum and other networks.",
+      date: "Mar 8, 2025",
+      author: "Deon Orina",
+      image: gasFeesImg
+    },
+    {
+      id: 4,
+      title: "From Campus to Chain: A Student's Journey into Web3",
+      excerpt: "Real stories from university students who transitioned from traditional tech studies to blockchain.",
+      date: "Mar 5, 2025",
+      author: "Deon Orina",
+      image: studentsOnChainImg
+    },
+    {
+      id: 5,
+      title: "Token Standards Decoded: ERC-20, ERC-721, and Beyond",
+      excerpt: "Understand the building blocks of digital assets. What makes a fungible token different from an NFT.",
+      date: "Mar 1, 2025",
+      author: "Deon Orina",
+      image: tokensImg
+    },
+    {
+      id: 6,
+      title: "Building Your First dApp: A Weekend Project Guide",
+      excerpt: "Turn your ideas into working decentralized applications. From concept to deployment in a single weekend.",
+      date: "Feb 28, 2025",
+      author: "Deon Orina",
+      image: dappsImg
+    }
+  ]
 
   const scrollBlogs = (direction) => {
     if (blogsScrollRef.current) {
@@ -117,12 +176,6 @@ function Academy() {
             <p className="developer-blogs-description">
               In-depth technical articles, tutorials, and insights from our developer community covering blockchain development, smart contracts, and Web3 technologies.
             </p>
-            <Link to="/blog" className="view-more-link">
-              View All Blogs
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </Link>
           </div>
           <div className="blogs-scroll-wrapper">
             <button 
@@ -136,83 +189,18 @@ function Academy() {
             </button>
             <div className="blogs-scroll-container" ref={blogsScrollRef}>
               <div className="blogs-grid">
-            <article className="blog-card">
-              <div className="blog-image">
-                <div className="blog-image-placeholder" style={{background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'}}></div>
-              </div>
-              <div className="blog-meta">
-                <span className="blog-date-author">March 15, 2024 • John Doe</span>
-              </div>
-              <h3 className="blog-title">Understanding Solidity: A Beginner's Guide</h3>
-              <p className="blog-excerpt">
-                Dive into the fundamentals of Solidity programming language. Learn about data types, functions, and how to write your first smart contract on Ethereum.
-              </p>
-            </article>
-
-            <article className="blog-card">
-              <div className="blog-image">
-                <div className="blog-image-placeholder" style={{background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'}}></div>
-              </div>
-              <div className="blog-meta">
-                <span className="blog-date-author">March 10, 2024 • Jane Smith</span>
-              </div>
-              <h3 className="blog-title">Building Decentralized Applications with React</h3>
-              <p className="blog-excerpt">
-                Explore how to integrate Web3 technologies with React to create modern decentralized applications. From wallet connections to contract interactions.
-              </p>
-            </article>
-
-            <article className="blog-card">
-              <div className="blog-image">
-                <div className="blog-image-placeholder" style={{background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)'}}></div>
-              </div>
-              <div className="blog-meta">
-                <span className="blog-date-author">March 5, 2024 • Alex Johnson</span>
-              </div>
-              <h3 className="blog-title">Best Practices for Smart Contract Security</h3>
-              <p className="blog-excerpt">
-                Learn essential security patterns and common vulnerabilities in smart contract development. Protect your contracts from attacks and ensure user funds are safe.
-              </p>
-            </article>
-
-            <article className="blog-card">
-              <div className="blog-image">
-                <div className="blog-image-placeholder" style={{background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)'}}></div>
-              </div>
-              <div className="blog-meta">
-                <span className="blog-date-author">February 28, 2024 • Sarah Williams</span>
-              </div>
-              <h3 className="blog-title">Introduction to DeFi Protocols and Yield Farming</h3>
-              <p className="blog-excerpt">
-                Get started with decentralized finance concepts. Understand liquidity pools, automated market makers, and how yield farming works in practice.
-              </p>
-            </article>
-
-            <article className="blog-card">
-              <div className="blog-image">
-                <div className="blog-image-placeholder" style={{background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)'}}></div>
-              </div>
-              <div className="blog-meta">
-                <span className="blog-date-author">February 20, 2024 • Michael Brown</span>
-              </div>
-              <h3 className="blog-title">Creating and Deploying NFT Collections</h3>
-              <p className="blog-excerpt">
-                Step-by-step guide to building NFT collections using ERC-721 standards. From minting to marketplace integration, everything you need to know.
-              </p>
-            </article>
-
-            <article className="blog-card">
-              <div className="blog-image">
-                <div className="blog-image-placeholder" style={{background: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'}}></div>
-              </div>
-              <div className="blog-meta">
-                <span className="blog-date-author">February 15, 2024 • Emily Davis</span>
-              </div>
-              <h3 className="blog-title">The Future of Web3 Development in Africa</h3>
-              <p className="blog-excerpt">
-                Exploring the growing blockchain ecosystem across Africa. Opportunities, challenges, and how developers can contribute to the continent's Web3 transformation.
-              </p>
-            </article>
+                {blogs.map((blog) => (
+                  <Link to={`/blog/${blog.id}`} key={blog.id} className="blog-card">
+                    <div className="blog-image">
+                      <img src={blog.image} alt={blog.title} className="blog-image-img" />
+                    </div>
+                    <div className="blog-meta">
+                      <span className="blog-date-author">{blog.date} • {blog.author}</span>
+                    </div>
+                    <h3 className="blog-title">{blog.title}</h3>
+                    <p className="blog-excerpt">{blog.excerpt}</p>
+                  </Link>
+                ))}
               </div>
             </div>
             <button 
@@ -224,6 +212,14 @@ function Academy() {
                 <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
+          </div>
+          <div className="blogs-view-all-wrapper">
+            <Link to="/blog" className="blogs-view-all-btn">
+              View All Blogs
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

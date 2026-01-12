@@ -3,96 +3,106 @@ import './Blog.css'
 import Navbar from '../components/Navbar'
 import { Link } from 'react-router-dom'
 
+// Blog images
+import smartContractsImg from '../assets/blogs/smartcontracts.png'
+import africanDevsImg from '../assets/blogs/africandevs.png'
+import gasFeesImg from '../assets/blogs/gasfees.png'
+import studentsOnChainImg from '../assets/blogs/studentsonchain.png'
+import tokensImg from '../assets/blogs/tokens.png'
+import dappsImg from '../assets/blogs/dapps.png'
+import bugsImg from '../assets/blogs/bugs.png'
+import blockchainUsesImg from '../assets/blogs/blockchainuses.png'
+
 function Blog() {
   const blogs = [
     {
       id: 1,
-      title: "Understanding Solidity: A Beginner's Guide",
-      excerpt: "Dive into the fundamentals of Solidity programming language. Learn about data types, functions, and how to write your first smart contract on Ethereum.",
+      title: "Your First Smart Contract in 30 Minutes",
+      excerpt: "A hands-on walkthrough for absolute beginners. We'll write, deploy, and interact with a simple contract on a test network.",
       date: "Mar 15, 2025",
       readTime: "7 min read",
-      author: "John Doe",
-      gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      author: "Deon Orina",
+      image: smartContractsImg,
       featured: false
     },
     {
       id: 2,
-      title: "Wallets Are the Front Door to Web3: Let's Make Them Welcoming",
-      excerpt: "Here's the thing about Web3: we keep talking about scalability, security, and decentralization, but most people never even make it past the first step. They try to set up a crypto wallet, get overwhelmed, and give up.",
+      title: "Why African Developers Are Leading the Next Wave of Blockchain Innovation",
+      excerpt: "From mobile money to decentralized identity, African builders are solving real problems with blockchain. Here's what the rest of the world can learn from this growing ecosystem.",
       date: "Mar 12, 2025",
       readTime: "10 min read",
-      author: "Jane Smith",
-      gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+      author: "Deon Orina",
+      image: africanDevsImg,
       featured: true
     },
     {
       id: 3,
-      title: "Demystifying Consensus Mechanisms: A Comprehensive Guide",
-      excerpt: "Explore the different types of consensus mechanisms that power blockchain networks, from Proof of Work to Proof of Stake and beyond.",
+      title: "Gas Fees Explained: What You're Actually Paying For",
+      excerpt: "Break down the mystery of transaction costs on Ethereum and other networks. Learn how to estimate and optimize your gas spending.",
       date: "Mar 8, 2025",
       readTime: "12 min read",
-      author: "Alex Johnson",
-      gradient: "linear-gradient(135deg, #232526 0%, #414345 100%)",
+      author: "Deon Orina",
+      image: gasFeesImg,
       featured: false
     },
     {
       id: 4,
-      title: "Getting Started with Solidity: All You Need to Know",
-      excerpt: "A comprehensive introduction to Solidity programming for beginners. Learn the essential concepts and start building smart contracts today.",
+      title: "From Campus to Chain: A Student's Journey into Web3",
+      excerpt: "Real stories from university students who transitioned from traditional tech studies to becoming blockchain developers and founders.",
       date: "Mar 5, 2025",
       readTime: "8 min read",
-      author: "Sarah Williams",
-      gradient: "linear-gradient(135deg, #c31432 0%, #240b36 100%)",
+      author: "Deon Orina",
+      image: studentsOnChainImg,
       featured: false
     },
     {
       id: 5,
-      title: "Why is the Hard Drive for Blockchain and the Internet Important?",
-      excerpt: "Understanding the role of decentralized storage solutions like IPFS in the Web3 ecosystem and why they matter for the future of the internet.",
+      title: "Token Standards Decoded: ERC-20, ERC-721, and Beyond",
+      excerpt: "Understand the building blocks of digital assets. What makes a fungible token different from an NFT, and when to use each standard.",
       date: "Mar 1, 2025",
       readTime: "6 min read",
-      author: "Michael Brown",
-      gradient: "linear-gradient(135deg, #f7971e 0%, #ffd200 100%)",
+      author: "Deon Orina",
+      image: tokensImg,
       featured: false
     },
     {
       id: 6,
-      title: "Building Decentralized Applications with React",
-      excerpt: "Explore how to integrate Web3 technologies with React to create modern decentralized applications. From wallet connections to contract interactions.",
+      title: "Building Your First dApp: A Weekend Project Guide",
+      excerpt: "Turn your ideas into working decentralized applications. This step-by-step guide takes you from concept to deployment in a single weekend.",
       date: "Feb 28, 2025",
       readTime: "9 min read",
-      author: "Emily Davis",
-      gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      author: "Deon Orina",
+      image: dappsImg,
       featured: false
     },
     {
       id: 7,
-      title: "Best Practices for Smart Contract Security",
-      excerpt: "Learn essential security patterns and common vulnerabilities in smart contract development. Protect your contracts from attacks.",
+      title: "Common Smart Contract Bugs and How to Avoid Them",
+      excerpt: "Learn from expensive mistakes. We analyze real-world exploits and show you the coding patterns that prevent vulnerabilities.",
       date: "Feb 25, 2025",
       readTime: "11 min read",
-      author: "Chris Taylor",
-      gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
+      author: "Deon Orina",
+      image: bugsImg,
       featured: false
     },
     {
       id: 8,
-      title: "Introduction to DeFi Protocols and Yield Farming",
-      excerpt: "Get started with decentralized finance concepts. Understand liquidity pools, automated market makers, and how yield farming works.",
+      title: "How DAOs Are Changing Community Governance",
+      excerpt: "Decentralized organizations are rewriting the rules of collective decision-making. Explore how communities are using on-chain voting to build transparent organizations.",
       date: "Feb 20, 2025",
       readTime: "8 min read",
-      author: "Amanda Lee",
+      author: "Deon Orina",
       gradient: "linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)",
       featured: false
     },
     {
       id: 9,
-      title: "The Future of Web3 Development in Africa",
-      excerpt: "Exploring the growing blockchain ecosystem across Africa. Opportunities, challenges, and how developers can contribute to the continent's Web3 transformation.",
+      title: "Blockchain Use Cases Beyond Cryptocurrency",
+      excerpt: "From supply chain tracking to digital identity, discover the real-world applications transforming industries across Africa and the globe.",
       date: "Feb 15, 2025",
       readTime: "7 min read",
-      author: "David Okonkwo",
-      gradient: "linear-gradient(135deg, #30cfd0 0%, #330867 100%)",
+      author: "Deon Orina",
+      image: blockchainUsesImg,
       featured: false
     }
   ]
@@ -125,9 +135,13 @@ function Blog() {
             {/* Left Column */}
             <div className="blog-column blog-column-left">
               {leftBlogs.map((blog) => (
-                <article key={blog.id} className="blog-grid-card">
+                <Link to={`/blog/${blog.id}`} key={blog.id} className="blog-grid-card">
                   <div className="blog-grid-image">
-                    <div className="blog-grid-image-placeholder" style={{background: blog.gradient}}></div>
+                    {blog.image ? (
+                      <img src={blog.image} alt={blog.title} className="blog-grid-img" />
+                    ) : (
+                      <div className="blog-grid-image-placeholder" style={{background: blog.gradient}}></div>
+                    )}
                   </div>
                   <h3 className="blog-grid-title">{blog.title}</h3>
                   <div className="blog-grid-meta">
@@ -135,16 +149,20 @@ function Blog() {
                     <span className="blog-meta-dot">•</span>
                     <span>{blog.readTime}</span>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
 
             {/* Center Column - Featured */}
             <div className="blog-column blog-column-center">
               {featuredBlog && (
-                <article className="blog-grid-card blog-featured-card">
+                <Link to={`/blog/${featuredBlog.id}`} className="blog-grid-card blog-featured-card">
                   <div className="blog-grid-image blog-featured-image">
-                    <div className="blog-grid-image-placeholder" style={{background: featuredBlog.gradient}}></div>
+                    {featuredBlog.image ? (
+                      <img src={featuredBlog.image} alt={featuredBlog.title} className="blog-grid-img" />
+                    ) : (
+                      <div className="blog-grid-image-placeholder" style={{background: featuredBlog.gradient}}></div>
+                    )}
                   </div>
                   <h2 className="blog-featured-title">{featuredBlog.title}</h2>
                   <p className="blog-featured-excerpt">{featuredBlog.excerpt}</p>
@@ -153,16 +171,20 @@ function Blog() {
                     <span className="blog-meta-dot">•</span>
                     <span>{featuredBlog.readTime}</span>
                   </div>
-                </article>
+                </Link>
               )}
             </div>
 
             {/* Right Column */}
             <div className="blog-column blog-column-right">
               {rightBlogs.map((blog) => (
-                <article key={blog.id} className="blog-grid-card">
+                <Link to={`/blog/${blog.id}`} key={blog.id} className="blog-grid-card">
                   <div className="blog-grid-image">
-                    <div className="blog-grid-image-placeholder" style={{background: blog.gradient}}></div>
+                    {blog.image ? (
+                      <img src={blog.image} alt={blog.title} className="blog-grid-img" />
+                    ) : (
+                      <div className="blog-grid-image-placeholder" style={{background: blog.gradient}}></div>
+                    )}
                   </div>
                   <h3 className="blog-grid-title">{blog.title}</h3>
                   <div className="blog-grid-meta">
@@ -170,7 +192,7 @@ function Blog() {
                     <span className="blog-meta-dot">•</span>
                     <span>{blog.readTime}</span>
                   </div>
-                </article>
+                </Link>
               ))}
             </div>
           </div>

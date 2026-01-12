@@ -556,7 +556,7 @@
 }
 
 .team-header {
-  text-align: center;
+  text-align: left;
   margin-bottom: 64px;
 }
 
@@ -577,7 +577,7 @@
   color: #6B7280;
   line-height: 1.7;
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .team-empty-state-simple {
